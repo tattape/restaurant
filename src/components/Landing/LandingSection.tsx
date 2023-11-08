@@ -46,7 +46,6 @@ function LandingSection({ }: Props) {
                         <Image data-aos='fade-up' data-aos-duration='2000' className='' src={Logo} width={300} height={150} alt='logo' />
                     </Parallax>
                 </div>
-                <div className='absolute text-white border top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>test</div>
             </ParallaxProvider>
         </>
     )
