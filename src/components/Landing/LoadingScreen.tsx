@@ -1,28 +1,47 @@
-import React from 'react'
-import Logo from '../../images/slice6.png'
-import Image from 'next/image'
+import React from "react";
+import Logo from "../../images/slice6.png";
+import Image from "next/image";
 import "aos/dist/aos.css";
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from "framer-motion";
 type Props = {
-    Loading: boolean;
-}
+  Loading: boolean;
+};
 
 function LoadingScreen({ Loading }: Props) {
-    return (
-        <AnimatePresence>
-            {Loading &&
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className={`z-[999] absolute w-full h-screen flex justify-center items-center bg-black`}
-                >
-                    <Image className='animate-[bounce_2s_ease-in-out_infinite]' src={Logo} width={300} height={150} alt='logo' />
-                </motion.div>
-            }
-        </AnimatePresence>
-    )
+  return (
+    <div
+      className={`z-[999] absolute w-full h-screen flex justify-center items-center `}
+    >
+      <AnimatePresence>
+        {Loading && (
+          <motion.div
+            initial={{ opacity: 1, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, translateY: -800 }}
+            transition={{
+              duration: 2.2,
+              ease: [0, 0.5, 1, 2.2],
+              scale: {
+                type: "spring",
+                damping: 9,
+                stiffness: 200,
+                restDelta: 0.01,
+              },
+            }}
+            className="bg-black"
+          >
+            <Image
+              className=""
+              src={Logo}
+              width={300}
+              height={150}
+              alt="logo"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 }
 
-export default LoadingScreen
+export default LoadingScreen;
