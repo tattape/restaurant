@@ -5,3 +5,7 @@
 body {
     background-color: black;
 }
+
+.main-bg {
+    background-image: url('../images/bg.jpg');
+}
