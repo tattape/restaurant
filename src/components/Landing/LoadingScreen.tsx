@@ -28,7 +28,7 @@ function LoadingScreen({ Loading }: Props) {
                 restDelta: 0.01,
               },
             }}
-            className="bg-black"
+            className="bg-[rgb(46, 46, 46)]"
           >
             <Image
               className=""
