@@ -17,18 +17,17 @@ function LoadingScreen({ Loading }: Props) {
           <motion.div
             initial={{ opacity: 1, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, translateY: -800 }}
+            exit={{ opacity: 0, scale: 0 }}
             transition={{
               duration: 2.2,
               ease: [0, 0.5, 1, 2.2],
               scale: {
                 type: "spring",
-                damping: 9,
+                damping: 15,
                 stiffness: 200,
-                restDelta: 0.01,
               },
             }}
-            className="bg-[rgb(46, 46, 46)]"
+            className="bg-main"
           >
             <Image
               className=""
