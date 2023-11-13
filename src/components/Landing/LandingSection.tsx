@@ -21,7 +21,7 @@ import tong2 from "../../images/Asset 3.png";
 import tong3 from "../../images/Asset 4.png";
 import footer from "../../images/Asset 28.png";
 import menu from "../../images/menu.png";
-import smallPlate from "../../images/small-plate.png";
+import smallPlates from "../../images/small-plate.png";
 import tugTug from "../../images/tug-tug.png";
 import tung from "../../images/tung.png";
 import nangrum from "../../images/nangrum.png";
@@ -33,6 +33,12 @@ import brife from "../../images/brife.png";
 import chicken from "../../images/chicken.png";
 import sanvid from "../../images/sanvid.png";
 import sai from "../../images/slice27.png";
+import handblack from "../../images/hand-black.png";
+import thaiStreet from "../../images/thai-street.png";
+import thongRed from "../../images/thong-red.png";
+import thisIsSoYum from "../../images/this-is-so-yum.png";
+import pick from "../../images/pick.png";
+import bitong from "../../images/bitong.png";
 
 type Props = {};
 
@@ -58,10 +64,10 @@ function LandingSection({}: Props) {
   const settings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
-    draggable: true,
+    slidesToShow: 5,
     swipeToSlide: true,
-    // slidesToScroll: 1,
+    arrows: false,
+    dots: false,
     autoplay: true,
     autoplaySpeed: 2000,
   };
@@ -73,11 +79,11 @@ function LandingSection({}: Props) {
     },
     {
       src: chicken,
-      alt: "image1",
+      alt: "image2",
     },
     {
       src: brife,
-      alt: "image1",
+      alt: "image3",
     },
     {
       src: sanvid,
@@ -85,10 +91,26 @@ function LandingSection({}: Props) {
     },
     {
       src: brife,
+      alt: "image3",
+    },
+    {
+      src: chicken,
+      alt: "image2",
+    },
+    {
+      src: sanvid,
       alt: "image1",
     },
     {
       src: chicken,
+      alt: "image2",
+    },
+    {
+      src: brife,
+      alt: "image3",
+    },
+    {
+      src: sanvid,
       alt: "image1",
     },
   ];
@@ -153,12 +175,34 @@ function LandingSection({}: Props) {
                       <Image src={tong3} alt={""}></Image>
                     </motion.div>
                   </Parallax>
-                  <div className="absolute top-[650px] -left-[40px]">
-                    <Image src={sai} alt={""} />
-                  </div>
-                  <div className="absolute top-[600px] left-[680px]">
-                    <Image src={oil} alt={""} />
-                  </div>
+                  <AnimatePresence>
+                    <motion.div
+                      initial={{ opacity: 0, translateX: -50 }}
+                      animate={{ opacity: 1, translateX: 0 }}
+                      transition={{
+                        stiffness: 130,
+                        delay: 0.52,
+                      }}
+                    >
+                      <div className="absolute top-[650px] -left-[40px]">
+                        <Image src={sai} alt={""} />
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                  <Parallax speed={-10} rotate={[-10, 10]}>
+                    <motion.div
+                      initial={{ opacity: 0, translateX: -50 }}
+                      animate={{ opacity: 1, translateX: 0 }}
+                      transition={{
+                        stiffness: 130,
+                        delay: 0.52,
+                      }}
+                      className="absolute -right-[220px] top-[530px] w-[400px]"
+                    >
+                      <Image width={600} height={200} src={oil} alt={""} />
+                    </motion.div>
+                  </Parallax>
+
                   <Parallax
                     speed={10}
                     translateY={[-40, 60]}
@@ -222,25 +266,27 @@ function LandingSection({}: Props) {
                     speed={40}
                     className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]"
                   >
-                    <motion.div
-                      initial={{ width: "0%", opacity: 0 }}
-                      animate={{ width: "100%", opacity: 1 }}
-                      transition={{
-                        type: "spring",
-                        damping: 23,
-                        stiffness: 130,
-                        duration: 20,
-                        delay: 0.45,
-                      }}
-                    >
-                      <Image
-                        className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
-                        src={authentic}
-                        alt={""}
-                      />
-                    </motion.div>
+                    <AnimatePresence>
+                      <motion.div
+                        initial={{ width: "0%", opacity: 0 }}
+                        animate={{ width: "100%", opacity: 1 }}
+                        transition={{
+                          type: "spring",
+                          damping: 23,
+                          stiffness: 130,
+                          duration: 20,
+                          delay: 0.45,
+                        }}
+                      >
+                        <Image
+                          className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
+                          src={authentic}
+                          alt={""}
+                        />
+                      </motion.div>
+                    </AnimatePresence>
                   </Parallax>
-                  <div className="absolute flex justify-start left-52">
+                  {/* <div className="absolute flex justify-start left-52">
                     <Image src={tugTug} alt={""} />
                   </div>
                   <div className="absolute  right-[360px] top-[120px]">
@@ -257,37 +303,105 @@ function LandingSection({}: Props) {
                   </div>
                   <div className="absolute  left-[260px] top-[580px] w-[180px] h-[80px]">
                     <Image src={reservation} alt={""} />
-                  </div>
+                  </div> */}
                 </div>
               </Parallax>
             </div>
+            {/* heder */}
             {/* small plate */}
-            <div className=" h-screen text-white ">
-              {/* <div className="absolute flex justify-center right-[840px]">
-                <Image src={menu} alt={""} />
-              </div>
-              <div className="absolute flex justify-center right-[730px] top-[1080px]">
-                <Image src={smallPlate} alt={""} />
-              </div>
-              <div className="absolute flex justify-center right-[730px] top-[1080px]">
-                <Image src={smallPlate} alt={""} />
-              </div> */}
-              <div>
-                <Slider {...settings}>
-                  {smallPlate.map((item, idx) => (
-                    <Image
-                      key={idx}
-                      src={item.src}
-                      alt={item.alt}
-                      className="hover:scale-[1.03] transition-all"
-                    />
-                  ))}
-                </Slider>
+            <div className=" h-screen  ">
+              <div className="relative">
+                <div className="flex justify-center">
+                  <div className="absolute flex flex-col gap-6 items-center ">
+                    <Image src={menu} alt={""} />
+                    <Image src={smallPlates} alt={""} />
+                  </div>
+                </div>
+                <Parallax speed={-2}>
+                <div className="absolute top-[700px] left-[350px]">
+                  <Image width={300} height={300} src={bitong} alt={""} />
+                </div>
+                </Parallax>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute  w-full top-[500px]"
+                  >
+                    <Slider
+                      {...settings}
+                      className="flex items-center justify-center"
+                    >
+                      {smallPlate.map((item, idx) => (
+                        <div className="  w-[50px]">
+                          <Image
+                            key={idx}
+                            src={item.src}
+                            alt={item.alt}
+                            className="hover:scale-[1.03] transition-all object-contain"
+                          />
+                        </div>
+                      ))}
+                    </Slider>
+                  </motion.div>
+                </AnimatePresence>
+                <div className="absolute top-[280px] right-[0px]">
+                  <Image src={handblack} alt={""} />
+                </div>
+                
               </div>
             </div>
+            {/* small plate */}
             {/* thai street */}
-            <div className="h-screen"></div>
+            <div className=" h-screen">
+              <div className="relative">
+                
+                <Parallax speed={5}>
+                  <div className="absolute w-full">
+                    <Image width={2200} height={800} src={thongRed} alt={""} />
+                  </div>
+                </Parallax>
+                <div className="flex justify-center">
+                  <div className="absolute top-10 flex">
+                    <Image width={400} height={300} src={thaiStreet} alt={""} />
+                  </div>
+                  <div className="absolute w-[440px] right-[390px] top-[50px]">
+                    <Image width={500} height={30} src={thisIsSoYum} alt={""} />
+                  </div>
+                  <Parallax speed={-10}>
+                  <div className="absolute w-[150px] -left-[440px]">
+                    <Image width={500} height={800} src={pick} alt={""} />
+                  </div>
+                </Parallax>
+                
+                </div>
 
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute  w-full top-[300px]"
+                  >
+                    <Slider
+                      {...settings}
+                      className="flex items-center justify-center "
+                    >
+                      {smallPlate.map((item, idx) => (
+                        <div className="  w-[50px]">
+                          <Image
+                            key={idx}
+                            src={item.src}
+                            alt={item.alt}
+                            className="hover:scale-[1.03] transition-all object-contain"
+                          />
+                        </div>
+                      ))}
+                    </Slider>
+                  </motion.div>
+                </AnimatePresence>
+                
+              </div>
+            </div>
             <Image className="w-full" src={footer} alt={""}></Image>
           </div>
         </ParallaxProvider>
