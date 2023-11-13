@@ -1,9 +1,12 @@
-/** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
     output: 'export',
-    reactStrictMode: true,
-    assetPrefix: isProd ? '/restaurant/' : '',
+    // distDir: 'dist',
+    images: {
+        unoptimized: true
+    }
 }
 
 module.exports = nextConfig
