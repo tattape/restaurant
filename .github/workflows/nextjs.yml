@@ -1,4 +1,4 @@
-name: Deploy to Github Pages ${{ matrix.node-version }}
+name: Deploy to Github Pages
 on:
   push:
     branches:
