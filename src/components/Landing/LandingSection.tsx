@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../images/slice6.png";
 import Image from "next/image";
 import "aos/dist/aos.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   ParallaxProvider,
   Parallax,
@@ -16,10 +20,23 @@ import tong1 from "../../images/Asset 2.png";
 import tong2 from "../../images/Asset 3.png";
 import tong3 from "../../images/Asset 4.png";
 import footer from "../../images/Asset 28.png";
+import menu from "../../images/menu.png";
+import smallPlate from "../../images/small-plate.png";
+import tugTug from "../../images/tug-tug.png";
+import tung from "../../images/tung.png";
+import nangrum from "../../images/nangrum.png";
+import delivery from "../../images/deli-very.png";
+import pickup from "../../images/pick-up.png";
+import oil from "../../images/oil.png";
+import reservation from "../../images/reser-vation.png";
+import brife from "../../images/brife.png";
+import chicken from "../../images/chicken.png";
+import sanvid from "../../images/sanvid.png";
+import sai from "../../images/slice27.png";
 
 type Props = {};
 
-function LandingSection({ }: Props) {
+function LandingSection({}: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [readyTong, setReadyTong] = useState(false);
@@ -38,13 +55,51 @@ function LandingSection({ }: Props) {
     };
   }, []);
 
+  const settings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    draggable: true,
+    swipeToSlide: true,
+    // slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
+  const smallPlate = [
+    {
+      src: sanvid,
+      alt: "image1",
+    },
+    {
+      src: chicken,
+      alt: "image1",
+    },
+    {
+      src: brife,
+      alt: "image1",
+    },
+    {
+      src: sanvid,
+      alt: "image1",
+    },
+    {
+      src: brife,
+      alt: "image1",
+    },
+    {
+      src: chicken,
+      alt: "image1",
+    },
+  ];
+
   return (
     <>
       {!Ready ? (
         <LoadingScreen Loading={Loading} />
       ) : (
         <ParallaxProvider>
-          <div className='overflow-x-hidden'>
+          <div className="overflow-x-hidden">
             {/* heder */}
             <div className="h-screen">
               <div className="flex justify-center">
@@ -98,6 +153,12 @@ function LandingSection({ }: Props) {
                       <Image src={tong3} alt={""}></Image>
                     </motion.div>
                   </Parallax>
+                  <div className="absolute top-[650px] -left-[40px]">
+                    <Image src={sai} alt={""} />
+                  </div>
+                  <div className="absolute top-[600px] left-[680px]">
+                    <Image src={oil} alt={""} />
+                  </div>
                   <Parallax
                     speed={10}
                     translateY={[-40, 60]}
@@ -120,7 +181,11 @@ function LandingSection({ }: Props) {
                       <Image src={tong2} alt={""}></Image>
                     </motion.div>
                   </Parallax>
-                  <Parallax speed={-20} rotate={[-30, 30]} className="absolute w-3/4 md:w-[700px]">
+                  <Parallax
+                    speed={-20}
+                    rotate={[-30, 30]}
+                    className="absolute w-3/4 md:w-[700px]"
+                  >
                     <motion.div
                       initial={{ rotate: 180, scale: 0 }}
                       animate={{ rotate: 0, scale: 1 }}
@@ -135,7 +200,11 @@ function LandingSection({ }: Props) {
                     </motion.div>
                   </Parallax>
 
-                  <Parallax disabled speed={40} className="absolute s:top-[65px] m:top-[50px] sm:top-16 md:top-16 w-1/2 md:w-[500px]">
+                  <Parallax
+                    disabled
+                    speed={40}
+                    className="absolute s:top-[65px] m:top-[50px] sm:top-16 md:top-16 w-1/2 md:w-[500px]"
+                  >
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -148,7 +217,11 @@ function LandingSection({ }: Props) {
                       <Image src={thaiFood} alt={""}></Image>
                     </motion.div>
                   </Parallax>
-                  <Parallax disabled speed={40} className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]">
+                  <Parallax
+                    disabled
+                    speed={40}
+                    className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]"
+                  >
                     <motion.div
                       initial={{ width: "0%", opacity: 0 }}
                       animate={{ width: "100%", opacity: 1 }}
@@ -160,14 +233,58 @@ function LandingSection({ }: Props) {
                         delay: 0.45,
                       }}
                     >
-                      <Image className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic} alt={""} />
+                      <Image
+                        className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
+                        src={authentic}
+                        alt={""}
+                      />
                     </motion.div>
                   </Parallax>
+                  <div className="absolute flex justify-start left-52">
+                    <Image src={tugTug} alt={""} />
+                  </div>
+                  <div className="absolute  right-[360px] top-[120px]">
+                    <Image src={tung} alt={""} />
+                  </div>
+                  <div className="absolute left-[240px] top-[430px]">
+                    <Image src={nangrum} alt={""} />
+                  </div>
+                  <div className="absolute  left-[240px] top-12 w-[140px] h-[90px]">
+                    <Image src={delivery} alt={""} />
+                  </div>
+                  <div className="absolute  right-[370px] top-[180px] w-[140px] h-[90px]">
+                    <Image src={pickup} alt={""} />
+                  </div>
+                  <div className="absolute  left-[260px] top-[580px] w-[180px] h-[80px]">
+                    <Image src={reservation} alt={""} />
+                  </div>
                 </div>
               </Parallax>
             </div>
             {/* small plate */}
-            <div className="h-screen text-white">test</div>
+            <div className=" h-screen text-white ">
+              {/* <div className="absolute flex justify-center right-[840px]">
+                <Image src={menu} alt={""} />
+              </div>
+              <div className="absolute flex justify-center right-[730px] top-[1080px]">
+                <Image src={smallPlate} alt={""} />
+              </div>
+              <div className="absolute flex justify-center right-[730px] top-[1080px]">
+                <Image src={smallPlate} alt={""} />
+              </div> */}
+              <div>
+                <Slider {...settings}>
+                  {smallPlate.map((item, idx) => (
+                    <Image
+                      key={idx}
+                      src={item.src}
+                      alt={item.alt}
+                      className="hover:scale-[1.03] transition-all"
+                    />
+                  ))}
+                </Slider>
+              </div>
+            </div>
             {/* thai street */}
             <div className="h-screen"></div>
 
