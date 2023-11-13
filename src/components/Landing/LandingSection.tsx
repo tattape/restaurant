@@ -42,7 +42,7 @@ import bitong from "../../images/bitong.png";
 
 type Props = {};
 
-function LandingSection({}: Props) {
+function LandingSection({ }: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [readyTong, setReadyTong] = useState(false);
@@ -308,6 +308,7 @@ function LandingSection({}: Props) {
               </Parallax>
             </div>
             {/* heder */}
+
             {/* small plate */}
             <div className=" h-screen  ">
               <div className="relative">
@@ -318,94 +319,88 @@ function LandingSection({}: Props) {
                   </div>
                 </div>
                 <Parallax speed={-2}>
-                <div className="absolute top-[700px] left-[350px]">
-                  <Image width={300} height={300} src={bitong} alt={""} />
-                </div>
+                  <div className="absolute top-[700px] left-[350px] w-[300px]">
+                    <Image width={300} height={300} src={bitong} alt={""} />
+                  </div>
                 </Parallax>
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="absolute  w-full top-[500px]"
+                <div className="absolute w-full top-[500px]">
+                  <Slider
+                    {...settings}
+                    className="flex items-center justify-center"
                   >
-                    <Slider
-                      {...settings}
-                      className="flex items-center justify-center"
-                    >
-                      {smallPlate.map((item, idx) => (
-                        <div className="  w-[50px]">
-                          <Image
-                            key={idx}
-                            src={item.src}
-                            alt={item.alt}
-                            className="hover:scale-[1.03] transition-all object-contain"
-                          />
-                        </div>
-                      ))}
-                    </Slider>
-                  </motion.div>
-                </AnimatePresence>
+                    {smallPlate.map((item, idx) => (
+                      <div className="h-full outline-none cursor-grab">
+                        <Image
+                          key={idx}
+                          src={item.src}
+                          alt={item.alt}
+                          className="hover:scale-[1.03] transition-all object-contain"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
                 <div className="absolute top-[280px] right-[0px]">
                   <Image src={handblack} alt={""} />
                 </div>
-                
+
               </div>
             </div>
             {/* small plate */}
+
             {/* thai street */}
             <div className=" h-screen">
               <div className="relative">
-                
+
                 <Parallax speed={5}>
                   <div className="absolute w-full">
                     <Image width={2200} height={800} src={thongRed} alt={""} />
                   </div>
                 </Parallax>
                 <div className="flex justify-center">
-                  <div className="absolute top-10 flex">
+                  <div className="absolute top-10 flex w-[400px]">
                     <Image width={400} height={300} src={thaiStreet} alt={""} />
                   </div>
                   <div className="absolute w-[440px] right-[390px] top-[50px]">
                     <Image width={500} height={30} src={thisIsSoYum} alt={""} />
                   </div>
                   <Parallax speed={-10}>
-                  <div className="absolute w-[150px] -left-[440px]">
-                    <Image width={500} height={800} src={pick} alt={""} />
-                  </div>
-                </Parallax>
-                
+                    <div className="absolute w-[150px] -left-[440px]">
+                      <Image width={500} height={800} src={pick} alt={""} />
+                    </div>
+                  </Parallax>
+
                 </div>
 
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="absolute  w-full top-[300px]"
+                <div className="absolute  w-full top-[300px]">
+                  <Slider
+                    {...settings}
+                    className="flex items-center justify-center "
                   >
-                    <Slider
-                      {...settings}
-                      className="flex items-center justify-center "
-                    >
-                      {smallPlate.map((item, idx) => (
-                        <div className="  w-[50px]">
-                          <Image
-                            key={idx}
-                            src={item.src}
-                            alt={item.alt}
-                            className="hover:scale-[1.03] transition-all object-contain"
-                          />
-                        </div>
-                      ))}
-                    </Slider>
-                  </motion.div>
-                </AnimatePresence>
-                
+                    {smallPlate.map((item, idx) => (
+                      <div className="h-full outline-none cursor-grab">
+                        <Image
+                          key={idx}
+                          src={item.src}
+                          alt={item.alt}
+                          className="hover:scale-[1.03] transition-all object-contain"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+
               </div>
             </div>
+            {/* thai street */}
+
+            {/* footer */}
             <Image className="w-full" src={footer} alt={""}></Image>
+            {/* footer */}
           </div>
-        </ParallaxProvider>
-      )}
+        </ParallaxProvider >
+      )
+      }
     </>
   );
 }
