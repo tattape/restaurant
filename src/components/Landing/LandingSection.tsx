@@ -39,6 +39,14 @@ import thongRed from "../../images/thong-red.png";
 import thisIsSoYum from "../../images/this-is-so-yum.png";
 import pick from "../../images/pick.png";
 import bitong from "../../images/bitong.png";
+import allTimeFavorite from "../../images/all-time-favorite.png";
+import horapa1 from "../../images/horapa1.png";
+import horapa2 from "../../images/horapa2.png";
+import thongPeple from "../../images/thong-peple.png";
+import giftCard from "../../images/gift-card.png";
+import thongTong from "../../images/thongtong.png";
+import heart from "../../images/heart.png";
+import women from "../../images/women.png";
 
 type Props = {};
 
@@ -400,7 +408,102 @@ function LandingSection({ }: Props) {
               </div>
             </div>
             {/* thai street */}
+{/* all time favorite */}
+<div className=" h-[800px]">
+              <div className="relative">
+                <div className="flex justify-center">
+                  <div className="absolute justify-center top-10 flex">
+                    <div className="absolute w-[670px] -left-[210px]">
+                      <Image
+                        width={800}
+                        height={100}
+                        src={allTimeFavorite}
+                        alt={""}
+                      />
+                    </div>
+                  </div>
+                  <Parallax speed={-10}>
+                    <div className="absolute w-[500px] left-[700px] right-[0px]  ">
+                      <Image width={600} height={200} src={horapa1} alt={""} />
+                    </div>
+                  </Parallax>
+                </div>
+                
 
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute  w-full top-[360px]"
+                  >
+                    <Slider
+                      {...settings}
+                      className="flex items-center justify-center "
+                    >
+                      {smallPlate.map((item, idx) => (
+                        <div className="  w-[50px]">
+                          <Image
+                            key={idx}
+                            src={item.src}
+                            alt={item.alt}
+                            className="hover:scale-[1.03] transition-all object-contain"
+                          />
+                        </div>
+                      ))}
+                    </Slider>
+                  </motion.div>
+                </AnimatePresence>
+                <Parallax speed={-5}>
+                  <div className="absolute w-[400px] -left-[210px] top-[260px] border-none  object-contain">
+                    <Image width={600} height={200} src={horapa2} alt={""} />
+                  </div>
+                </Parallax>
+              </div>
+            </div>
+            {/* all time favorite */}
+            {/* gift card */}
+            <div className=" h-[800px]">
+              <div className="relative">
+                <Parallax speed={5}>
+                  <div className="absolute w-full">
+                    <Image
+                      width={2200}
+                      height={800}
+                      src={thongPeple}
+                      alt={""}
+                    />
+                  </div>
+                </Parallax>
+                <div className=" flex justify-center">
+                <div className="absolute rounded-full bg-[#9f00a3] border w-[500px] h-[500px] border-none opacity-70 top-[180px] right-[400px]"></div>
+                  <div className="absolute top-[320px] right-[0px] left-[700px] w-[400px] h-[200px] ">
+                    <Image width={600} height={100} src={giftCard} alt={""} />
+                  </div>
+                  <Parallax speed={-10}>
+                    <div className="absolute h-[400px] w-[400px] left-[600px] top-[80px]">
+                      <Image width={500} height={800} src={women} alt={""} />
+                    </div>
+                  </Parallax>
+                  <div className="absolute w-[300px] h-[300px] right-[260px] top-[440px]">
+                    <Image width={500} height={30} src={heart} alt={""} />
+                  </div>
+                  <div className="absolute w-[300px] h-[300px] right-[470px] top-[300px] ">
+                    <Image width={500} height={30} src={thongTong} alt={""} />
+                  </div>
+                  <div className="absolute text-lg right-[740px] top-[570px]">
+                    <div className="text-white">Give your loved ones the gift of dining</div>
+                  </div>
+                  <div className="absolute text-lg right-[737px] top-[595px]">
+                    <div className="text-white">with Bai Tong gift card.</div>
+                  </div>
+                 
+                 
+                  
+                </div>
+              </div>
+            </div>
+            {/* gift card */}
+            
             {/* footer */}
             <Image className="w-full" src={footer} alt={""}></Image>
             {/* footer */}
