@@ -53,7 +53,7 @@ type Props = {};
 function LandingSection({ }: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
-  const [readyTong, setReadyTong] = useState(false);
+  const [NumOfDish, setNumOfDish] = useState(5);
 
   useEffect(() => {
     const preload = setInterval(() => {
@@ -69,10 +69,28 @@ function LandingSection({ }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 1025) {
+        setNumOfDish(3)
+      } else {
+        setNumOfDish(5)
+      }
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  });
+
   const settings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: NumOfDish,
     swipeToSlide: true,
     arrows: false,
     dots: false,
@@ -321,7 +339,7 @@ function LandingSection({ }: Props) {
             {/* heder */}
 
             {/* small plate */}
-            <div className="h-[800px] md:pt-[100px] lg:pt-0">
+            <div className="h-[800px] md:pt-[120px] lg:pt-0">
               <div className="relative">
                 <div className="flex justify-center">
                   <div className="absolute flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
@@ -364,7 +382,7 @@ function LandingSection({ }: Props) {
             {/* small plate */}
 
             {/* thai street */}
-            <div className=" h-[800px]">
+            <div className=" h-[800px] md:pt-[100px] lg:pt-0">
               <div className="relative">
                 <Parallax speed={5}>
                   <Parallax speed={-10}>
