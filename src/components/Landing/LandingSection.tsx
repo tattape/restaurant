@@ -78,6 +78,8 @@ function LandingSection({ }: Props) {
     dots: false,
     autoplay: true,
     autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: '0',
   };
 
   const smallPlate = [
@@ -345,7 +347,7 @@ function LandingSection({ }: Props) {
                           key={idx}
                           src={item.src}
                           alt={item.alt}
-                          className="hover:scale-[1.03] transition-all object-contain"
+                          className="p-3 hover:scale-[1.05] transition-all object-contain"
                         />
                       </div>
                     ))}
@@ -398,7 +400,7 @@ function LandingSection({ }: Props) {
                           key={idx}
                           src={item.src}
                           alt={item.alt}
-                          className="hover:scale-[1.03] transition-all object-contain"
+                          className="p-3 hover:scale-[1.05] transition-all object-contain"
                         />
                       </div>
                     ))}
@@ -408,8 +410,8 @@ function LandingSection({ }: Props) {
               </div>
             </div>
             {/* thai street */}
-{/* all time favorite */}
-<div className=" h-[800px]">
+            {/* all time favorite */}
+            <div className=" h-[800px]">
               <div className="relative">
                 <div className="flex justify-center">
                   <div className="absolute justify-center top-10 flex">
@@ -428,31 +430,27 @@ function LandingSection({ }: Props) {
                     </div>
                   </Parallax>
                 </div>
-                
 
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="absolute  w-full top-[360px]"
+                <div className="absolute w-full top-[360px]">
+                  <Slider
+                    {...settings}
+                    className="flex items-center justify-center"
                   >
-                    <Slider
-                      {...settings}
-                      className="flex items-center justify-center "
-                    >
-                      {smallPlate.map((item, idx) => (
-                        <div className="  w-[50px]">
-                          <Image
-                            key={idx}
-                            src={item.src}
-                            alt={item.alt}
-                            className="hover:scale-[1.03] transition-all object-contain"
-                          />
-                        </div>
-                      ))}
-                    </Slider>
-                  </motion.div>
-                </AnimatePresence>
+                    {smallPlate.map((item, idx) => (
+                      <div className="outline-none cursor-grab">
+                        <Image
+                          width={500}
+                          height={500}
+                          key={idx}
+                          src={item.src}
+                          alt={item.alt}
+                          className="p-3 hover:scale-[1.05] transition-all object-contain"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+
                 <Parallax speed={-5}>
                   <div className="absolute w-[400px] -left-[210px] top-[260px] border-none  object-contain">
                     <Image width={600} height={200} src={horapa2} alt={""} />
@@ -475,7 +473,7 @@ function LandingSection({ }: Props) {
                   </div>
                 </Parallax>
                 <div className=" flex justify-center">
-                <div className="absolute rounded-full bg-[#9f00a3] border w-[500px] h-[500px] border-none opacity-70 top-[180px] right-[400px]"></div>
+                  <div className="absolute rounded-full bg-[#9f00a3] border w-[500px] h-[500px] border-none opacity-70 top-[180px] right-[400px]"></div>
                   <div className="absolute top-[320px] right-[0px] left-[700px] w-[400px] h-[200px] ">
                     <Image width={600} height={100} src={giftCard} alt={""} />
                   </div>
@@ -496,14 +494,14 @@ function LandingSection({ }: Props) {
                   <div className="absolute text-lg right-[737px] top-[595px]">
                     <div className="text-white">with Bai Tong gift card.</div>
                   </div>
-                 
-                 
-                  
+
+
+
                 </div>
               </div>
             </div>
             {/* gift card */}
-            
+
             {/* footer */}
             <Image className="w-full" src={footer} alt={""}></Image>
             {/* footer */}
