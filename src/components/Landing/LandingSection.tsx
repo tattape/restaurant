@@ -47,10 +47,11 @@ import giftCard from "../../images/gift-card.png";
 import thongTong from "../../images/thongtong.png";
 import heart from "../../images/heart.png";
 import women from "../../images/women.png";
+import photo from "../../images/photo.png";
 
 type Props = {};
 
-function LandingSection({ }: Props) {
+function LandingSection({}: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [NumOfDish, setNumOfDish] = useState(5);
@@ -73,17 +74,17 @@ function LandingSection({ }: Props) {
     const checkScreenSize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 1025) {
-        setNumOfDish(3)
+        setNumOfDish(3);
       } else {
-        setNumOfDish(5)
+        setNumOfDish(5);
       }
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
     return () => {
-      window.removeEventListener('resize', checkScreenSize);
+      window.removeEventListener("resize", checkScreenSize);
     };
   });
 
@@ -97,7 +98,7 @@ function LandingSection({ }: Props) {
     autoplay: true,
     autoplaySpeed: 2000,
     centerMode: true,
-    centerPadding: '0',
+    centerPadding: "0",
   };
 
   const smallPlate = [
@@ -337,7 +338,6 @@ function LandingSection({ }: Props) {
               </Parallax>
             </div>
             {/* heder */}
-
             {/* small plate */}
             <div className="h-[800px] md:pt-[120px] lg:pt-0">
               <div className="relative">
@@ -376,18 +376,22 @@ function LandingSection({ }: Props) {
                     <Image width={600} height={600} src={handblack} alt={""} />
                   </div>
                 </Parallax>
-
               </div>
             </div>
             {/* small plate */}
-
             {/* thai street */}
             <div className=" h-[800px] md:pt-[100px] lg:pt-0">
               <div className="relative">
                 <Parallax speed={5}>
                   <Parallax speed={-10}>
                     <div className="absolute w-full">
-                      <Image className="w-full" width={2200} height={800} src={thongRed} alt={""} />
+                      <Image
+                        className="w-full"
+                        width={2200}
+                        height={800}
+                        src={thongRed}
+                        alt={""}
+                      />
                     </div>
                   </Parallax>
                 </Parallax>
@@ -424,9 +428,8 @@ function LandingSection({ }: Props) {
                     ))}
                   </Slider>
                 </div>
-
               </div>
-            </div>
+            </div>{" "}
             {/* thai street */}
             {/* all time favorite */}
             <div className=" h-[800px]">
@@ -442,12 +445,12 @@ function LandingSection({ }: Props) {
                       />
                     </div>
                   </div>
-                  <Parallax speed={-10}>
-                    <div className="absolute w-[500px] left-[700px] right-[0px]  ">
-                      <Image width={600} height={200} src={horapa1} alt={""} />
-                    </div>
-                  </Parallax>
                 </div>
+                <Parallax translateX={[0, 0]}>
+                  <div className="absolute md:top-[150px] -right-[170px] lg:top-[220px] md:w-[200px] lg:w-[350px] ">
+                    <Image width={600} height={600} src={horapa1} alt={""} />
+                  </div>
+                </Parallax>
 
                 <div className="absolute w-full top-[360px]">
                   <Slider
@@ -478,12 +481,12 @@ function LandingSection({ }: Props) {
             </div>
             {/* all time favorite */}
             {/* gift card */}
-            <div className=" h-[800px]">
+            <div className=" h-[1500px]">
               <div className="relative">
                 <Parallax speed={5}>
                   <div className="absolute w-full">
                     <Image
-                      width={2200}
+                      width={1400}
                       height={800}
                       src={thongPeple}
                       alt={""}
@@ -491,42 +494,65 @@ function LandingSection({ }: Props) {
                   </div>
                 </Parallax>
                 <div className=" flex justify-center">
-                  <div className="absolute rounded-full bg-[#9f00a3] border w-[500px] h-[500px] border-none opacity-70 top-[180px] right-[400px]"></div>
-                  <div className="absolute top-[320px] right-[0px] left-[700px] w-[400px] h-[200px] ">
+                  <div className="">
+                    <div className="absolute rounded-full bg-[#9f00a3] opacity-70 top-[120px] left-[640px] border-none w-[450px] h-[450px]"></div>
+                  </div>
+                  <div className="absolute top-[220px] right-[0px] left-[425px] w-[300px] h-[200px] ">
                     <Image width={600} height={100} src={giftCard} alt={""} />
                   </div>
                   <Parallax speed={-10}>
-                    <div className="absolute h-[400px] w-[400px] left-[600px] top-[80px]">
+                    <div className="absolute h-[300px] w-[300px] left-[140px] top-[5px]">
                       <Image width={500} height={800} src={women} alt={""} />
                     </div>
                   </Parallax>
-                  <div className="absolute w-[300px] h-[300px] right-[260px] top-[440px]">
+                  <div className="absolute w-[200px] h-[200px] right-[750px] top-[280px]">
                     <Image width={500} height={30} src={heart} alt={""} />
                   </div>
-                  <div className="absolute w-[300px] h-[300px] right-[470px] top-[300px] ">
+                  <div className="absolute w-[250px] h-[250px] left-[740px] top-[190px] ">
                     <Image width={500} height={30} src={thongTong} alt={""} />
                   </div>
-                  <div className="absolute text-lg right-[740px] top-[570px]">
-                    <div className="text-white">Give your loved ones the gift of dining</div>
+                  <div className="absolute text-lg left-[460px] top-[420px]">
+                    <div className="text-white">
+                      Give your loved ones the gift of dining
+                    </div>
                   </div>
-                  <div className="absolute text-lg right-[737px] top-[595px]">
+                  <div className="absolute text-lg left-[580px] top-[450px]">
                     <div className="text-white">with Bai Tong gift card.</div>
                   </div>
-
-
-
+                  <div className="absolute top-[580px]">
+                    <Image height={700} width={700} src={photo} alt={""} />
+                  </div>
+                  <div className="absolute text-3xl left-[630px] top-[850px] text-[#ffe200]">
+                    <div className="">Looking for</div>
+                    <div className="">catering ser vice</div>
+                    <div className="">for</div>
+                    <div className="">your upcoming event?</div>
+                  </div>
+                  <div className="absolute text-lg left-[630px] top-[1030px] text-[#ffe200]">
+                    <div className="">We offer an extensive menu</div>
+                    <div className="">selection and can accommodate</div>
+                    <div className="">most dietary needs.Menu</div>
+                    <div className="">planning including bar service,</div>
+                    <div className="">floral and table decoration as</div>
+                    <div className="">well as rental needs can all be</div>
+                    <div className="">handled by our team, leaving</div>
+                    <div className="">you time to relax.</div>
+                  </div>
+                  <div className="absolute text-lg left-[630px] top-[1270px] text-[#ffe200]">
+                    <div className="">For more information,</div>
+                    <div className="">please email us at :</div>
+                    <div className="">catering@baitongfamily.com</div>
+                  </div>
                 </div>
               </div>
             </div>
             {/* gift card */}
-
             {/* footer */}
             <Image className="w-full" src={footer} alt={""}></Image>
             {/* footer */}
           </div>
-        </ParallaxProvider >
-      )
-      }
+        </ParallaxProvider>
+      )}
     </>
   );
 }
