@@ -175,20 +175,21 @@ function LandingSection({ }: Props) {
                       <Image src={tong3} alt={""}></Image>
                     </motion.div>
                   </Parallax>
-                  <AnimatePresence>
+
+                  <Parallax speed={-20} rotate={[-50, 20]}>
                     <motion.div
-                      initial={{ opacity: 0, translateX: -50 }}
-                      animate={{ opacity: 1, translateX: 0 }}
+                      initial={{ rotate: -20, opacity: 0, translateX: -100 }}
+                      animate={{ rotate: 0, opacity: 1, translateX: 0 }}
                       transition={{
                         stiffness: 130,
-                        delay: 0.52,
+                        delay: 0.4,
                       }}
+                      className="absolute top-[400px] right-[150px] w-[800px]"
                     >
-                      <div className="absolute top-[650px] -left-[40px]">
-                        <Image src={sai} alt={""} />
-                      </div>
+                      <Image width={1000} height={500} src={sai} alt={""} />
                     </motion.div>
-                  </AnimatePresence>
+                  </Parallax>
+
                   <Parallax speed={-10} rotate={[-10, 10]}>
                     <motion.div
                       initial={{ opacity: 0, translateX: -50 }}
@@ -197,7 +198,7 @@ function LandingSection({ }: Props) {
                         stiffness: 130,
                         delay: 0.52,
                       }}
-                      className="absolute -right-[220px] top-[530px] w-[400px]"
+                      className="absolute -right-[100px] md:-right-[220px] s:top-[150px] m:top-[200px] l:top-[220px] md:top-[530px] w-[200px] md:w-[400px]"
                     >
                       <Image width={600} height={200} src={oil} alt={""} />
                     </motion.div>
@@ -310,27 +311,29 @@ function LandingSection({ }: Props) {
             {/* heder */}
 
             {/* small plate */}
-            <div className=" h-screen  ">
+            <div className="h-[800px] md:pt-[100px] lg:pt-0">
               <div className="relative">
                 <div className="flex justify-center">
-                  <div className="absolute flex flex-col gap-6 items-center ">
+                  <div className="absolute flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
                     <Image src={menu} alt={""} />
                     <Image src={smallPlates} alt={""} />
                   </div>
                 </div>
-                <Parallax speed={-2}>
-                  <div className="absolute top-[700px] left-[350px] w-[300px]">
+                <Parallax speed={-10}>
+                  <div className="absolute md:top-[350px] lg:top-[500px] left-[250px] md:w-[250px] lg:w-[300px]">
                     <Image width={300} height={300} src={bitong} alt={""} />
                   </div>
                 </Parallax>
-                <div className="absolute w-full top-[500px]">
+                <div className="absolute w-full md:top-[300px] lg:top-[400px]">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
                   >
                     {smallPlate.map((item, idx) => (
-                      <div className="h-full outline-none cursor-grab">
+                      <div className="outline-none cursor-grab">
                         <Image
+                          width={500}
+                          height={500}
                           key={idx}
                           src={item.src}
                           alt={item.alt}
@@ -340,46 +343,50 @@ function LandingSection({ }: Props) {
                     ))}
                   </Slider>
                 </div>
-                <div className="absolute top-[280px] right-[0px]">
-                  <Image src={handblack} alt={""} />
-                </div>
+                <Parallax translateX={[50, 0]}>
+                  <div className="absolute md:top-[150px] lg:top-[220px] right-[0px] md:w-[200px] lg:w-[350px]">
+                    <Image width={600} height={600} src={handblack} alt={""} />
+                  </div>
+                </Parallax>
 
               </div>
             </div>
             {/* small plate */}
 
             {/* thai street */}
-            <div className=" h-screen">
+            <div className=" h-[800px]">
               <div className="relative">
-
                 <Parallax speed={5}>
-                  <div className="absolute w-full">
-                    <Image width={2200} height={800} src={thongRed} alt={""} />
-                  </div>
+                  <Parallax speed={-10}>
+                    <div className="absolute w-full">
+                      <Image className="w-full" width={2200} height={800} src={thongRed} alt={""} />
+                    </div>
+                  </Parallax>
                 </Parallax>
                 <div className="flex justify-center">
-                  <div className="absolute top-10 flex w-[400px]">
+                  <div className="absolute md:-top-5 2xl:top-10 flex md:w-[250px] xl:w-[400px]">
                     <Image width={400} height={300} src={thaiStreet} alt={""} />
                   </div>
-                  <div className="absolute w-[440px] right-[390px] top-[50px]">
+                  <div className="absolute md:right-[50px] lg:right-[180px] 2xl:right-[390px] md:-top-[10px] 2xl:top-[50px] md:w-[280px] xl:w-[440px]">
                     <Image width={500} height={30} src={thisIsSoYum} alt={""} />
                   </div>
-                  <Parallax speed={-10}>
-                    <div className="absolute w-[150px] -left-[440px]">
+                  <Parallax speed={-5}>
+                    <div className="absolute w-[100px] xl:w-[150px] -left-[300px] xl:-left-[440px] -top-[70px] xl:-top-[60px]">
                       <Image width={500} height={800} src={pick} alt={""} />
                     </div>
                   </Parallax>
-
                 </div>
 
-                <div className="absolute  w-full top-[300px]">
+                <div className="absolute w-full md:top-[150px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
                   <Slider
                     {...settings}
-                    className="flex items-center justify-center "
+                    className="flex items-center justify-center"
                   >
                     {smallPlate.map((item, idx) => (
-                      <div className="h-full outline-none cursor-grab">
+                      <div className="outline-none cursor-grab">
                         <Image
+                          width={500}
+                          height={500}
                           key={idx}
                           src={item.src}
                           alt={item.alt}
