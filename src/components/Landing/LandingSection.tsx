@@ -556,52 +556,52 @@ function LandingSection({}: Props) {
                   </div>
                 </Parallax>
 
-                <Parallax className="absolute top-[670px] left-[400px] w-[70px]">
-                  <div>
+                <Parallax translateX={[100,0]}>
+                  <div className="absolute top-[671px] left-[400px] w-[70px]">
                     <Image width={300} height={300} src={fontC} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[-30,0]}>
                   <div className="absolute top-[640px] left-[460px] w-[100px]">
                     <Image width={300} height={300} src={fontA} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[100,0]}>
                   <div className="absolute top-[640px] left-[570px] w-[120px]">
                     <Image width={300} height={300} src={fontR} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[-30,0]}>
                   <div className="absolute top-[670px] left-[720px] w-[40px]">
                     <Image width={300} height={300} src={fontT} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[100,0]}>
                   <div className="absolute top-[705px] left-[755px] w-[40px]">
                     <Image width={300} height={300} src={fontE} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[-30,0]}>
                   <div className="absolute top-[645px] right-[965px] w-[110px]">
                     <Image width={300} height={300} src={fontRingR} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[100,0]}>
                   <div className="absolute top-[592px] right-[900px] w-[50px]">
                     <Image width={300} height={300} src={fontI} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[100,0]}>
                   <div className="absolute top-[560px] right-[870px] w-[70px]">
                     <Image width={300} height={300} src={flower} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[-30,0]}>
                   <div className="absolute top-[645px] right-[810px] w-[85px]">
                     <Image width={300} height={300} src={fontN} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax>
+                <Parallax translateX={[100,0]}>
                   <div className="absolute top-[645px] right-[730px] w-[85px]">
                     <Image width={300} height={300} src={fontG} alt={""} />
                   </div>
