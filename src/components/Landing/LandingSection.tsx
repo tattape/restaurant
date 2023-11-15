@@ -68,13 +68,33 @@ import flower from "../../images/flower.png";
 import cropPhoto from "../../images/crop-photo.png";
 import date from "../../images/date.png";
 import arch from "../../images/arch.png";
+import ButtonLanding from "./ButtonLanding";
 
 type Props = {};
 
-function LandingSection({}: Props) {
+function LandingSection({ }: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [NumOfDish, setNumOfDish] = useState(5);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    let timer: any;
+    const handleScroll = () => {
+      setIsScrolling(true);
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        setIsScrolling(false);
+      }, 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const preload = setInterval(() => {
@@ -170,6 +190,7 @@ function LandingSection({}: Props) {
         <LoadingScreen Loading={Loading} />
       ) : (
         <ParallaxProvider>
+          <ButtonLanding scroll={isScrolling} />
           <div className="overflow-x-hidden">
             {/* heder */}
             <div className="h-screen">
@@ -336,24 +357,6 @@ function LandingSection({}: Props) {
                       </motion.div>
                     </AnimatePresence>
                   </Parallax>
-                  {/* <div className="absolute flex justify-start left-52">
-                    <Image src={tugTug} alt={""} />
-                  </div>
-                  <div className="absolute  right-[360px] top-[120px]">
-                    <Image src={tung} alt={""} />
-                  </div>
-                  <div className="absolute left-[240px] top-[430px]">
-                    <Image src={nangrum} alt={""} />
-                  </div>
-                  <div className="absolute  left-[240px] top-12 w-[140px] h-[90px]">
-                    <Image src={delivery} alt={""} />
-                  </div>
-                  <div className="absolute  right-[370px] top-[180px] w-[140px] h-[90px]">
-                    <Image src={pickup} alt={""} />
-                  </div>
-                  <div className="absolute  left-[260px] top-[580px] w-[180px] h-[80px]">
-                    <Image src={reservation} alt={""} />
-                  </div> */}
                 </div>
               </Parallax>
             </div>
@@ -556,52 +559,52 @@ function LandingSection({}: Props) {
                   </div>
                 </Parallax>
 
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[671px] left-[400px] w-[70px]">
                     <Image width={300} height={300} src={fontC} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[-30,0]}>
+                <Parallax translateX={[-30, 0]}>
                   <div className="absolute top-[640px] left-[460px] w-[100px]">
                     <Image width={300} height={300} src={fontA} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[640px] left-[570px] w-[120px]">
                     <Image width={300} height={300} src={fontR} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[-30,0]}>
+                <Parallax translateX={[-30, 0]}>
                   <div className="absolute top-[670px] left-[720px] w-[40px]">
                     <Image width={300} height={300} src={fontT} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[705px] left-[755px] w-[40px]">
                     <Image width={300} height={300} src={fontE} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[-30,0]}>
+                <Parallax translateX={[-30, 0]}>
                   <div className="absolute top-[645px] right-[965px] w-[110px]">
                     <Image width={300} height={300} src={fontRingR} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[592px] right-[900px] w-[50px]">
                     <Image width={300} height={300} src={fontI} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[560px] right-[870px] w-[70px]">
                     <Image width={300} height={300} src={flower} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[-30,0]}>
+                <Parallax translateX={[-30, 0]}>
                   <div className="absolute top-[645px] right-[810px] w-[85px]">
                     <Image width={300} height={300} src={fontN} alt={""} />
                   </div>
                 </Parallax>
-                <Parallax translateX={[100,0]}>
+                <Parallax translateX={[100, 0]}>
                   <div className="absolute top-[645px] right-[730px] w-[85px]">
                     <Image width={300} height={300} src={fontG} alt={""} />
                   </div>
