@@ -42,12 +42,32 @@ import bitong from "../../images/bitong.png";
 import allTimeFavorite from "../../images/all-time-favorite.png";
 import horapa1 from "../../images/horapa1.png";
 import horapa2 from "../../images/horapa2.png";
-import thongPeple from "../../images/thong-peple.png";
+import giftCardBG from "../../images/giftCardBG.png";
 import giftCard from "../../images/gift-card.png";
 import thongTong from "../../images/thongtong.png";
 import heart from "../../images/heart.png";
 import women from "../../images/women.png";
-import photo from "../../images/photo.png";
+import fontC from "../../images/image-font-c.png";
+import fontA from "../../images/image-font-A.png";
+import fontR from "../../images/image-font-R.png";
+import fontT from "../../images/image-font-t.png";
+import fontE from "../../images/image-font-e.png";
+import fontRingR from "../../images/image-font-R-head-ring.png";
+import fontI from "../../images/image-font-i.png";
+import fontN from "../../images/image-font-n.png";
+import fontG from "../../images/image-font-g.png";
+import fontW from "../../images/image-font-W.png";
+import fontWedE from "../../images/image-font-E-wed.png";
+import fontD from "../../images/image-font-D.png";
+import fontDingD from "../../images/image-font-D-ding.png";
+import fontDingI from "../../images/image-font-I-ding.png";
+import fontDingN from "../../images/image-font-N-ding.png";
+import fontDingG from "../../images/image-font-G-ding.png";
+import camera from "../../images/camera.png";
+import flower from "../../images/flower.png";
+import cropPhoto from "../../images/crop-photo.png";
+import date from "../../images/date.png";
+import arch from "../../images/arch.png";
 
 type Props = {};
 
@@ -483,66 +503,211 @@ function LandingSection({}: Props) {
             {/* gift card */}
             <div className=" h-[1500px]">
               <div className="relative">
-                <Parallax speed={5}>
+                <Parallax speed={5} translateX={[0, -10]}>
                   <div className="absolute w-full">
                     <Image
                       width={1400}
                       height={800}
-                      src={thongPeple}
+                      src={giftCardBG}
                       alt={""}
                     />
                   </div>
                 </Parallax>
-                <div className=" flex justify-center">
+                <Parallax translateX={[0, -40]}>
                   <div className="">
-                    <div className="absolute rounded-full bg-[#9f00a3] opacity-70 top-[120px] left-[640px] border-none w-[450px] h-[450px]"></div>
+                    <div className="absolute rounded-full bg-[#9f00a3] opacity-70 top-[50px] right-[240px] border-none w-[380px] h-[380px]"></div>
                   </div>
-                  <div className="absolute top-[220px] right-[0px] left-[425px] w-[300px] h-[200px] ">
+                </Parallax>
+                <Parallax translateX={[-40, 0]}>
+                  <div className="absolute top-[120px] right-[0px] left-[380px] w-[300px] h-[200px] ">
                     <Image width={600} height={100} src={giftCard} alt={""} />
                   </div>
-                  <Parallax speed={-10}>
-                    <div className="absolute h-[300px] w-[300px] left-[140px] top-[5px]">
-                      <Image width={500} height={800} src={women} alt={""} />
-                    </div>
-                  </Parallax>
-                  <div className="absolute w-[200px] h-[200px] right-[750px] top-[280px]">
+                </Parallax>
+                <Parallax speed={-10}>
+                  <div className="absolute h-[240px] w-[240px] left-[960px] -top-[40px]">
+                    <Image width={500} height={800} src={women} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax translateY={[-20, 0]}>
+                  <div className="absolute w-[160px] h-[160px] left-[860px] top-[215px]">
                     <Image width={500} height={30} src={heart} alt={""} />
                   </div>
-                  <div className="absolute w-[250px] h-[250px] left-[740px] top-[190px] ">
+                </Parallax>
+                <Parallax translateX={[0, 10]}>
+                  <div className="absolute w-[240px] h-[240px] left-[480px] top-[100px] ">
                     <Image width={500} height={30} src={thongTong} alt={""} />
                   </div>
-                  <div className="absolute text-lg left-[460px] top-[420px]">
+                </Parallax>
+                <Parallax translateX={[0, 10]}>
+                  <div className="absolute text-lg left-[220px] top-[320px]">
                     <div className="text-white">
                       Give your loved ones the gift of dining
                     </div>
                   </div>
-                  <div className="absolute text-lg left-[580px] top-[450px]">
+                </Parallax>
+                <Parallax translateX={[10, 0]}>
+                  <div className="absolute text-lg left-[510px] top-[350px]">
                     <div className="text-white">with Bai Tong gift card.</div>
                   </div>
-                  <div className="absolute top-[580px]">
-                    <Image height={700} width={700} src={photo} alt={""} />
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[460px] left-[740px] w-[200px]">
+                    <Image width={300} height={300} src={camera} alt={""} />
                   </div>
-                  <div className="absolute text-3xl left-[630px] top-[850px] text-[#ffe200]">
+                </Parallax>
+
+                <Parallax className="absolute top-[670px] left-[400px] w-[70px]">
+                  <div>
+                    <Image width={300} height={300} src={fontC} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[640px] left-[460px] w-[100px]">
+                    <Image width={300} height={300} src={fontA} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[640px] left-[570px] w-[120px]">
+                    <Image width={300} height={300} src={fontR} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[670px] left-[720px] w-[40px]">
+                    <Image width={300} height={300} src={fontT} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[705px] left-[755px] w-[40px]">
+                    <Image width={300} height={300} src={fontE} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[645px] right-[965px] w-[110px]">
+                    <Image width={300} height={300} src={fontRingR} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[592px] right-[900px] w-[50px]">
+                    <Image width={300} height={300} src={fontI} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[560px] right-[870px] w-[70px]">
+                    <Image width={300} height={300} src={flower} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[645px] right-[810px] w-[85px]">
+                    <Image width={300} height={300} src={fontN} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[645px] right-[730px] w-[85px]">
+                    <Image width={300} height={300} src={fontG} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[750px] left-[670px] w-[160px]">
+                    <Image width={300} height={300} src={fontW} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[750px] left-[820px] w-[90px]">
+                    <Image width={300} height={300} src={fontWedE} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[750px] right-[870px] w-[105px]">
+                    <Image width={300} height={300} src={fontD} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[880px] left-[680px] w-[105px]">
+                    <Image width={300} height={300} src={fontDingD} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[880px] left-[790px] w-[49px]">
+                    <Image width={300} height={300} src={fontDingI} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[880px] right-[950px] w-[100px]">
+                    <Image width={300} height={300} src={fontDingN} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[880px] right-[850px] w-[100px]">
+                    <Image width={300} height={300} src={fontDingG} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[1060px] right-[800px] w-[400px]">
+                    <Image width={300} height={300} src={arch} alt={""} />
+                  </div>
+                </Parallax>
+                <Parallax>
+                  <div className="absolute top-[990px] right-[800px] w-[300px]">
+                    <Image width={300} height={300} src={cropPhoto} alt={""} />
+                  </div>
+                </Parallax>
+                <ParallaxProvider>
+                  <Parallax rotate={[0, 180]}>
+                    <div className="absolute top-[1370px] right-[820px] w-[140px] border">
+                      <Image width={300} height={300} src={date} alt={""} />
+                    </div>
+                  </Parallax>
+                </ParallaxProvider>
+                <div className="absolute text-3xl left-[440px] top-[800px] text-[#ffe200]">
+                  <Parallax>
                     <div className="">Looking for</div>
-                    <div className="">catering ser vice</div>
+                  </Parallax>
+                  <Parallax>
+                    <div className="">catering service</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">for</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">your upcoming event?</div>
-                  </div>
-                  <div className="absolute text-lg left-[630px] top-[1030px] text-[#ffe200]">
+                  </Parallax>
+                </div>
+                <div className="absolute text-lg left-[440px] top-[1000px] text-[#ffe200]">
+                  <Parallax>
                     <div className="">We offer an extensive menu</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">selection and can accommodate</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">most dietary needs.Menu</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">planning including bar service,</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">floral and table decoration as</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">well as rental needs can all be</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">handled by our team, leaving</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">you time to relax.</div>
-                  </div>
-                  <div className="absolute text-lg left-[630px] top-[1270px] text-[#ffe200]">
+                  </Parallax>
+                </div>
+                <div className="absolute text-lg left-[440px] top-[1250px] text-[#ffe200]">
+                  <Parallax>
                     <div className="">For more information,</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">please email us at :</div>
+                  </Parallax>
+                  <Parallax>
                     <div className="">catering@baitongfamily.com</div>
-                  </div>
+                  </Parallax>
                 </div>
               </div>
             </div>
