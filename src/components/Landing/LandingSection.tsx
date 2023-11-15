@@ -72,7 +72,7 @@ import ButtonLanding from "./ButtonLanding";
 
 type Props = {};
 
-function LandingSection({ }: Props) {
+function LandingSection({}: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [NumOfDish, setNumOfDish] = useState(5);
@@ -88,10 +88,10 @@ function LandingSection({ }: Props) {
       }, 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       clearTimeout(timer);
     };
   }, []);
@@ -190,7 +190,7 @@ function LandingSection({ }: Props) {
         <LoadingScreen Loading={Loading} />
       ) : (
         <ParallaxProvider>
-          <ButtonLanding scroll={isScrolling} />
+          {/* <ButtonLanding scroll={isScrolling} /> */}
           <div className="overflow-x-hidden">
             {/* heder */}
             <div className="h-screen">
@@ -362,20 +362,20 @@ function LandingSection({ }: Props) {
             </div>
             {/* heder */}
             {/* small plate */}
-            <div className="h-[800px] md:pt-[120px] lg:pt-0">
+            <div className=" md:pt-[120px] lg:pt-0 my-[120px]">
               <div className="relative">
                 <div className="flex justify-center">
-                  <div className="absolute flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
+                  <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
                     <Image src={menu} alt={""} />
                     <Image src={smallPlates} alt={""} />
                   </div>
                 </div>
-                <Parallax speed={-10}>
-                  <div className="absolute md:top-[350px] lg:top-[500px] left-[250px] md:w-[250px] lg:w-[300px]">
-                    <Image width={300} height={300} src={bitong} alt={""} />
+                <Parallax translateX={[10, 0]} translateY={[0, 0]} speed={10}>
+                  <div className="absolute -top-[180px] right-[0px] md:w-[200px] lg:w-[350px] ">
+                    <Image width={600} height={600} src={handblack} alt={""} />
                   </div>
                 </Parallax>
-                <div className="absolute w-full md:top-[300px] lg:top-[400px]">
+                <div className=" w-full md:top-[300px] lg:top-[400px]">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
@@ -394,29 +394,32 @@ function LandingSection({ }: Props) {
                     ))}
                   </Slider>
                 </div>
-                <Parallax translateX={[50, 0]}>
-                  <div className="absolute md:top-[150px] lg:top-[220px] right-[0px] md:w-[200px] lg:w-[350px]">
-                    <Image width={600} height={600} src={handblack} alt={""} />
+                <Parallax speed={-10}>
+                  <div className="absolute -top-[50px] left-[435px] md:w-[250px] lg:w-[300px]">
+                    <Image width={300} height={300} src={bitong} alt={""} />
                   </div>
                 </Parallax>
               </div>
             </div>
             {/* small plate */}
             {/* thai street */}
-            <div className=" h-[800px] md:pt-[100px] lg:pt-0">
+            <div className="md:pt-[100px] lg:pt-0 my-[120px]">
               <div className="relative">
-                <Parallax speed={5}>
-                  <Parallax speed={-10}>
-                    <div className="absolute w-full">
-                      <Image
-                        className="w-full"
-                        width={2200}
-                        height={800}
-                        src={thongRed}
-                        alt={""}
-                      />
-                    </div>
-                  </Parallax>
+                <Parallax speed={-10}>
+                  <div className="w-full z-0">
+                    <Image
+                      className="w-full"
+                      width={2200}
+                      height={800}
+                      src={thongRed}
+                      alt={""}
+                    />
+                  </div>
+                </Parallax>
+                <Parallax speed={-2}>
+                  <div className="absolute w-[100px] xl:w-[150px] -top-[925px] left-[520px] z-[999]">
+                    <Image width={500} height={800} src={pick} alt={""} />
+                  </div>
                 </Parallax>
                 <div className="flex justify-center">
                   <div className="absolute md:-top-5 2xl:top-10 flex md:w-[250px] xl:w-[400px]">
@@ -425,11 +428,6 @@ function LandingSection({ }: Props) {
                   <div className="absolute md:right-[50px] lg:right-[180px] 2xl:right-[390px] md:-top-[10px] 2xl:top-[50px] md:w-[280px] xl:w-[440px]">
                     <Image width={500} height={30} src={thisIsSoYum} alt={""} />
                   </div>
-                  <Parallax speed={-5}>
-                    <div className="absolute w-[100px] xl:w-[150px] -left-[300px] xl:-left-[440px] -top-[70px] xl:-top-[60px]">
-                      <Image width={500} height={800} src={pick} alt={""} />
-                    </div>
-                  </Parallax>
                 </div>
 
                 <div className="absolute w-full md:top-[150px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
@@ -452,14 +450,14 @@ function LandingSection({ }: Props) {
                   </Slider>
                 </div>
               </div>
-            </div>{" "}
+            </div>
             {/* thai street */}
             {/* all time favorite */}
-            <div className=" h-[800px]">
+            <div className="my-[120px]">
               <div className="relative">
-                <div className="flex justify-center">
-                  <div className="absolute justify-center top-10 flex">
-                    <div className="absolute w-[670px] -left-[210px]">
+                <Parallax speed={10}>
+                  <div className="flex justify-center">
+                    <div className="w-[670px]">
                       <Image
                         width={800}
                         height={100}
@@ -468,14 +466,13 @@ function LandingSection({ }: Props) {
                       />
                     </div>
                   </div>
-                </div>
+                </Parallax>
                 <Parallax translateX={[0, 0]}>
-                  <div className="absolute md:top-[150px] -right-[170px] lg:top-[220px] md:w-[200px] lg:w-[350px] ">
+                  <div className="absolute md:w-[200px] lg:w-[350px] -right-[150px] -top-[110px]">
                     <Image width={600} height={600} src={horapa1} alt={""} />
                   </div>
                 </Parallax>
-
-                <div className="absolute w-full top-[360px]">
+                <div className="w-full">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
@@ -494,17 +491,16 @@ function LandingSection({ }: Props) {
                     ))}
                   </Slider>
                 </div>
-
                 <Parallax speed={-5}>
-                  <div className="absolute w-[400px] -left-[210px] top-[260px] border-none  object-contain">
+                  <div className="absolute w-[400px] border-none object-contain -left-[180px] -top-[220px]">
                     <Image width={600} height={200} src={horapa2} alt={""} />
                   </div>
                 </Parallax>
               </div>
             </div>
             {/* all time favorite */}
-            {/* gift card && Car te Ring */}
-            <div className=" h-[1500px]">
+            <div className=" h-[1500px] my-[200px]">
+              {/* gift card */}
               <div className="relative">
                 <Parallax speed={5} translateX={[0, -10]}>
                   <div className="absolute w-full 2xl:left-[28px] xl:-left-[10px]">
@@ -553,7 +549,9 @@ function LandingSection({ }: Props) {
                     <div className="text-white">with Bai Tong gift card.</div>
                   </div>
                 </Parallax>
-                {/* Car te Ring */}
+              </div>
+              {/* Car te Ring */}
+              <div className="relative">
                 <Parallax>
                   <div className="absolute top-[460px] left-[740px] w-[200px]">
                     <Image width={300} height={300} src={camera} alt={""} />
