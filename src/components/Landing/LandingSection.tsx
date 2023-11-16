@@ -70,12 +70,21 @@ import date from "../../images/date.png";
 import arch from "../../images/arch.png";
 import ButtonLanding from "./ButtonLanding";
 
+//contact
+import facebook from "../../images/facebook-logo.png";
+import twitter from "../../images/twitter-logo.png";
+import whatapp from "../../images/whatsapp-logo.png";
+import instagram from "../../images/instagram-logo.png";
+import tel from "../../images/smartphone-logo.png";
+import email from "../../images/mail-logo.png";
+import message from "../../images/chat-logo.png";
+
 type Props = {};
 
 function LandingSection({}: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
-  const [NumOfDish, setNumOfDish] = useState(5);
+  const [NumOfDish, setNumOfDish] = useState(3);
   const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
@@ -116,7 +125,7 @@ function LandingSection({}: Props) {
       if (screenWidth < 1025) {
         setNumOfDish(3);
       } else {
-        setNumOfDish(5);
+        setNumOfDish(3);
       }
     };
 
@@ -181,6 +190,37 @@ function LandingSection({}: Props) {
     {
       src: sanvid,
       alt: "image1",
+    },
+  ];
+
+  const contact = [
+    {
+      alt: "facebook",
+      src: facebook,
+    },
+    {
+      alt: "x",
+      src: twitter,
+    },
+    {
+      alt: "whatapp",
+      src: whatapp,
+    },
+    {
+      alt: "instagram",
+      src: instagram,
+    },
+    {
+      alt: "tel",
+      src: tel,
+    },
+    {
+      alt: "email",
+      src: email,
+    },
+    {
+      alt: "message",
+      src: message,
     },
   ];
 
@@ -381,7 +421,7 @@ function LandingSection({}: Props) {
                     className="flex items-center justify-center"
                   >
                     {smallPlate.map((item, idx) => (
-                      <div className="outline-none cursor-grab">
+                      <div key={idx} className="outline-none cursor-grab">
                         <Image
                           width={500}
                           height={500}
@@ -429,14 +469,14 @@ function LandingSection({}: Props) {
                     <Image width={500} height={30} src={thisIsSoYum} alt={""} />
                   </div>
                 </div>
-
-                <div className="absolute w-full md:top-[150px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
+                {/* before md:top-[150px] after md:top-[100px] */}
+                <div className="absolute w-full md:top-[100px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
                   >
                     {smallPlate.map((item, idx) => (
-                      <div className="outline-none cursor-grab">
+                      <div key={idx} className="outline-none cursor-grab">
                         <Image
                           width={500}
                           height={500}
@@ -478,7 +518,7 @@ function LandingSection({}: Props) {
                     className="flex items-center justify-center"
                   >
                     {smallPlate.map((item, idx) => (
-                      <div className="outline-none cursor-grab">
+                      <div key={idx} className="outline-none cursor-grab">
                         <Image
                           width={500}
                           height={500}
@@ -712,7 +752,39 @@ function LandingSection({}: Props) {
             </div>
             {/* gift card */}
             {/* footer */}
-            <Image className="w-full" src={footer} alt={""}></Image>
+            <div className="relative flex  justify-center items-center">
+              <Image className="w-full" src={footer} alt={""} />
+              <div className="absolute grid grid-cols-7 gap-2 2xl:top-[300px] xl:top-[200px] lg:top-[130px]">
+                {contact.map((item, index) => (
+                  <div
+                    key={index}
+                    className="w-16 h-16 bg-white flex justify-center items-center"
+                  >
+                    <div className="w-10 h-10">
+                      <Image
+                        className="w-full"
+                        width={64}
+                        height={64}
+                        src={item.src}
+                        alt={item.alt}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="absolute bg-fuchsia-800 w-full 2xl:h-[330px] xl:h-[230px] lg:h-[180px] py-8 px-[140px] flex justify-center items-center bottom-0">
+                <div className="2xl:w-[600px] 2xl:h-[200px] xl:w-[400px] xl:h-[150px] lg:w-[300px] lg:h-[100px]">
+                  <Image
+                    src={Logo}
+                    width={600}
+                    height={200}
+                    alt="logo"
+                    unoptimized
+                  />
+                </div>
+              </div>
+            </div>
             {/* footer */}
           </div>
         </ParallaxProvider>
