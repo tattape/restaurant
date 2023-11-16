@@ -558,15 +558,15 @@ function LandingSection({}: Props) {
                   </div>
                 </Parallax>
                 <Parallax translateX={[50, -250]}>
-                  <div className="absolute rounded-full bg-[#9f00a3] opacity-70 2xl:top-[-650px] 2xl:right-[450px] xl:top-[50px] xl:-right-[90px] border-none w-[480px] h-[480px]"></div>
+                  <div className="absolute rounded-full bg-[#9f00a3] opacity-70 2xl:top-[-650px] 2xl:right-[450px] xl:top-[-480px] xl:right-[515px] border-none 2xl:w-[480px] 2xl:h-[480px] xl:w-[350px] xl:h-[350px]"></div>
                 </Parallax>
                 <Parallax translateX={[-50, 238]}>
-                  <div className="absolute 2xl:top-[-610px] 2xl:right-[0px] 2xl:left-[570px] xl:top-[120px] xl:right-[0px] xl:left-[360px] w-[500px] h-[200px] ">
+                  <div className="absolute 2xl:top-[-610px] 2xl:right-[0px] 2xl:left-[570px] xl:top-[-450px] xl:right-[0px] xl:left-[599px] 2xl:w-[500px] 2xl:h-[200px] xl:w-[350px] xl:h-[200px]">
                     <Image width={600} height={100} src={giftCard} alt={""} />
                   </div>
                 </Parallax>
                 <Parallax speed={-10}>
-                  <div className="absolute h-[260px] w-[260px] 2xl:left-[1450px] 2xl:-top-[520px] xl:left-[960px] xl:-top-[55px]">
+                  <div className="absolute h-[260px] w-[260px] 2xl:left-[1450px] 2xl:-top-[520px] xl:left-[1060px] xl:-top-[425px]">
                     <Image
                       width={500}
                       height={800}
@@ -577,25 +577,25 @@ function LandingSection({}: Props) {
                   </div>
                 </Parallax>
                 <Parallax translateY={[-20, 0]}>
-                  <div className="absolute w-[200px] h-[200px] 2xl:left-[1330px] 2xl:top-[-405px] xl:left-[860px] xl:top-[215px]">
+                  <div className="absolute 2xl:w-[200px] 2xl:h-[200px] xl:w-[150px] xl:h-[150px] 2xl:left-[1330px] 2xl:top-[-405px] xl:left-[985px] xl:top-[-320px]">
                     <Image width={500} height={30} src={heart} alt={""} />
                   </div>
                 </Parallax>
                 <Parallax translateX={[-85, 420]}>
-                  <div className="absolute w-[280px] h-[280px] 2xl:left-[1060px] 2xl:top-[-530px] xl:left-[535px] xl:top-[110px]">
+                  <div className="absolute 2xl:w-[280px] 2xl:h-[280px] xl:w-[200px] xl:h-[200px] 2xl:left-[1060px] 2xl:top-[-530px] xl:left-[1050px] xl:top-[-400px]">
                     <Image width={500} height={30} src={thongTong} alt={""} />
                   </div>
                 </Parallax>
                 <Parallax translateX={[0, 10]}>
-                  <div className="absolute 2xl:left-[650px] 2xl:top-[-280px] xl:left-[260px] xl:top-[325px]">
-                    <div className="text-white text-3xl">
+                  <div className="absolute 2xl:left-[650px] 2xl:top-[-280px] xl:left-[500px] xl:top-[-225px]">
+                    <div className="text-white 2xl:text-3xl xl:text-xl">
                       Give your loved ones the gift of dining
                     </div>
                   </div>
                 </Parallax>
                 <Parallax translateX={[10, 0]}>
-                  <div className="absolute 2xl:left-[730px] 2xl:top-[-245px] xl:left-[530px] xl:top-[355px]">
-                    <p className="text-white text-3xl">
+                  <div className="absolute 2xl:left-[730px] 2xl:top-[-245px] xl:left-[530px] xl:top-[-199px]">
+                    <p className="text-white 2xl:text-3xl xl:text-xl">
                       with Bai Tong gift card.
                     </p>
                   </div>
@@ -675,7 +675,7 @@ function LandingSection({}: Props) {
                 </div>
 
                 {/* WEDRING */}
-                <div className="absolute top-[295px] left-[810px] flex flex-col gap-6">
+                <div className="absolute top-[295px] 2xl:left-[810px] xl:left-[610px] flex flex-col gap-6">
                   {/* WED */}
                   <div className="flex flex-row gap-[2px]">
                     <Parallax>
@@ -745,21 +745,21 @@ function LandingSection({}: Props) {
                 </div>
 
                 <Parallax>
-                  <div className="absolute 2xl:top-[570px] 2xl:right-[-10px] xl:top-[1030px] xl:right-[280px] w-[500px]">
+                  <div className="absolute 2xl:top-[570px] 2xl:right-[-10px] xl:top-[570px] xl:right-[-10px] 2xl:w-[500px] xl:w-[450px]">
                     <Image width={450} height={450} src={arch} alt={""} />
                   </div>
                 </Parallax>
                 <Parallax>
-                  <div className="absolute 2xl:top-[528px] 2xl:right-[90px] xl:top-[980px] xl:right-[300px] w-[300px]">
+                  <div className="absolute 2xl:top-[528px] 2xl:right-[90px] xl:top-[528px] xl:right-[30px] w-[300px]">
                     <Image width={350} height={350} src={cropPhoto} alt={""} />
                   </div>
                 </Parallax>
                 <Parallax>
-                  <div className="absolute 2xl:top-[820px] 2xl:right-[120px] xl:top-[1215px] xl:right-[350px] w-[140px]">
+                  <div className="absolute 2xl:top-[820px] 2xl:right-[120px] xl:top-[820px] xl:right-[40px] w-[140px]">
                     <Image width={300} height={300} src={date} alt={""} />
                   </div>
                 </Parallax>
-                <div className="absolute text-3xl left-[575px] top-[360px] text-[#ffe200]">
+                <div className="absolute text-3xl 2xl:left-[575px] 2xl:top-[360px] xl:left-[370px] xl:top-[360px] text-[#ffe200]">
                   <Parallax>
                     <div className="">Looking for</div>
                   </Parallax>
@@ -773,7 +773,7 @@ function LandingSection({}: Props) {
                     <div className="">your upcoming event?</div>
                   </Parallax>
                 </div>
-                <div className="absolute text-lg left-[575px] top-[550px] text-[#ffe200]">
+                <div className="absolute text-lg 2xl:left-[575px] 2xl:top-[550px] xl:left-[370px] xl:top-[550px] text-[#ffe200]">
                   <Parallax>
                     <div className="">We offer an extensive menu</div>
                   </Parallax>
@@ -799,7 +799,7 @@ function LandingSection({}: Props) {
                     <div className="">you time to relax.</div>
                   </Parallax>
                 </div>
-                <div className="absolute text-lg left-[575px] top-[790px] text-[#ffe200]">
+                <div className="absolute text-lg 2xl:left-[575px] 2xl:top-[790px] xl:left-[370px] xl:top-[790px] text-[#ffe200]">
                   <Parallax>
                     <div className="">For more information,</div>
                   </Parallax>
