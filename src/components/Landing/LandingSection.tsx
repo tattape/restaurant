@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import {
   ParallaxProvider,
@@ -81,7 +83,7 @@ import message from "../../images/chat-logo.png";
 
 type Props = {};
 
-function LandingSection({}: Props) {
+function LandingSection({ }: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [NumOfDish, setNumOfDish] = useState(3);
@@ -136,6 +138,17 @@ function LandingSection({}: Props) {
       window.removeEventListener("resize", checkScreenSize);
     };
   });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-out',
+    });
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
 
   const settings = {
     infinite: true,
@@ -407,8 +420,8 @@ function LandingSection({}: Props) {
               <div className="relative">
                 <div className="flex justify-center">
                   <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
-                    <Image src={menu} alt={""} />
-                    <Image src={smallPlates} alt={""} />
+                    <Image data-aos="fade-up" src={menu} alt={""} />
+                    <Image data-aos="fade-down" src={smallPlates} alt={""} />
                   </div>
                 </div>
                 <Parallax translateX={[10, 0]} translateY={[0, 0]} speed={10}>
@@ -416,7 +429,7 @@ function LandingSection({}: Props) {
                     <Image width={600} height={600} src={handblack} alt={""} />
                   </div>
                 </Parallax>
-                <div className=" w-full md:top-[300px] lg:top-[400px]">
+                <div data-aos="zoom-in-down" className=" w-full md:top-[300px] lg:top-[400px]">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
@@ -437,7 +450,7 @@ function LandingSection({}: Props) {
                 </div>
                 <Parallax speed={-10}>
                   <div className="absolute -top-[50px] left-[435px] md:w-[250px] lg:w-[300px]">
-                    <Image width={300} height={300} src={bitong} alt={""} />
+                    <Image data-aos="fade-up" data-aos-duration="500" width={300} height={300} src={bitong} alt={""} />
                   </div>
                 </Parallax>
               </div>
@@ -465,14 +478,14 @@ function LandingSection({}: Props) {
                 </Parallax>
                 <div className="flex justify-center">
                   <div className="absolute md:-top-5 2xl:top-10 flex md:w-[250px] xl:w-[400px]">
-                    <Image width={400} height={300} src={thaiStreet} alt={""} />
+                    <Image data-aos="fade-up" width={400} height={300} src={thaiStreet} alt={""} />
                   </div>
                   <div className="absolute md:right-[50px] lg:right-[180px] 2xl:right-[390px] md:-top-[10px] 2xl:top-[50px] md:w-[280px] xl:w-[440px]">
-                    <Image width={500} height={30} src={thisIsSoYum} alt={""} />
+                    <Image data-aos="fade-up" data-aos-anchor-placement="bottom-center" width={500} height={30} src={thisIsSoYum} alt={""} />
                   </div>
                 </div>
                 {/* before md:top-[150px] after md:top-[100px] */}
-                <div className="absolute w-full md:top-[100px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
+                <div data-aos="zoom-in-down" className="absolute w-full md:top-[100px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
@@ -502,6 +515,8 @@ function LandingSection({}: Props) {
                   <div className="flex justify-center">
                     <div className="w-[670px]">
                       <Image
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="center-center"
                         width={800}
                         height={100}
                         src={allTimeFavorite}
@@ -512,10 +527,10 @@ function LandingSection({}: Props) {
                 </Parallax>
                 <Parallax translateX={[0, 0]}>
                   <div className="absolute md:w-[200px] lg:w-[350px] -right-[150px] -top-[110px]">
-                    <Image width={600} height={600} src={horapa1} alt={""} />
+                    <Image data-aos="fade-down-left" data-aos-anchor-placement="top-center" width={600} height={600} src={horapa1} alt={""} />
                   </div>
                 </Parallax>
-                <div className="w-full">
+                <div data-aos="zoom-in-down" data-aos-anchor-placement="top-center" className="w-full">
                   <Slider
                     {...settings}
                     className="flex items-center justify-center"
@@ -536,7 +551,7 @@ function LandingSection({}: Props) {
                 </div>
                 <Parallax speed={-5}>
                   <div className="absolute w-[400px] border-none object-contain -left-[180px] -top-[220px]">
-                    <Image width={600} height={200} src={horapa2} alt={""} />
+                    <Image data-aos="fade-up-right" data-aos-anchor-placement="top-bottom" width={600} height={200} src={horapa2} alt={""} />
                   </div>
                 </Parallax>
               </div>
@@ -816,13 +831,15 @@ function LandingSection({}: Props) {
 
             {/* footer */}
             <div className="mt-[200px]">
-              <div className="relative flex  justify-center items-center">
+              <div className="relative flex justify-center items-center">
                 <Image className="w-full" src={footer} alt={""} />
-                <div className="absolute grid grid-cols-7 gap-2 2xl:top-[300px] xl:top-[200px] lg:top-[130px]">
+                <div className="absolute flex gap-2 2xl:top-[300px] xl:top-[200px] lg:top-[130px]">
                   {contact.map((item, index) => (
                     <div
                       key={index}
-                      className="w-16 h-16 bg-white flex justify-center items-center"
+                      data-aos="flip-right"
+                      data-aos-delay={index * 50}
+                      className="w-16 h-16 bg-white flex justify-center items-center rounded-md hover:scale-110 transition-all ease-in-out"
                     >
                       <div className="w-10 h-10">
                         <Image
