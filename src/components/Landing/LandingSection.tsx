@@ -13,6 +13,7 @@ import AlltimeFavSection from "./AlltimeFavSection";
 import GiftCardSection from "./GiftCardSection";
 import CarteringSection from "./CarteringSection";
 import Footer from "./Footer";
+import ButtonLanding from "./ButtonLanding";
 
 type Props = {};
 
