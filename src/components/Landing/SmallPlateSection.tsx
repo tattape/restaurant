@@ -25,12 +25,16 @@ function SmallPlateSection({ }: Props) {
     const [activeIndex, setActiveIndex] = useState(Math.floor(SmallPlateImg.length / 2));
 
     return (
-        <div className="my-[300px]">
+        <div className="mt-0 md:mt-[300px]">
             <div className="flex flex-col items-center">
                 <div className="flex justify-center">
                     <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
-                        <Image data-aos="fade-up" src={menu} alt={""} />
-                        <Image data-aos="fade-down" src={smallPlates} alt={""} />
+                        <div className="flex justify-center w-[100px] md:w-[300px] lg:w-[500px] ">
+                            <Image data-aos="fade-up" src={menu} alt={""} />
+                        </div>
+                        <div className="flex justify-center w-[180px] md:w-[300px] lg:w-[500px]">
+                            <Image data-aos="fade-down" src={smallPlates} alt={""} />
+                        </div>
                     </div>
                 </div>
                 <div className="w-full flex justify-end -mt-20 md:-mt-40">
@@ -40,7 +44,7 @@ function SmallPlateSection({ }: Props) {
                         </div>
                     </Parallax>
                 </div>
-                <div className='mt-0 lg:-mt-24' data-aos="zoom-in-down">
+                <div className='s:mt-0 md:mt-10 lg:-mt-24' data-aos="zoom-in-down">
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
@@ -63,13 +67,13 @@ function SmallPlateSection({ }: Props) {
                             const Opacity = isActive ? 'hover:!scale-[1.02] !transition-all' : 'brightness-50';
 
                             return (
-                                <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[300px] !h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
+                                <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
                                     <Image width={500} height={500} alt='' src={image.src} />
                                     {isActive &&
                                         <p
                                             data-aos="zoom-in"
                                             data-aos-anchor-placement="top-bottom"
-                                            className='text-white text-center text-2xl lg:text-3xl'>
+                                            className='text-white text-center text-base md:text-2xl lg:text-3xl'>
                                             {image.name}
                                         </p>
                                     }
@@ -78,7 +82,7 @@ function SmallPlateSection({ }: Props) {
                         })}
                     </Swiper>
                 </div>
-                <div className="w-full pl-5 md:pl-10 lg:pl-60">
+                <div className="w-full mt-5 md:mt-0 pl-5 md:pl-10 lg:pl-60">
                     <Parallax speed={-10}>
                         <div className="w-[150px] md:w-[200px] lg:w-[300px]">
                             <Image data-aos="fade-down" data-aos-duration="500" width={300} height={300} src={bitong} alt={""} />
