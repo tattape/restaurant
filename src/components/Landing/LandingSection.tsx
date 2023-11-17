@@ -90,7 +90,7 @@ function LandingSection({ }: Props) {
         <LoadingScreen Loading={Loading} />
       ) : (
         <ParallaxProvider>
-          {/* <ButtonLanding scroll={isScrolling} /> */}
+          <ButtonLanding scroll={isScrolling} />
           <div className="overflow-x-hidden">
             {/* heder */}
             <HeaderSection />
