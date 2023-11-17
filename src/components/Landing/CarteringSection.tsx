@@ -47,43 +47,55 @@ function CarteringSection({ }: Props) {
                 {/* cAR te Ring */}
                 <div className="flex gap-5">
                     <div className="flex gap-1 items-end">
-                        <Parallax>
+                        <Parallax translateX={[-100, 30]}>
                             <div className="w-[65px]">
                                 <Image width={300} height={300} src={fontC} alt={""} />
                             </div>
                         </Parallax>
-                        <Parallax>
+                        <Parallax translateX={[100, -30]}>
                             <div className="w-[100px]">
                                 <Image width={300} height={300} src={fontA} alt={""} />
                             </div>
                         </Parallax>
-                        <Parallax>
+                        <Parallax translateX={[-100, 30]}>
                             <div className="w-[120px]">
                                 <Image width={300} height={300} src={fontR} alt={""} />
                             </div>
                         </Parallax>
                     </div>
                     <div className="flex gap-1 items-end">
-                        <div className="w-[50px]">
-                            <Image width={300} height={300} src={fontT} alt={""} />
-                        </div>
-                        <div className="w-[50px]">
-                            <Image width={300} height={300} src={fontE} alt={""} />
-                        </div>
+                        <Parallax translateX={[100, -30]}>
+                            <div className="w-[50px]">
+                                <Image width={300} height={300} src={fontT} alt={""} />
+                            </div>
+                        </Parallax>
+                        <Parallax translateX={[-100, 30]}>
+                            <div className="w-[50px]">
+                                <Image width={300} height={300} src={fontE} alt={""} />
+                            </div>
+                        </Parallax>
                     </div>
                     <div className="flex gap-1">
-                        <div className="w-[130px]">
-                            <Image width={300} height={300} src={fontRingR} alt={""} />
-                        </div>
-                        <div className="w-[40px] -mt-10">
-                            <Image width={300} height={300} src={fontI} alt={""} />
-                        </div>
-                        <div className="w-[65px]">
-                            <Image width={300} height={300} src={fontN} alt={""} />
-                        </div>
-                        <div className="w-[70px]">
-                            <Image width={300} height={300} src={fontG} alt={""} />
-                        </div>
+                        <Parallax translateX={[100, -30]}>
+                            <div className="w-[130px]">
+                                <Image width={300} height={300} src={fontRingR} alt={""} />
+                            </div>
+                        </Parallax>
+                        <Parallax translateX={[-100, 30]}>
+                            <div className="w-[40px] -mt-10">
+                                <Image width={300} height={300} src={fontI} alt={""} />
+                            </div>
+                        </Parallax>
+                        <Parallax translateX={[100, -30]}>
+                            <div className="w-[65px]">
+                                <Image width={300} height={300} src={fontN} alt={""} />
+                            </div>
+                        </Parallax>
+                        <Parallax translateX={[-100, 30]}>
+                            <div className="w-[70px]">
+                                <Image width={300} height={300} src={fontG} alt={""} />
+                            </div>
+                        </Parallax>
                     </div>
                 </div>
 
