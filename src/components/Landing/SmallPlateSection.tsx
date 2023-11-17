@@ -44,7 +44,7 @@ function SmallPlateSection({ }: Props) {
                         </div>
                     </Parallax>
                 </div>
-                <div className='s:mt-0 md:mt-10 lg:-mt-24' data-aos="zoom-in-down">
+                <div className='mt-0 md:mt-10 lg:-mt-24' data-aos="zoom-in-down">
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
