@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../images/slice6.png";
 import Image from "next/image";
 import "aos/dist/aos.css";
