@@ -28,213 +28,143 @@ type Props = {}
 
 function CarteringSection({ }: Props) {
     return (
-        <div className="h-[700px]">
-            <div className="relative flex justify-center">
-                <Parallax translateX={[-10, 0]}>
-                    <div className="absolute top-[-20px] left-[290px] w-[200px]">
-                        <Image width={300} height={300} src={camera} alt={""} />
-                    </div>
-                </Parallax>
-                <div className="mt-[130px] flex flex-row items-center justify-center gap-2">
+        <div className="mt-60">
+            <div className="flex flex-col items-center">
+                {/* camera and sunflower */}
+                <div className="flex -mr-[260px]">
                     <Parallax>
-                        <div className="absolute top-[-65px] left-[-45px] w-[60px] mt-[60px] ">
-                            <Image width={300} height={300} src={fontC} alt={""} />
+                        <div className="w-[200px] -mt-24">
+                            <Image width={300} height={300} src={camera} alt={""} />
                         </div>
                     </Parallax>
                     <Parallax>
-                        <div className="w-[120px]">
-                            <Image width={300} height={300} src={fontA} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="w-[140px]">
-                            <Image width={300} height={300} src={fontR} alt={""} />
-                        </div>
-                    </Parallax>
-                </div>
-                <div className="mt-[130px] flex flex-row items-center justify-center">
-                    <Parallax>
-                        <div className="mt-[39px] w-[40px]">
-                            <Image width={300} height={300} src={fontT} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="mt-[75px] w-[40px]">
-                            <Image width={300} height={300} src={fontE} alt={""} />
-                        </div>
-                    </Parallax>
-                </div>
-                <div className="mt-[130px] flex flex-row items-center justify-center gap-1">
-                    <Parallax>
-                        <div className="mt-[5px] w-[125px]">
-                            <Image
-                                width={300}
-                                height={300}
-                                src={fontRingR}
-                                alt={""}
-                            />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="mb-[85px] w-[50px]">
-                            <Image width={300} height={300} src={fontI} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="mb-[25px] w-[85px]">
-                            <Image width={300} height={300} src={fontN} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="w-[85px]">
-                            <Image width={300} height={300} src={fontG} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="absolute -top-[160px] right-[150px] w-[90px]">
+                        <div className="w-[70px] justify-self-end self-end">
                             <Image width={300} height={300} src={flower} alt={""} />
                         </div>
                     </Parallax>
                 </div>
 
-                {/* WEDRING */}
-                <div className="absolute top-[295px] 2xl:left-[810px] xl:left-[610px] flex flex-col gap-6">
-                    {/* WED */}
-                    <div className="flex flex-row gap-[2px]">
+                {/* cAR te Ring */}
+                <div className="flex gap-5">
+                    <div className="flex gap-1 items-end">
                         <Parallax>
-                            <div className="w-[160px]">
-                                <Image width={300} height={300} src={fontW} alt={""} />
+                            <div className="w-[65px]">
+                                <Image width={300} height={300} src={fontC} alt={""} />
                             </div>
                         </Parallax>
                         <Parallax>
-                            <div className="w-[90px]">
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    src={fontWedE}
-                                    alt={""}
-                                />
+                            <div className="w-[100px]">
+                                <Image width={300} height={300} src={fontA} alt={""} />
                             </div>
                         </Parallax>
                         <Parallax>
-                            <div className="w-[105px]">
-                                <Image width={300} height={300} src={fontD} alt={""} />
+                            <div className="w-[120px]">
+                                <Image width={300} height={300} src={fontR} alt={""} />
                             </div>
                         </Parallax>
                     </div>
-                    {/* DING */}
-                    <div className="flex flex-row gap-2">
-                        <Parallax>
-                            <div className="w-[105px]">
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    src={fontDingD}
-                                    alt={""}
-                                />
-                            </div>
-                        </Parallax>
-                        <Parallax>
-                            <div className="w-[49px]">
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    src={fontDingI}
-                                    alt={""}
-                                />
-                            </div>
-                        </Parallax>
-                        <Parallax>
-                            <div className="w-[100px]">
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    src={fontDingN}
-                                    alt={""}
-                                />
-                            </div>
-                        </Parallax>
-                        <Parallax>
-                            <div className="w-[100px]">
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    src={fontDingG}
-                                    alt={""}
-                                />
-                            </div>
-                        </Parallax>
+                    <div className="flex gap-1 items-end">
+                        <div className="w-[50px]">
+                            <Image width={300} height={300} src={fontT} alt={""} />
+                        </div>
+                        <div className="w-[50px]">
+                            <Image width={300} height={300} src={fontE} alt={""} />
+                        </div>
+                    </div>
+                    <div className="flex gap-1">
+                        <div className="w-[130px]">
+                            <Image width={300} height={300} src={fontRingR} alt={""} />
+                        </div>
+                        <div className="w-[40px] -mt-10">
+                            <Image width={300} height={300} src={fontI} alt={""} />
+                        </div>
+                        <div className="w-[65px]">
+                            <Image width={300} height={300} src={fontN} alt={""} />
+                        </div>
+                        <div className="w-[70px]">
+                            <Image width={300} height={300} src={fontG} alt={""} />
+                        </div>
                     </div>
                 </div>
 
-                <Parallax>
-                    <div className="absolute 2xl:top-[570px] 2xl:right-[-10px] xl:top-[570px] xl:right-[-10px] 2xl:w-[500px] xl:w-[450px]">
-                        <Image width={450} height={450} src={arch} alt={""} />
+                {/* pic and paragraph */}
+                <div className="flex ml-10">
+                    {/* paragraph */}
+                    <div className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg">
+                        <div className="font-bold text-2xl">Looking for
+                            <br />catering service
+                            <br />for
+                            <br />your upcoming event?
+                        </div>
+                        <div className="">
+                            We offer an extensive menu
+                            <br />selection and can accommodate
+                            <br />most dietary needs.Menu
+                            <br />planning including bar service,
+                            <br />floral and table decoration as
+                            <br />well as rental needs can all be
+                            <br />handled by our team, leaving
+                            <br />you time to relax.
+                        </div>
+                        <div className="">
+                            For more information,
+                            <br />please email us at :
+                            <br />catering@baitongfamily.com
+                        </div>
                     </div>
-                </Parallax>
-                <Parallax>
-                    <div className="absolute 2xl:top-[528px] 2xl:right-[90px] xl:top-[528px] xl:right-[30px] w-[300px]">
-                        <Image width={350} height={350} src={cropPhoto} alt={""} />
+                    {/* wedding and frame image */}
+                    <div className="-mt-5 -ml-10">
+                        <Parallax>
+                            <div className="flex flex-col gap-10">
+                                <div className="flex">
+                                    <div className="w-[137px]">
+                                        <Image width={300} height={300} src={fontW} alt={""} />
+                                    </div>
+                                    <div className="w-[78px]">
+                                        <Image width={300} height={300} src={fontWedE} alt={""} />
+                                    </div>
+                                    <div className="w-[90px]">
+                                        <Image width={300} height={300} src={fontD} alt={""} />
+                                    </div>
+
+                                </div>
+                                <div className="flex">
+                                    <div className="w-[90px]">
+                                        <Image width={300} height={300} src={fontDingD} alt={""} />
+                                    </div>
+                                    <div className="w-[42.3px]">
+                                        <Image width={300} height={300} src={fontDingI} alt={""} />
+                                    </div>
+                                    <div className="w-[88px]">
+                                        <Image width={300} height={300} src={fontDingN} alt={""} />
+                                    </div>
+                                    <div className="w-[87px]">
+                                        <Image width={300} height={300} src={fontDingG} alt={""} />
+                                    </div>
+                                </div>
+                            </div>
+                        </Parallax>
+                        <div className="flex flex-col items-end ml-10 mt-10">
+                            <Parallax>
+                                <div className="w-[400px]">
+                                    <Image width={450} height={450} src={arch} alt={""} />
+                                </div>
+                            </Parallax>
+                            <Parallax>
+                                <div className="w-[280px] -mt-[320px] mr-5">
+                                    <Image width={350} height={350} src={cropPhoto} alt={""} />
+                                </div>
+                            </Parallax>
+                            <Parallax>
+                                <div className="w-[120px] -mt-10 mr-10">
+                                    <Image width={300} height={300} src={date} alt={""} />
+                                </div>
+                            </Parallax>
+                        </div>
                     </div>
-                </Parallax>
-                <Parallax>
-                    <div className="absolute 2xl:top-[820px] 2xl:right-[120px] xl:top-[820px] xl:right-[40px] w-[140px]">
-                        <Image width={300} height={300} src={date} alt={""} />
-                    </div>
-                </Parallax>
-                <div className="absolute text-3xl 2xl:left-[575px] 2xl:top-[360px] xl:left-[370px] xl:top-[360px] text-[#ffe200]">
-                    <Parallax>
-                        <div className="">Looking for</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">catering service</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">for</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">your upcoming event?</div>
-                    </Parallax>
-                </div>
-                <div className="absolute text-lg 2xl:left-[575px] 2xl:top-[550px] xl:left-[370px] xl:top-[550px] text-[#ffe200]">
-                    <Parallax>
-                        <div className="">We offer an extensive menu</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">selection and can accommodate</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">most dietary needs.Menu</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">planning including bar service,</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">floral and table decoration as</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">well as rental needs can all be</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">handled by our team, leaving</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">you time to relax.</div>
-                    </Parallax>
-                </div>
-                <div className="absolute text-lg 2xl:left-[575px] 2xl:top-[790px] xl:left-[370px] xl:top-[790px] text-[#ffe200]">
-                    <Parallax>
-                        <div className="">For more information,</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">please email us at :</div>
-                    </Parallax>
-                    <Parallax>
-                        <div className="">catering@baitongfamily.com</div>
-                    </Parallax>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
