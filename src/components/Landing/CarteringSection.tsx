@@ -32,12 +32,12 @@ function CarteringSection({ }: Props) {
             <div className="flex flex-col items-center ">
                 {/* camera and sunflower */}
                 <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
-                    <Parallax opacity={[0,1]} translateY={[0,-30]}>
+                    <Parallax opacity={[0, 1]} translateY={[0, 30]}>
                         <div className="w-[200px] -mt-24">
                             <Image width={300} height={300} src={camera} alt={""} />
                         </div>
                     </Parallax>
-                    <Parallax opacity={[0,1]} translateY={[0,-30]}>
+                    <Parallax opacity={[0, 1]} translateY={[0, 30]}>
                         <div className="w-[70px] justify-self-end self-end">
                             <Image width={300} height={300} src={flower} alt={""} />
                         </div>
@@ -75,7 +75,7 @@ function CarteringSection({ }: Props) {
                             </div>
                         </Parallax>
                     </div>
-                    <div className="flex gap-1"> 
+                    <div className="flex gap-1">
                         <Parallax translateX={[100, -30]}>
                             <div className="w-[130px]">
                                 <Image width={300} height={300} src={fontRingR} alt={""} />
@@ -100,15 +100,15 @@ function CarteringSection({ }: Props) {
                 </div>
 
                 {/* pic and paragraph */}
-                <div className="flex ml-10  flex-col md:flex-row">
+                <div className="flex ml-10 flex-col md:flex-row">
                     {/* paragraph */}
                     <div data-aos="fade-up" className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 ">
-                        <div className="font-bold text-2xl">Looking for
+                        <div className="font-bold text-2xl font-din">Looking for
                             <br />catering service
                             <br />for
                             <br />your upcoming event?
                         </div>
-                        <div className="">
+                        <div className="font-arial">
                             We offer an extensive menu
                             <br />selection and can accommodate
                             <br />most dietary needs.Menu
@@ -125,8 +125,8 @@ function CarteringSection({ }: Props) {
                         </div>
                     </div>
                     {/* wedding and frame image */}
-                    <div className="-mt-24 -ml-10 scale-75 l:-mt-5 l:scale-100">
-                        <Parallax translateY={[-30,10]} opacity={[0.5,1]}>
+                    <div className="-mt-24 -ml-10 scale-75 l:-mt-5 md:scale-100">
+                        <Parallax translateY={[-5, 10]} opacity={[0.5, 1]}>
                             <div className="flex flex-col gap-10">
                                 <div className="flex">
                                     <div className="w-[137px]">
@@ -162,12 +162,12 @@ function CarteringSection({ }: Props) {
                                     <Image width={450} height={450} src={arch} alt={""} />
                                 </div>
                             </Parallax>
-                            <Parallax rotate={[10,-20]}>
+                            <Parallax rotate={[10, -20]}>
                                 <div className="w-[280px] -mt-[320px] mr-5 ">
                                     <Image width={350} height={350} src={cropPhoto} alt={""} />
                                 </div>
                             </Parallax>
-                            <Parallax  rotate={[0,180]}>
+                            <Parallax rotate={[0, 180]}>
                                 <div className="w-[120px] -mt-10 mr-10">
                                     <Image width={300} height={300} src={date} alt={""} />
                                 </div>
