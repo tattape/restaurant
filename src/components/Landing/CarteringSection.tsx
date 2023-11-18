@@ -102,7 +102,7 @@ function CarteringSection({ }: Props) {
                 {/* pic and paragraph */}
                 <div className="flex ml-10  flex-col md:flex-row">
                     {/* paragraph */}
-                    <div data-aos="fade-up" data-aos-anchor-placement="top-center" className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 ">
+                    <div data-aos="fade-up" className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 ">
                         <div className="font-bold text-2xl">Looking for
                             <br />catering service
                             <br />for
