@@ -165,29 +165,17 @@ function HeaderSection({ }: Props) {
                         speed={40}
                         className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]"
                     >
-                        <AnimatePresence>
-                            <motion.div
-                                initial={{ width: "0%", opacity: 0 }}
-                                animate={{ width: "100%", opacity: 1 }}
-                                transition={{
-                                    type: "spring",
-                                    damping: 23,
-                                    stiffness: 130,
-                                    duration: 20,
-                                    delay: 0.45,
-                                }}
-                            >
-                                <Image
-                                    className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
-                                    src={authentic}
-                                    alt={""}
-                                />
-                            </motion.div>
-                        </AnimatePresence>
+                        <div className="brush-stroke">
+                            <Image
+                                className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
+                                src={authentic}
+                                alt={""}
+                            />
+                        </div>
                     </Parallax>
                 </div>
-            </Parallax>
-        </div>
+            </Parallax >
+        </div >
     )
 }
 

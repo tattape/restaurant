@@ -54,3 +54,17 @@ body {
 .slick-center {
     transform: scale(1.05);
 }
+
+@keyframes brushStrokeReveal {
+    0% {
+        clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.brush-stroke {
+    animation: brushStrokeReveal 1s ease-in-out forwards;
+}
