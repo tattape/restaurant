@@ -28,16 +28,16 @@ type Props = {}
 
 function CarteringSection({ }: Props) {
     return (
-        <div className="mt-60">
-            <div className="flex flex-col items-center">
+        <div className="-mt-[5px]">
+            <div className="flex flex-col items-center ">
                 {/* camera and sunflower */}
-                <div className="flex -mr-[260px]">
-                    <Parallax>
+                <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
+                    <Parallax opacity={[0,1]} translateY={[0,-30]}>
                         <div className="w-[200px] -mt-24">
                             <Image width={300} height={300} src={camera} alt={""} />
                         </div>
                     </Parallax>
-                    <Parallax>
+                    <Parallax opacity={[0,1]} translateY={[0,-30]}>
                         <div className="w-[70px] justify-self-end self-end">
                             <Image width={300} height={300} src={flower} alt={""} />
                         </div>
@@ -45,8 +45,8 @@ function CarteringSection({ }: Props) {
                 </div>
 
                 {/* cAR te Ring */}
-                <div className="flex gap-5">
-                    <div className="flex gap-1 items-end">
+                <div className="flex gap-5 lg:mt-12 md:mt-4 m:-mt-[40px] s:-mt-[60px] scale-[0.3] m:scale-[0.4] l:scale-[0.45] md:scale-75 lg:scale-100 ">
+                    <div className="flex gap-1 items-end ">
                         <Parallax translateX={[-100, 30]}>
                             <div className="w-[65px]">
                                 <Image width={300} height={300} src={fontC} alt={""} />
@@ -75,7 +75,7 @@ function CarteringSection({ }: Props) {
                             </div>
                         </Parallax>
                     </div>
-                    <div className="flex gap-1">
+                    <div className="flex gap-1"> 
                         <Parallax translateX={[100, -30]}>
                             <div className="w-[130px]">
                                 <Image width={300} height={300} src={fontRingR} alt={""} />
@@ -100,9 +100,9 @@ function CarteringSection({ }: Props) {
                 </div>
 
                 {/* pic and paragraph */}
-                <div className="flex ml-10">
+                <div className="flex ml-10  flex-col md:flex-row">
                     {/* paragraph */}
-                    <div className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg">
+                    <div data-aos="fade-up" className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 ">
                         <div className="font-bold text-2xl">Looking for
                             <br />catering service
                             <br />for
@@ -125,8 +125,8 @@ function CarteringSection({ }: Props) {
                         </div>
                     </div>
                     {/* wedding and frame image */}
-                    <div className="-mt-5 -ml-10">
-                        <Parallax>
+                    <div className="-mt-24 -ml-10 scale-75 l:-mt-5 l:scale-100">
+                        <Parallax translateY={[-30,10]} opacity={[0.5,1]}>
                             <div className="flex flex-col gap-10">
                                 <div className="flex">
                                     <div className="w-[137px]">
@@ -162,12 +162,12 @@ function CarteringSection({ }: Props) {
                                     <Image width={450} height={450} src={arch} alt={""} />
                                 </div>
                             </Parallax>
-                            <Parallax>
-                                <div className="w-[280px] -mt-[320px] mr-5">
+                            <Parallax rotate={[10,-20]}>
+                                <div className="w-[280px] -mt-[320px] mr-5 ">
                                     <Image width={350} height={350} src={cropPhoto} alt={""} />
                                 </div>
                             </Parallax>
-                            <Parallax>
+                            <Parallax  rotate={[0,180]}>
                                 <div className="w-[120px] -mt-10 mr-10">
                                     <Image width={300} height={300} src={date} alt={""} />
                                 </div>
