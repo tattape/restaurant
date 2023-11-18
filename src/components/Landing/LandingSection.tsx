@@ -13,6 +13,7 @@ import AlltimeFavSection from "./AlltimeFavSection";
 import GiftCardSection from "./GiftCardSection";
 import CarteringSection from "./CarteringSection";
 import Footer from "./Footer";
+import ButtonLanding from "./ButtonLanding";
 
 type Props = {};
 
@@ -90,7 +91,7 @@ function LandingSection({ }: Props) {
         <LoadingScreen Loading={Loading} />
       ) : (
         <ParallaxProvider>
-          <ButtonLanding scroll={isScrolling} />
+          {/* <ButtonLanding scroll={isScrolling} /> */}
           <div className="overflow-x-hidden">
             {/* heder */}
             <HeaderSection />
