@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import ThaiStreetImg from '../../Utils/ThaiStreetImg';
 
-import brife from "../../images/brife.png";
-import chicken from "../../images/chicken.png";
-import sanvid from "../../images/sanvid.png";
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+
+// import required modules
+import { EffectCoverflow } from 'swiper/modules';
+
 import thaiStreet from "../../images/thai-street.png";
 import thongRed from "../../images/thong-red.png";
 import thisIsSoYum from "../../images/this-is-so-yum.png";
@@ -16,107 +20,105 @@ import pick from "../../images/pick.png";
 type Props = {}
 
 function ThaiStreetSection({ }: Props) {
-    const settings = {
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 3,
-        swipeToSlide: true,
-        arrows: false,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        centerMode: true,
-        centerPadding: "0",
-    };
+    const [activeIndex, setActiveIndex] = useState(Math.floor(ThaiStreetImg.length / 4));
+    const [activeIndex2, setActiveIndex2] = useState(Math.floor(ThaiStreetImg.length / 4));
 
-    const smallPlate = [
-        {
-            src: sanvid,
-            alt: "image1",
-        },
-        {
-            src: chicken,
-            alt: "image2",
-        },
-        {
-            src: brife,
-            alt: "image3",
-        },
-        {
-            src: sanvid,
-            alt: "image1",
-        },
-        {
-            src: brife,
-            alt: "image3",
-        },
-        {
-            src: chicken,
-            alt: "image2",
-        },
-        {
-            src: sanvid,
-            alt: "image1",
-        },
-        {
-            src: chicken,
-            alt: "image2",
-        },
-        {
-            src: brife,
-            alt: "image3",
-        },
-        {
-            src: sanvid,
-            alt: "image1",
-        },
-    ];
     return (
-        <div className="md:pt-[100px] lg:pt-0 my-[120px]">
-            <div className="relative">
-                <Parallax speed={-10}>
-                    <div className="w-full z-0">
-                        <Image
-                            className="w-full"
-                            width={2200}
-                            height={800}
-                            src={thongRed}
-                            alt={""}
-                        />
+        <div className="">
+            <div className="flex flex-col items-center">
+                <Parallax speed={-5} className="z-10">
+                    <div data-aos="zoom-in-up" data-aos-duration='700' className="w-[90px] md:w-[150px] -ml-[200px] md:-ml-[420px] -mb-80 md:-mb-96">
+                        <Image width={500} height={800} src={pick} alt="" />
                     </div>
                 </Parallax>
-                <Parallax speed={-2}>
-                    <div className="absolute w-[100px] xl:w-[150px] -top-[925px] left-[520px] z-[999]">
-                        <Image width={500} height={800} src={pick} alt={""} />
+                <div className="flex flex-col-reverse items-center justify-center z-10">
+                    <div className="w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
+                        <Image data-aos="fade-up" width={400} height={300} src={thaiStreet} alt="" />
                     </div>
-                </Parallax>
-                <div className="flex justify-center">
-                    <div className="absolute md:-top-5 2xl:top-10 flex md:w-[250px] xl:w-[400px]">
-                        <Image data-aos="fade-up" width={400} height={300} src={thaiStreet} alt={""} />
-                    </div>
-                    <div className="absolute md:right-[50px] lg:right-[180px] 2xl:right-[390px] md:-top-[10px] 2xl:top-[50px] md:w-[280px] xl:w-[440px]">
-                        <Image data-aos="fade-up" data-aos-anchor-placement="bottom-center" width={500} height={30} src={thisIsSoYum} alt={""} />
+                    <div className="w-[180px] md:w-[300px] lg:w-[440px] rotate-[30deg] md:rotate-0 -mb-10 md:-mb-28 lg:-mb-32 -mr-[200px] md:-mr-[450px] lg:-mr-[650px] z-10">
+                        <Image data-aos="fade-up" data-aos-anchor-placement="top-center" width={500} height={30} src={thisIsSoYum} alt="" />
                     </div>
                 </div>
-                {/* before md:top-[150px] after md:top-[100px] */}
-                <div data-aos="zoom-in-down" className="absolute w-full md:top-[100px] lg:top-[200px] xl:top-[300px] 2xl:top-[400px]">
-                    <Slider
-                        {...settings}
-                        className="flex items-center justify-center"
+                <Parallax speed={10} className="w-[1200px] md:w-[1800px] lg:w-[2200px]">
+                    <div className="-mt-20">
+                        <Image width={3500} height={1000} src={thongRed} alt="" />
+                    </div>
+                </Parallax>
+                <div className='-mt-[450px] md:-mt-[700px] lg:-mt-[1000px]' data-aos="zoom-in-down">
+                    <Swiper
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        initialSlide={activeIndex}
+                        centeredSlides={true}
+                        slidesPerView={'auto'}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 10,
+                            depth: 200,
+                            modifier: 3,
+                            slideShadows: false,
+                        }}
+                        modules={[EffectCoverflow]}
+                        className="!w-full"
+                        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     >
-                        {smallPlate.map((item, idx) => (
-                            <div key={idx} className="outline-none cursor-grab">
-                                <Image
-                                    width={500}
-                                    height={500}
-                                    key={idx}
-                                    src={item.src}
-                                    alt={item.alt}
-                                    className="p-3 hover:scale-[1.05] transition-all object-contain"
-                                />
-                            </div>
-                        ))}
-                    </Slider>
+                        {ThaiStreetImg.slice(0, 8).map((image: any, idx: number) => {
+                            const isActive = idx === activeIndex;
+                            const Opacity = isActive ? 'hover:!scale-[1.02] !transition-all' : 'brightness-50';
+
+                            return (
+                                <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
+                                    <Image width={400} height={400} alt='' src={image.src} />
+                                    {isActive &&
+                                        <p
+                                            data-aos="zoom-in"
+                                            data-aos-anchor-placement="top-bottom"
+                                            className='text-white text-center text-base md:text-2xl lg:text-3xl'>
+                                            {image.name}
+                                        </p>
+                                    }
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
+                </div>
+                <div className='mt-10 lg:-mt-10' data-aos="zoom-in-down">
+                    <Swiper
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        initialSlide={activeIndex}
+                        centeredSlides={true}
+                        slidesPerView={'auto'}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 10,
+                            depth: 200,
+                            modifier: 3,
+                            slideShadows: false,
+                        }}
+                        modules={[EffectCoverflow]}
+                        className="!w-full"
+                        onSlideChange={(swiper) => setActiveIndex2(swiper.activeIndex)}
+                    >
+                        {ThaiStreetImg.slice(8, 17).map((image: any, idx: number) => {
+                            const isActive = idx === activeIndex2;
+                            const Opacity = isActive ? 'hover:!scale-[1.02] !transition-all' : 'brightness-50';
+
+                            return (
+                                <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
+                                    <Image width={400} height={400} alt='' src={image.src} />
+                                    {isActive &&
+                                        <p
+                                            data-aos="zoom-in"
+                                            data-aos-anchor-placement="top-bottom"
+                                            className='text-white text-center text-base md:text-2xl lg:text-3xl'>
+                                            {image.name}
+                                        </p>
+                                    }
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
                 </div>
             </div>
         </div>
