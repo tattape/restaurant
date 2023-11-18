@@ -71,7 +71,7 @@ function AlltimeFavSection({ }: Props) {
 
                             return (
                                 <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
-                                    <Image width={400} height={400} alt='' src={image.src} />
+                                    <Image width={500} height={500} alt='' src={image.src} />
                                     {isActive &&
                                         <p
                                             data-aos="zoom-in"
@@ -109,7 +109,7 @@ function AlltimeFavSection({ }: Props) {
 
                             return (
                                 <SwiperSlide key={idx} className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}>
-                                    <Image width={400} height={400} alt='' src={image.src} />
+                                    <Image width={500} height={500} alt='' src={image.src} />
                                     {isActive &&
                                         <p
                                             data-aos="zoom-in"
