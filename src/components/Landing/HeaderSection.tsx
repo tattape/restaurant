@@ -12,9 +12,6 @@ import tong1 from "../../images/Asset 2.png";
 import tong2 from "../../images/Asset 3.png";
 import tong3 from "../../images/Asset 4.png";
 import oil from "../../images/oil.png";
-import brife from "../../images/brife.png";
-import chicken from "../../images/chicken.png";
-import sanvid from "../../images/sanvid.png";
 import sai from "../../images/slice27.png";
 
 type Props = {}
@@ -82,7 +79,7 @@ function HeaderSection({ }: Props) {
                                 stiffness: 130,
                                 delay: 0.4,
                             }}
-                            className="absolute top-[400px] right-[150px] w-[800px]"
+                            className="absolute top-[100px] md:top-[400px] -right-[250px] md:right-[150px] w-[800px]"
                         >
                             <Image width={1000} height={500} src={sai} alt={""} />
                         </motion.div>
