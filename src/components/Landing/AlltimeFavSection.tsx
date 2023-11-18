@@ -23,7 +23,7 @@ function AlltimeFavSection({ }: Props) {
     const [activeIndex2, setActiveIndex2] = useState(Math.floor(AlltimeFavImg.length / 4));
 
     return (
-        <div className="mt-40">
+        <div className="mt-20">
             <div className="flex flex-col items-center">
                 {/* baitong */}
                 <Parallax speed={10}>
