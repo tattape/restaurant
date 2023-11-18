@@ -11,7 +11,7 @@ import clsx from "clsx";
 
 type Props = {};
 
-function GiftCardSection({}: Props) {
+function GiftCardSection({ }: Props) {
   return (
     <div className="my-[100px]">
       <div className="flex flex-col items-center">
@@ -80,7 +80,7 @@ function GiftCardSection({}: Props) {
               </div>
             </Parallax>
             {/* Description */}
-            <div className={clsx("flex flex-col w-[520px] items-end")}>
+            <div className={clsx("flex flex-col w-[520px] items-end font-uid")}>
               <Parallax translateX={[10, -10]}>
                 <p
                   className={clsx(
