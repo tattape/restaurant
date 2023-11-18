@@ -12,9 +12,6 @@ import tong1 from "../../images/Asset 2.png";
 import tong2 from "../../images/Asset 3.png";
 import tong3 from "../../images/Asset 4.png";
 import oil from "../../images/oil.png";
-import brife from "../../images/brife.png";
-import chicken from "../../images/chicken.png";
-import sanvid from "../../images/sanvid.png";
 import sai from "../../images/slice27.png";
 
 type Props = {}
@@ -82,7 +79,7 @@ function HeaderSection({ }: Props) {
                                 stiffness: 130,
                                 delay: 0.4,
                             }}
-                            className="absolute top-[400px] right-[150px] w-[800px]"
+                            className="absolute top-[100px] md:top-[400px] -right-[250px] md:right-[150px] w-[800px]"
                         >
                             <Image width={1000} height={500} src={sai} alt={""} />
                         </motion.div>
@@ -165,29 +162,17 @@ function HeaderSection({ }: Props) {
                         speed={40}
                         className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]"
                     >
-                        <AnimatePresence>
-                            <motion.div
-                                initial={{ width: "0%", opacity: 0 }}
-                                animate={{ width: "100%", opacity: 1 }}
-                                transition={{
-                                    type: "spring",
-                                    damping: 23,
-                                    stiffness: 130,
-                                    duration: 20,
-                                    delay: 0.45,
-                                }}
-                            >
-                                <Image
-                                    className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
-                                    src={authentic}
-                                    alt={""}
-                                />
-                            </motion.div>
-                        </AnimatePresence>
+                        <div className="brush-stroke">
+                            <Image
+                                className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
+                                src={authentic}
+                                alt={""}
+                            />
+                        </div>
                     </Parallax>
                 </div>
-            </Parallax>
-        </div>
+            </Parallax >
+        </div >
     )
 }
 
