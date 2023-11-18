@@ -11,6 +11,7 @@ import instagram from "../../images/instagram-logo.png";
 import tel from "../../images/smartphone-logo.png";
 import email from "../../images/mail-logo.png";
 import message from "../../images/chat-logo.png";
+import { Parallax } from 'react-scroll-parallax';
 
 type Props = {}
 
@@ -46,18 +47,19 @@ function Footer({ }: Props) {
         },
     ];
     return (
-        <div className="mt-[200px]">
-            <div className="relative flex justify-center items-center">
-                <Image className="w-full" src={footer} alt={""} />
-                <div className="absolute flex gap-2 2xl:top-[300px] xl:top-[200px] lg:top-[130px]">
+        <div className="mt-[500px]">
+            <div className="flex flex-col items-center">
+                {/* contacts */}
+                <div className="flex gap-5 z-10 -mb-10 md:-mb-[200px] lg:-mb-[300px] xl:-mb-[400px] 2xl:-mb-[600px]">
                     {contact.map((item, index) => (
                         <div
+                            className=""
                             key={index}
                             data-aos="flip-right"
                             data-aos-delay={index * 50}
-                            className="w-16 h-16 bg-white flex justify-center items-center rounded-md hover:scale-110 transition-all ease-in-out"
+                            data-aos-anchor-placement="top-bottom"
                         >
-                            <div className="w-10 h-10">
+                            <div className="w-14 bg-white p-2 rounded-md !duration-300 cursor-pointer hover:bg-gray-300 !transition-all active:scale-95 active:bg-gray-500">
                                 <Image
                                     className="w-full"
                                     width={64}
@@ -69,8 +71,13 @@ function Footer({ }: Props) {
                         </div>
                     ))}
                 </div>
-                <div className="absolute bg-fuchsia-800 w-full 2xl:h-[330px] xl:h-[230px] lg:h-[180px] py-8 px-[140px] flex justify-center items-center bottom-0">
-                    <div className="2xl:w-[600px] 2xl:h-[200px] xl:w-[400px] xl:h-[150px] lg:w-[300px] lg:h-[100px]">
+
+                {/* bg */}
+                <Image className="w-full" src={footer} alt={""} />
+
+                {/* footer */}
+                <div className="z-10 bg-fuchsia-800 w-full flex justify-center py-10">
+                    <div className="w-[150px] m:w-[250px] md:w-[400px]">
                         <Image
                             src={Logo}
                             width={600}
