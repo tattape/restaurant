@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import Image from "next/image";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 
 import fontC from "../../images/image-font-c.png";
 import fontA from "../../images/image-font-A.png";
@@ -24,160 +25,229 @@ import cropPhoto from "../../images/crop-photo.png";
 import date from "../../images/date.png";
 import arch from "../../images/arch.png";
 
-type Props = {}
+type Props = {};
 
-function CarteringSection({ }: Props) {
-    return (
-        <div className="-mt-[5px]">
-            <div className="flex flex-col items-center ">
-                {/* camera and sunflower */}
-                <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
-                    <Parallax opacity={[0, 1]} translateY={[0, 30]}>
-                        <div className="w-[200px] -mt-24">
-                            <Image width={300} height={300} src={camera} alt={""} />
-                        </div>
-                    </Parallax>
-                    <Parallax opacity={[0, 1]} translateY={[0, 30]}>
-                        <div className="w-[70px] justify-self-end self-end">
-                            <Image width={300} height={300} src={flower} alt={""} />
-                        </div>
-                    </Parallax>
-                </div>
-
-                {/* cAR te Ring */}
-                <div className="flex gap-5 lg:mt-12 md:mt-4 m:-mt-[40px] s:-mt-[60px] scale-[0.3] m:scale-[0.4] l:scale-[0.45] md:scale-75 lg:scale-100 ">
-                    <div className="flex gap-1 items-end ">
-                        <Parallax translateX={[-100, 30]}>
-                            <div className="w-[65px]">
-                                <Image width={300} height={300} src={fontC} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[100, -30]}>
-                            <div className="w-[100px]">
-                                <Image width={300} height={300} src={fontA} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[-100, 30]}>
-                            <div className="w-[120px]">
-                                <Image width={300} height={300} src={fontR} alt={""} />
-                            </div>
-                        </Parallax>
-                    </div>
-                    <div className="flex gap-1 items-end">
-                        <Parallax translateX={[100, -30]}>
-                            <div className="w-[50px]">
-                                <Image width={300} height={300} src={fontT} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[-100, 30]}>
-                            <div className="w-[50px]">
-                                <Image width={300} height={300} src={fontE} alt={""} />
-                            </div>
-                        </Parallax>
-                    </div>
-                    <div className="flex gap-1">
-                        <Parallax translateX={[100, -30]}>
-                            <div className="w-[130px]">
-                                <Image width={300} height={300} src={fontRingR} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[-100, 30]}>
-                            <div className="w-[40px] -mt-10">
-                                <Image width={300} height={300} src={fontI} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[100, -30]}>
-                            <div className="w-[65px]">
-                                <Image width={300} height={300} src={fontN} alt={""} />
-                            </div>
-                        </Parallax>
-                        <Parallax translateX={[-100, 30]}>
-                            <div className="w-[70px]">
-                                <Image width={300} height={300} src={fontG} alt={""} />
-                            </div>
-                        </Parallax>
-                    </div>
-                </div>
-
-                {/* pic and paragraph */}
-                <div className="flex ml-10 flex-col md:flex-row">
-                    {/* paragraph */}
-                    <div data-aos="fade-up" className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 ">
-                        <div className="font-bold text-2xl font-din">Looking for
-                            <br />catering service
-                            <br />for
-                            <br />your upcoming event?
-                        </div>
-                        <div className="font-arial">
-                            We offer an extensive menu
-                            <br />selection and can accommodate
-                            <br />most dietary needs.Menu
-                            <br />planning including bar service,
-                            <br />floral and table decoration as
-                            <br />well as rental needs can all be
-                            <br />handled by our team, leaving
-                            <br />you time to relax.
-                        </div>
-                        <div className="">
-                            For more information,
-                            <br />please email us at :
-                            <br />catering@baitongfamily.com
-                        </div>
-                    </div>
-                    {/* wedding and frame image */}
-                    <div className="-mt-24 -ml-10 scale-75 l:-mt-5 md:scale-100">
-                        <Parallax translateY={[-5, 10]} opacity={[0.5, 1]}>
-                            <div className="flex flex-col gap-10">
-                                <div className="flex">
-                                    <div className="w-[137px]">
-                                        <Image width={300} height={300} src={fontW} alt={""} />
-                                    </div>
-                                    <div className="w-[78px]">
-                                        <Image width={300} height={300} src={fontWedE} alt={""} />
-                                    </div>
-                                    <div className="w-[90px]">
-                                        <Image width={300} height={300} src={fontD} alt={""} />
-                                    </div>
-
-                                </div>
-                                <div className="flex">
-                                    <div className="w-[90px]">
-                                        <Image width={300} height={300} src={fontDingD} alt={""} />
-                                    </div>
-                                    <div className="w-[42.3px]">
-                                        <Image width={300} height={300} src={fontDingI} alt={""} />
-                                    </div>
-                                    <div className="w-[88px]">
-                                        <Image width={300} height={300} src={fontDingN} alt={""} />
-                                    </div>
-                                    <div className="w-[87px]">
-                                        <Image width={300} height={300} src={fontDingG} alt={""} />
-                                    </div>
-                                </div>
-                            </div>
-                        </Parallax>
-                        <div className="flex flex-col items-end ml-10 mt-10">
-                            <Parallax>
-                                <div className="w-[400px]">
-                                    <Image width={450} height={450} src={arch} alt={""} />
-                                </div>
-                            </Parallax>
-                            <Parallax rotate={[10, -20]}>
-                                <div className="w-[280px] -mt-[320px] mr-5 ">
-                                    <Image width={350} height={350} src={cropPhoto} alt={""} />
-                                </div>
-                            </Parallax>
-                            <Parallax rotate={[0, 180]}>
-                                <div className="w-[120px] -mt-10 mr-10">
-                                    <Image width={300} height={300} src={date} alt={""} />
-                                </div>
-                            </Parallax>
-                        </div>
-                    </div>
-                </div>
+function CarteringSection({}: Props) {
+  const rtolVariants: Variants = {
+    onscreen: {
+      translateX: [100, 30],
+      transition: {
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+  const ltorVariants: Variants = {
+    onscreen: {
+      translateX: [-100, 30],
+      transition: {
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+  return (
+    <div className="-mt-[5px]">
+      <div className="flex flex-col items-center ">
+        {/* camera and sunflower */}
+        <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
+          <Parallax opacity={[0, 1]} translateY={[0, 30]}>
+            <div className="w-[200px] -mt-24">
+              <Image width={300} height={300} src={camera} alt={""} />
             </div>
-        </div >
-    )
+          </Parallax>
+          <Parallax opacity={[0, 1]} translateY={[0, 30]}>
+            <div className="w-[70px] justify-self-end self-end">
+              <Image width={300} height={300} src={flower} alt={""} />
+            </div>
+          </Parallax>
+        </div>
+
+        {/* cAR te Ring */}
+        <div className="flex gap-5 lg:mt-12 md:mt-4 m:-mt-[40px] s:-mt-[60px] scale-[0.3] m:scale-[0.4] l:scale-[0.45] md:scale-75 lg:scale-100 ">
+          <div className="flex gap-1 items-end ">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[65px]" variants={ltorVariants}>
+                <Image width={300} height={300} src={fontC} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[100px]" variants={rtolVariants}>
+                <Image width={300} height={300} src={fontA} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[120px]" variants={ltorVariants}>
+                <Image width={300} height={300} src={fontR} alt={""} />
+              </motion.div>
+            </motion.div>
+          </div>
+          <div className="flex gap-1 items-end">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[50px]" variants={rtolVariants}>
+                <Image width={300} height={300} src={fontT} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[50px]" variants={ltorVariants}>
+                <Image width={300} height={300} src={fontE} alt={""} />
+              </motion.div>
+            </motion.div>
+          </div>
+          <div className="flex gap-1">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[130px]" variants={rtolVariants}>
+                <Image width={300} height={300} src={fontRingR} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[40px] -mt-10" variants={ltorVariants}>
+                <Image width={300} height={300} src={fontI} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[65px]" variants={rtolVariants}>
+                <Image width={300} height={300} src={fontN} alt={""} />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div className="w-[70px]" variants={ltorVariants}>
+                <Image width={300} height={300} src={fontG} alt={""} />
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* pic and paragraph */}
+        <div className="flex ml-10 flex-col md:flex-row">
+          {/* paragraph */}
+          <div
+            data-aos="fade-up"
+            className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 "
+          >
+            <div className="font-bold text-2xl font-din">
+              Looking for
+              <br />
+              catering service
+              <br />
+              for
+              <br />
+              your upcoming event?
+            </div>
+            <div className="font-arial">
+              We offer an extensive menu
+              <br />
+              selection and can accommodate
+              <br />
+              most dietary needs.Menu
+              <br />
+              planning including bar service,
+              <br />
+              floral and table decoration as
+              <br />
+              well as rental needs can all be
+              <br />
+              handled by our team, leaving
+              <br />
+              you time to relax.
+            </div>
+            <div className="">
+              For more information,
+              <br />
+              please email us at :
+              <br />
+              catering@baitongfamily.com
+            </div>
+          </div>
+          {/* wedding and frame image */}
+          <div className="-mt-24 -ml-10 scale-75 l:-mt-5 md:scale-100">
+            <Parallax translateY={[-5, 10]} opacity={[0.5, 1]}>
+              <div className="flex flex-col gap-10">
+                <div className="flex">
+                  <div className="w-[137px]">
+                    <Image width={300} height={300} src={fontW} alt={""} />
+                  </div>
+                  <div className="w-[78px]">
+                    <Image width={300} height={300} src={fontWedE} alt={""} />
+                  </div>
+                  <div className="w-[90px]">
+                    <Image width={300} height={300} src={fontD} alt={""} />
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="w-[90px]">
+                    <Image width={300} height={300} src={fontDingD} alt={""} />
+                  </div>
+                  <div className="w-[42.3px]">
+                    <Image width={300} height={300} src={fontDingI} alt={""} />
+                  </div>
+                  <div className="w-[88px]">
+                    <Image width={300} height={300} src={fontDingN} alt={""} />
+                  </div>
+                  <div className="w-[87px]">
+                    <Image width={300} height={300} src={fontDingG} alt={""} />
+                  </div>
+                </div>
+              </div>
+            </Parallax>
+            <div className="flex flex-col items-end ml-10 mt-10">
+              <Parallax>
+                <div className="w-[400px]">
+                  <Image width={450} height={450} src={arch} alt={""} />
+                </div>
+              </Parallax>
+              <Parallax rotate={[10, -20]}>
+                <div className="w-[280px] -mt-[320px] mr-5 ">
+                  <Image width={350} height={350} src={cropPhoto} alt={""} />
+                </div>
+              </Parallax>
+              <Parallax rotate={[0, 180]}>
+                <div className="w-[120px] -mt-10 mr-10">
+                  <Image width={300} height={300} src={date} alt={""} />
+                </div>
+              </Parallax>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default CarteringSection
+export default CarteringSection;
