@@ -30,7 +30,7 @@ function AlltimeFavSection({}: Props) {
     <div className="mt-20">
       <div className="flex flex-col items-center">
         {/* baitong */}
-        <Parallax speed={-10}>
+        <Parallax speed={10}>
           <div className="w-[350px] md:w-[470px] lg:w-[670px] ml-32 md:ml-44">
             <Image
               data-aos="fade-up"
@@ -75,7 +75,7 @@ function AlltimeFavSection({}: Props) {
 
         {/* Foods */}
         <div
-          className="-mt-[300px] lg:-mt-[500px]"
+          className="-mt-[300px] lg:-mt-[530px]"
           data-aos="zoom-in-down"
           data-aos-anchor-placement="top-center"
           data-aos-once="true"
