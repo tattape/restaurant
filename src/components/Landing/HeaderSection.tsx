@@ -1,6 +1,6 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import Logo from "../../images/slice6.png";
@@ -18,160 +18,130 @@ type Props = {}
 
 function HeaderSection({ }: Props) {
     return (
-        <div className="h-screen">
+        <div className="h-screen mb-10">
             <div className="flex justify-center">
-                <motion.div
-                    initial={{ opacity: 0, translateY: -120 }}
-                    animate={{ opacity: 1, translateY: 40 }}
-                    transition={{
-                        duration: 0.5,
-                    }}
-                    className="w-[200px] md:w-[300px]"
-                >
+                <div data-aos='fade-down' className="my-14 w-[200px] md:w-[300px]">
                     <Image src={Logo} width={300} height={150} alt="logo" />
-                </motion.div>
+                </div>
             </div>
-            <Parallax speed={10} translateY={[0, -50]}>
-                <div className="relative flex justify-center mt-40">
-                    <Parallax
-                        speed={20}
-                        translateY={[0, -30]}
-                        translateX={[-17, -30]}
-                        rotate={[-5, 10]}
-                        className="absolute w-3/4 md:w-[900px]"
-                    >
-                        <motion.div
-                            initial={{ rotate: -30, scale: 0.5, opacity: 0 }}
-                            animate={{ rotate: 0, scale: 1, opacity: 1 }}
-                            transition={{
-                                stiffness: 130,
-                                delay: 0.3,
-                            }}
-                        >
-                            <Image src={tong1} alt={""}></Image>
-                        </motion.div>
-                    </Parallax>
-
+            <div className="relative flex flex-col justify-center items-center">
+                <div className="flex">
                     <Parallax
                         speed={10}
-                        translateY={[0, 50]}
-                        translateX={[-10, 50]}
-                        rotate={[-30, 45]}
-                        className="absolute -top-[40px] m:-top-[50px] md:-top-44 m:w-full md:w-[1000px]"
+                        className="absolute md:static rotate-45 l:rotate-0 md:-mr-[400px] w-3/5 md:w-[600px]"
                     >
-                        <motion.div
-                            initial={{ rotate: -20, opacity: 0, translateX: -100 }}
-                            animate={{ rotate: 0, opacity: 1, translateX: 0 }}
-                            transition={{
-                                stiffness: 130,
-                                delay: 0.37,
-                            }}
-                        >
-                            <Image src={tong3} alt={""}></Image>
-                        </motion.div>
-                    </Parallax>
-
-                    <Parallax speed={-20} rotate={[-50, 20]}>
-                        <motion.div
-                            initial={{ rotate: -20, opacity: 0, translateX: -100 }}
-                            animate={{ rotate: 0, opacity: 1, translateX: 0 }}
-                            transition={{
-                                stiffness: 130,
-                                delay: 0.4,
-                            }}
-                            className="absolute top-[100px] md:top-[400px] -right-[250px] md:right-[150px] w-[800px]"
-                        >
-                            <Image width={1000} height={500} src={sai} alt={""} />
-                        </motion.div>
-                    </Parallax>
-
-                    <Parallax speed={-10} rotate={[-10, 10]}>
-                        <motion.div
-                            initial={{ opacity: 0, translateX: -50 }}
-                            animate={{ opacity: 1, translateX: 0 }}
-                            transition={{
-                                stiffness: 130,
-                                delay: 0.52,
-                            }}
-                            className="absolute -right-[100px] md:-right-[220px] s:top-[150px] m:top-[200px] l:top-[220px] md:top-[530px] w-[200px] md:w-[400px]"
-                        >
-                            <Image width={600} height={200} src={oil} alt={""} />
-                        </motion.div>
-                    </Parallax>
-
-                    <Parallax
-                        speed={10}
-                        translateY={[-40, 60]}
-                        translateX={[10, -70]}
-                        rotate={[-30, 45]}
-                        className="absolute top-[20px] md:top-[93px] w-3/4 md:w-[900px]"
-                    >
-                        <motion.div
-                            initial={{
-                                opacity: 0,
-                                translateX: 200,
-                                translateY: -200,
-                            }}
-                            animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-                            transition={{
-                                stiffness: 130,
-                                delay: 0.35,
-                            }}
-                        >
-                            <Image src={tong2} alt={""}></Image>
-                        </motion.div>
+                        <div data-aos='fade-up' data-aos-delay='200'>
+                            <Image width={1000} height={500} src={tong1} alt={""}></Image>
+                        </div>
                     </Parallax>
                     <Parallax
-                        speed={-20}
-                        rotate={[-30, 30]}
-                        className="absolute w-3/4 md:w-[700px]"
+                        speed={5}
+                        translateY={[-40, 40]}
+                        rotate={[-45, 45]}
+                        className="ml-12 -mt-[20px] md:ml-0 md:mt-0 z-20 w-3/4 md:w-[700px]"
                     >
                         <motion.div
-                            initial={{ rotate: 180, scale: 0 }}
-                            animate={{ rotate: 0, scale: 1 }}
+                            initial={{ scale: 0 }}
+                            animate={{ rotate: 180, scale: 1 }}
                             transition={{
+                                delay: 0.2,
                                 type: "spring",
-                                damping: 23,
-                                stiffness: 130,
-                                duration: 20,
+                                stiffness: 260,
+                                damping: 25
                             }}
                         >
-                            <Image src={food} alt={""}></Image>
+                            <Image width={700} height={700} src={food} alt={""}></Image>
                         </motion.div>
                     </Parallax>
-
                     <Parallax
-                        disabled
-                        speed={40}
-                        className="absolute s:top-[65px] m:top-[50px] sm:top-16 md:top-16 w-1/2 md:w-[500px]"
+                        speed={10}
+                        translateY={[-60, 60]}
+                        translateX={[-60, 60]}
+                        rotate={[-45, 45]}
+                        className="absolute md:static ml-[100px] mt-[30px] m:mt-[50px] md:-ml-[500px] md:mt-[170px] w-3/4 md:w-[700px]"
+                    >
+                        <div data-aos='fade-right' data-aos-delay='400'>
+                            <Image width={1000} height={500} src={tong3} alt={""}></Image>
+                        </div>
+                    </Parallax>
+                </div>
+
+                <Parallax
+                    speed={10}
+                    translateY={[-60, 60]}
+                    translateX={[60, -60]}
+                    rotate={[-30, 30]}
+                    className="-ml-[50px] -mt-[150px] m:-ml-[100px] m:-mt-[200px] md:-ml-[300px] md:-mt-[400px] z-10 w-3/5 md:w-[600px]"
+                >
+                    <div data-aos='fade-left' data-aos-delay='300'>
+                        <Image width={1000} height={500} src={tong2} alt={""}></Image>
+                    </div>
+                </Parallax>
+
+                <div className="-mt-[160px] m:-mt-[160px] l:-mt-[230px] md:-mt-[600px] z-30 flex flex-col justify-center items-center">
+                    <Parallax
+                        className="w-1/2 md:w-[500px]"
                     >
                         <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{
-                                stiffness: 500,
+                                delay: 0.4,
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 25
+                            }}
+                        >
+                            <Image width={500} height={500} src={thaiFood} alt={""}></Image>
+                        </motion.div>
+                    </Parallax>
+                    <Parallax
+                        className="-mt-[75px] m:-mt-[90px] l:-mt-[100px] md:-mt-[225px] w-1/2 md:w-[600px]"
+                    >
+                        <motion.div
+                            initial={{ clipPath: 'polygon(0 0, 0 100%, 0 100%, 0 0)' }}
+                            animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+                            transition={{
                                 duration: 0.5,
                                 delay: 0.4,
                             }}
                         >
-                            <Image src={thaiFood} alt={""}></Image>
+                            <Image width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic} alt={""} />
                         </motion.div>
                     </Parallax>
-                    <Parallax
-                        disabled
-                        speed={40}
-                        className="absolute s:top-[105px] m:top-[102px] sm:top-[145px] md:top-[190px] w-1/2 md:w-[600px]"
-                    >
-                        <div className="brush-stroke">
-                            <Image
-                                className="w-full s:h-9 m:h-12 sm:h-16 md:h-24"
-                                src={authentic}
-                                alt={""}
-                            />
-                        </div>
-                    </Parallax>
                 </div>
-            </Parallax >
+
+                <Parallax
+                    speed={10}
+                    translateX={[0, 0]}
+                    translateY={[0, 0]}
+                    rotate={[-10, 45]}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, translateY: -20 }}
+                        animate={{ opacity: 1, translateY: 0 }}
+                        transition={{
+                            delay: 1,
+                        }}
+                        className="ml-20 mt-[100px] m:mt-[90px] l:mt-[150px] md:mt-[220px] md:ml-0 w-1/2 md:w-[400px]"
+                    >
+                        <Image width={600} height={200} src={oil} alt={""} />
+                    </motion.div>
+                </Parallax>
+                <Parallax>
+                    <motion.div
+                        initial={{ opacity: 0, rotate: -45, translateY: -100 }}
+                        animate={{ opacity: 1, rotate: 0, translateY: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.7,
+                        }}
+                        className="-mt-[50px] md:-ml-[950px] md:-mt-[300px] md:w-[900px]"
+                    >
+                        <Image width={1000} height={500} src={sai} alt={""} />
+                    </motion.div>
+                </Parallax>
+            </div>
         </div >
     )
 }

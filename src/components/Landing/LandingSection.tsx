@@ -43,10 +43,10 @@ function LandingSection({ }: Props) {
   useEffect(() => {
     const preload = setInterval(() => {
       setLoading(false);
-    }, 2500);
+    }, 1500);
     const Ready = setInterval(() => {
       setReady(true);
-    }, 2750);
+    }, 1750);
 
     return () => {
       clearInterval(preload);

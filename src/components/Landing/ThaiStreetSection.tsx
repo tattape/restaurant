@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
-function ThaiStreetSection({}: Props) {
+function ThaiStreetSection({ }: Props) {
   const [activeIndex, setActiveIndex] = useState(
     Math.floor(ThaiStreetImg.length / 4)
   );

@@ -57,14 +57,16 @@ body {
 
 @keyframes brushStrokeReveal {
     0% {
+        opacity: 0;
         clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
     }
 
     100% {
+        opacity: 1;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
 .brush-stroke {
-    animation: brushStrokeReveal 1s ease-in-out forwards;
+    animation: brushStrokeReveal .5s ease-in-out forwards;
 }
