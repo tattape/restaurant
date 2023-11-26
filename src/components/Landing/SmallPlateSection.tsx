@@ -25,7 +25,7 @@ function SmallPlateSection({}: Props) {
   );
 
   return (
-    <div className="mt-0 md:mt-[300px]">
+    <div className="mt-0 md:mt-[500px]">
       <div className="flex flex-col items-center">
         <div className="flex justify-center">
           <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
