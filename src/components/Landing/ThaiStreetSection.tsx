@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 // import required modules
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import thaiStreet from "../../images/thai-street.png";
 import thongRed from "../../images/thong-red.png";
@@ -38,7 +38,7 @@ function ThaiStreetSection({ }: Props) {
             data-aos-duration="700"
             className="w-[90px] md:w-[150px] -ml-[200px] md:-ml-[420px] -mb-80 md:-mb-96"
           >
-            <Image width={500} height={800} src={pick} alt="" />
+            <Image className="hover:animate-spin transition-all ease-in-out" width={500} height={800} src={pick} alt="" />
           </div>
         </Parallax>
         <div className="flex flex-col-reverse items-center justify-center z-10">
@@ -52,7 +52,7 @@ function ThaiStreetSection({ }: Props) {
               alt=""
             />
           </div>
-          <div className="w-[180px] md:w-[300px] lg:w-[440px] rotate-[30deg] md:rotate-0 -mb-10 md:-mb-28 lg:-mb-32 -mr-[200px] md:-mr-[450px] lg:-mr-[650px] z-10">
+          <div className="hover:animate-shake transition-all ease-in-out w-[180px] md:w-[300px] lg:w-[440px] rotate-[30deg] md:rotate-0 -mb-10 md:-mb-28 lg:-mb-32 -mr-[200px] md:-mr-[450px] lg:-mr-[650px] z-10">
             <Image
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
@@ -89,6 +89,11 @@ function ThaiStreetSection({ }: Props) {
             initialSlide={activeIndex}
             centeredSlides={true}
             slidesPerView={"auto"}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false
+            }}
             coverflowEffect={{
               rotate: 0,
               stretch: 10,
@@ -96,7 +101,7 @@ function ThaiStreetSection({ }: Props) {
               modifier: 3,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           >
@@ -138,6 +143,11 @@ function ThaiStreetSection({ }: Props) {
             initialSlide={activeIndex}
             centeredSlides={true}
             slidesPerView={"auto"}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false
+            }}
             coverflowEffect={{
               rotate: 0,
               stretch: 10,
@@ -145,7 +155,7 @@ function ThaiStreetSection({ }: Props) {
               modifier: 3,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex2(swiper.activeIndex)}
           >

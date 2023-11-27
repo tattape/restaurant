@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 // import required modules
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import allTimeFavorite from "../../images/all-time-favorite.png";
 import horapa1 from "../../images/horapa1.png";
@@ -18,7 +18,7 @@ import horapa2 from "../../images/horapa2.png";
 
 type Props = {};
 
-function AlltimeFavSection({}: Props) {
+function AlltimeFavSection({ }: Props) {
   const [activeIndex, setActiveIndex] = useState(
     Math.floor(AlltimeFavImg.length / 4)
   );
@@ -31,8 +31,9 @@ function AlltimeFavSection({}: Props) {
       <div className="flex flex-col items-center">
         {/* baitong */}
         <Parallax speed={10}>
-          <div className="w-[350px] md:w-[470px] lg:w-[670px] ml-32 md:ml-44">
+          <div className="w-[350px] md:w-[470px] lg:w-[670px] ml-32 md:ml-44 hover:ease-in-out hover:transition-all hover:duration-200">
             <Image
+              className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(255,36,145,1)] !transition-all !ease-in-out"
               data-aos="fade-up"
               data-aos-anchor-placement="center-center"
               data-aos-once="true"
@@ -48,6 +49,7 @@ function AlltimeFavSection({}: Props) {
           <Parallax speed={-20} className="z-10">
             <div className="w-[150px] md:w-[250px] lg:w-[400px] -ml-20 md:-ml-40 mt-40">
               <Image
+                className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out"
                 data-aos="fade-up-right"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
@@ -61,6 +63,7 @@ function AlltimeFavSection({}: Props) {
           <Parallax speed={-25}>
             <div className="w-[150px] md:w-[250px] lg:w-[350px] delay-75 -mr-20 md:-mr-40">
               <Image
+                className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out"
                 data-aos="fade-down-left"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
@@ -86,6 +89,11 @@ function AlltimeFavSection({}: Props) {
             initialSlide={activeIndex}
             centeredSlides={true}
             slidesPerView={"auto"}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false
+            }}
             coverflowEffect={{
               rotate: 0,
               stretch: 10,
@@ -93,7 +101,7 @@ function AlltimeFavSection({}: Props) {
               modifier: 3,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           >
@@ -136,6 +144,11 @@ function AlltimeFavSection({}: Props) {
             initialSlide={activeIndex2}
             centeredSlides={true}
             slidesPerView={"auto"}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false
+            }}
             coverflowEffect={{
               rotate: 0,
               stretch: 10,
@@ -143,7 +156,7 @@ function AlltimeFavSection({}: Props) {
               modifier: 3,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex2(swiper.activeIndex)}
           >

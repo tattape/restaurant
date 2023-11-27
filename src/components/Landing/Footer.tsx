@@ -59,7 +59,7 @@ function Footer({ }: Props) {
                             data-aos-delay={index * 50}
                             data-aos-anchor-placement="top-bottom"
                         >
-                            <div className="w-14 bg-white p-2 rounded-md !duration-300 cursor-pointer hover:bg-gray-300 !transition-all active:scale-95 active:bg-gray-500">
+                            <div className="w-14 bg-white p-2 rounded-md !duration-300 cursor-pointer hover:bg-gray-300 transition-all ease-in-out active:scale-[0.98] active:bg-gray-500">
                                 <Image
                                     className="w-full"
                                     width={64}

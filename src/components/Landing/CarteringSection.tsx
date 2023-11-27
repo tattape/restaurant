@@ -27,7 +27,7 @@ import arch from "../../images/arch.png";
 
 type Props = {};
 
-function CarteringSection({}: Props) {
+function CarteringSection({ }: Props) {
   const rtolVariants: Variants = {
     onscreen: {
       translateX: [100, 30],
@@ -53,12 +53,12 @@ function CarteringSection({}: Props) {
         <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
           <Parallax opacity={[0, 1]} translateY={[0, 30]}>
             <div className="w-[200px] -mt-24">
-              <Image width={300} height={300} src={camera} alt={""} />
+              <Image className="hover:animate-shake1" width={300} height={300} src={camera} alt={""} />
             </div>
           </Parallax>
           <Parallax opacity={[0, 1]} translateY={[0, 30]}>
             <div className="w-[70px] justify-self-end self-end">
-              <Image width={300} height={300} src={flower} alt={""} />
+              <Image className="hover:animate-shake" width={300} height={300} src={flower} alt={""} />
             </div>
           </Parallax>
         </div>
@@ -239,7 +239,7 @@ function CarteringSection({}: Props) {
               </Parallax>
               <Parallax rotate={[0, 180]}>
                 <div className="w-[120px] -mt-10 mr-10">
-                  <Image width={300} height={300} src={date} alt={""} />
+                  <Image className="hover:animate-[spin_2s_ease-in-out]" width={300} height={300} src={date} alt={""} />
                 </div>
               </Parallax>
             </div>

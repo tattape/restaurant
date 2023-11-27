@@ -128,7 +128,7 @@ function HeaderSection({ }: Props) {
                         <Image width={600} height={200} src={oil} alt={""} />
                     </motion.div>
                 </Parallax>
-                <Parallax>
+                <Parallax speed={-30}>
                     <motion.div
                         initial={{ opacity: 0, rotate: -45, translateY: -100 }}
                         animate={{ opacity: 1, rotate: 0, translateY: 0 }}
@@ -136,7 +136,7 @@ function HeaderSection({ }: Props) {
                             duration: 0.8,
                             delay: 0.7,
                         }}
-                        className="-mt-[50px] md:-ml-[950px] md:-mt-[300px] md:w-[900px]"
+                        className="hover:invert transition-all ease-in-out -mt-[50px] md:-ml-[950px] md:-mt-[100px] md:w-[900px]"
                     >
                         <Image width={1000} height={500} src={sai} alt={""} />
                     </motion.div>

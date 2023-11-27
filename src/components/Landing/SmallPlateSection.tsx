@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 // import required modules
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import menu from "../../images/menu.png";
 import smallPlates from "../../images/small-plate.png";
@@ -19,7 +19,7 @@ import bitong from "../../images/bitong.png";
 
 type Props = {};
 
-function SmallPlateSection({}: Props) {
+function SmallPlateSection({ }: Props) {
   const [activeIndex, setActiveIndex] = useState(
     Math.floor(SmallPlateImg.length / 2)
   );
@@ -65,6 +65,11 @@ function SmallPlateSection({}: Props) {
             initialSlide={activeIndex}
             centeredSlides={true}
             slidesPerView={"auto"}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false
+            }}
             coverflowEffect={{
               rotate: 0,
               stretch: 10,
@@ -72,7 +77,7 @@ function SmallPlateSection({}: Props) {
               modifier: 3,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           >
