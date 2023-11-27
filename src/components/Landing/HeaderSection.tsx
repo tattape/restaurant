@@ -14,14 +14,15 @@ import tong3 from "../../images/Asset 4.png";
 import oil from "../../images/oil.png";
 import sai from "../../images/slice27.png";
 
-type Props = {}
+type Props = {
+}
 
 function HeaderSection({ }: Props) {
     return (
         <div className="h-screen mb-10">
             <div className="flex justify-center">
                 <div data-aos='fade-down' className="my-14 w-[200px] md:w-[300px]">
-                    <Image src={Logo} width={300} height={150} alt="logo" />
+                    <Image src={Logo} width={300} height={150} alt="logo" priority />
                 </div>
             </div>
             <div className="relative flex flex-col justify-center items-center">
@@ -31,7 +32,7 @@ function HeaderSection({ }: Props) {
                         className="absolute md:static rotate-45 l:rotate-0 md:-mr-[400px] w-3/5 md:w-[600px]"
                     >
                         <div data-aos='fade-up' data-aos-delay='200'>
-                            <Image width={1000} height={500} src={tong1} alt={""}></Image>
+                            <Image width={1000} height={500} src={tong1} alt={""} priority />
                         </div>
                     </Parallax>
                     <Parallax
@@ -50,7 +51,7 @@ function HeaderSection({ }: Props) {
                                 damping: 25
                             }}
                         >
-                            <Image width={700} height={700} src={food} alt={""}></Image>
+                            <Image width={700} height={700} src={food} alt={""} priority />
                         </motion.div>
                     </Parallax>
                     <Parallax
@@ -61,7 +62,7 @@ function HeaderSection({ }: Props) {
                         className="absolute md:static ml-[100px] mt-[30px] m:mt-[50px] md:-ml-[500px] md:mt-[170px] w-3/4 md:w-[700px]"
                     >
                         <div data-aos='fade-right' data-aos-delay='400'>
-                            <Image width={1000} height={500} src={tong3} alt={""}></Image>
+                            <Image width={1000} height={500} src={tong3} alt={""} priority />
                         </div>
                     </Parallax>
                 </div>
@@ -74,7 +75,7 @@ function HeaderSection({ }: Props) {
                     className="-ml-[50px] -mt-[150px] m:-ml-[100px] m:-mt-[200px] md:-ml-[300px] md:-mt-[400px] z-10 w-3/5 md:w-[600px]"
                 >
                     <div data-aos='fade-left' data-aos-delay='300'>
-                        <Image width={1000} height={500} src={tong2} alt={""}></Image>
+                        <Image width={1000} height={500} src={tong2} alt={""} priority />
                     </div>
                 </Parallax>
 
@@ -92,7 +93,7 @@ function HeaderSection({ }: Props) {
                                 damping: 25
                             }}
                         >
-                            <Image width={500} height={500} src={thaiFood} alt={""}></Image>
+                            <Image width={500} height={500} src={thaiFood} alt={""} priority />
                         </motion.div>
                     </Parallax>
                     <Parallax
@@ -106,7 +107,7 @@ function HeaderSection({ }: Props) {
                                 delay: 0.4,
                             }}
                         >
-                            <Image width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic} alt={""} />
+                            <Image width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic} alt={""} priority />
                         </motion.div>
                     </Parallax>
                 </div>
@@ -125,7 +126,7 @@ function HeaderSection({ }: Props) {
                         }}
                         className="ml-20 mt-[100px] m:mt-[90px] l:mt-[150px] md:mt-[220px] md:ml-0 w-1/2 md:w-[400px]"
                     >
-                        <Image width={600} height={200} src={oil} alt={""} />
+                        <Image width={600} height={200} src={oil} alt={""} priority />
                     </motion.div>
                 </Parallax>
                 <Parallax speed={-30}>
@@ -136,9 +137,9 @@ function HeaderSection({ }: Props) {
                             duration: 0.8,
                             delay: 0.7,
                         }}
-                        className="hover:invert transition-all ease-in-out -mt-[50px] md:-ml-[950px] md:-mt-[100px] md:w-[900px]"
+                        className="-mt-[50px] md:-ml-[950px] md:-mt-[100px] md:w-[900px]"
                     >
-                        <Image width={1000} height={500} src={sai} alt={""} />
+                        <Image className="hover:invert transition-all ease-in-out" width={1000} height={500} src={sai} alt={""} priority />
                     </motion.div>
                 </Parallax>
             </div>

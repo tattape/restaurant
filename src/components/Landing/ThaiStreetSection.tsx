@@ -146,6 +146,7 @@ function ThaiStreetSection({ }: Props) {
             autoplay={{
               delay: 1500,
               pauseOnMouseEnter: true,
+              reverseDirection: true,
               disableOnInteraction: false
             }}
             coverflowEffect={{

@@ -87,35 +87,35 @@ function LandingSection({ }: Props) {
 
   return (
     <>
-      {!Ready ? (
+      {!Ready ?
         <LoadingScreen Loading={Loading} />
-      ) : (
-        <ParallaxProvider>
-          <ButtonLanding scroll={isScrolling} />
-          <div className="overflow-x-hidden">
-            {/* heder */}
-            <HeaderSection />
+        : (
+          <ParallaxProvider>
+            <ButtonLanding scroll={isScrolling} />
+            <div className="overflow-x-hidden">
+              {/* heder */}
+              <HeaderSection />
 
-            {/* small plate */}
-            <SmallPlateSection />
+              {/* small plate */}
+              <SmallPlateSection />
 
-            {/* thai street */}
-            <ThaiStreetSection />
+              {/* thai street */}
+              <ThaiStreetSection />
 
-            {/* all time favorite */}
-            <AlltimeFavSection />
+              {/* all time favorite */}
+              <AlltimeFavSection />
 
-            {/* gift card */}
-            <GiftCardSection />
+              {/* gift card */}
+              <GiftCardSection />
 
-            {/* Car te Ring */}
-            <CarteringSection />
+              {/* Car te Ring */}
+              <CarteringSection />
 
-            {/* footer */}
-            <Footer />
-          </div>
-        </ParallaxProvider>
-      )}
+              {/* footer */}
+              <Footer />
+            </div>
+          </ParallaxProvider>
+        )}
     </>
   );
 }
