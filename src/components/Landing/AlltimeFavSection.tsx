@@ -47,9 +47,8 @@ function AlltimeFavSection({ }: Props) {
         {/* props */}
         <div className="flex justify-between w-full">
           <Parallax speed={-20} className="z-10">
-            <div className="w-[150px] md:w-[250px] lg:w-[400px] -ml-20 md:-ml-40 mt-40">
+            <div className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out w-[150px] md:w-[250px] lg:w-[400px] -ml-20 md:-ml-40 mt-40">
               <Image
-                className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out"
                 data-aos="fade-up-right"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
@@ -61,9 +60,8 @@ function AlltimeFavSection({ }: Props) {
             </div>
           </Parallax>
           <Parallax speed={-25}>
-            <div className="w-[150px] md:w-[250px] lg:w-[350px] delay-75 -mr-20 md:-mr-40">
+            <div className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out w-[150px] md:w-[250px] lg:w-[350px] delay-75 -mr-20 md:-mr-40">
               <Image
-                className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out"
                 data-aos="fade-down-left"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
