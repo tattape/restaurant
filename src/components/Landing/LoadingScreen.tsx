@@ -21,8 +21,8 @@ function LoadingScreen({ Loading }: Props) {
               ease: [0, 0.5, 1, 2.2],
               scale: {
                 type: "spring",
-                damping: 15,
                 stiffness: 200,
+                damping: 20,
               },
             }}
             className="bg-main"

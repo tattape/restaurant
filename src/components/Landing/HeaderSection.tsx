@@ -21,8 +21,8 @@ function HeaderSection({ }: Props) {
     return (
         <div className="h-screen mb-10">
             <div className="flex justify-center">
-                <div data-aos='fade-down' className="my-14 w-[200px] md:w-[300px]">
-                    <img src={Logo.src} width={300} height={150} alt="logo" loading="eager" />
+                <div data-aos='fade-down' data-aos-delay='1400' className="my-14 w-[200px] md:w-[300px]">
+                    <Image src={Logo.src} width={300} height={150} alt="logo" loading="eager" priority />
                 </div>
             </div>
             <div className="relative flex flex-col justify-center items-center">
@@ -31,8 +31,8 @@ function HeaderSection({ }: Props) {
                         speed={10}
                         className="absolute md:static rotate-45 l:rotate-0 md:-mr-[400px] w-3/5 md:w-[600px]"
                     >
-                        <div data-aos='fade-up' data-aos-delay='200'>
-                            <img width={1000} height={500} src={tong1.src} alt={""} loading="eager" />
+                        <div data-aos='fade-up' data-aos-delay='1000'>
+                            <Image width={1000} height={500} src={tong1.src} alt={""} loading="eager" priority />
                         </div>
                     </Parallax>
                     <Parallax
@@ -45,13 +45,13 @@ function HeaderSection({ }: Props) {
                             initial={{ scale: 0 }}
                             animate={{ rotate: 180, scale: 1 }}
                             transition={{
-                                delay: 0.2,
+                                delay: 0.5,
                                 type: "spring",
-                                stiffness: 260,
+                                stiffness: 300,
                                 damping: 25
                             }}
                         >
-                            <img width={700} height={700} src={food.src} alt={""} loading="eager" />
+                            <Image width={700} height={700} src={food.src} alt={""} loading="eager" priority />
                         </motion.div>
                     </Parallax>
                     <Parallax
@@ -61,8 +61,8 @@ function HeaderSection({ }: Props) {
                         rotate={[-45, 45]}
                         className="absolute md:static ml-[100px] mt-[30px] m:mt-[50px] md:-ml-[500px] md:mt-[170px] w-3/4 md:w-[700px]"
                     >
-                        <div data-aos='fade-right' data-aos-delay='400'>
-                            <img width={1000} height={500} src={tong3.src} alt={""} loading="eager" />
+                        <div data-aos='fade-right' data-aos-delay='1000'>
+                            <Image width={1000} height={500} src={tong3.src} alt={""} loading="eager" priority />
                         </div>
                     </Parallax>
                 </div>
@@ -74,8 +74,8 @@ function HeaderSection({ }: Props) {
                     rotate={[-30, 30]}
                     className="-ml-[50px] -mt-[150px] m:-ml-[100px] m:-mt-[200px] md:-ml-[300px] md:-mt-[400px] z-10 w-3/5 md:w-[600px]"
                 >
-                    <div data-aos='fade-left' data-aos-delay='300'>
-                        <img width={1000} height={500} src={tong2.src} alt={""} loading="eager" />
+                    <div data-aos='fade-left' data-aos-delay='1000'>
+                        <Image width={1000} height={500} src={tong2.src} alt={""} loading="eager" priority />
                     </div>
                 </Parallax>
 
@@ -87,13 +87,13 @@ function HeaderSection({ }: Props) {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{
-                                delay: 0.4,
+                                delay: 0.8,
                                 type: "spring",
                                 stiffness: 260,
                                 damping: 25
                             }}
                         >
-                            <img width={500} height={500} src={thaiFood.src} alt={""} loading="eager" />
+                            <Image width={500} height={500} src={thaiFood.src} alt={""} loading="eager" priority />
                         </motion.div>
                     </Parallax>
                     <Parallax
@@ -103,11 +103,11 @@ function HeaderSection({ }: Props) {
                             initial={{ clipPath: 'polygon(0 0, 0 100%, 0 100%, 0 0)' }}
                             animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                             transition={{
-                                duration: 0.5,
-                                delay: 0.4,
+                                duration: 0.8,
+                                delay: 1,
                             }}
                         >
-                            <img width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic.src} alt={""} loading="eager" />
+                            <Image width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic.src} alt={""} loading="eager" priority />
                         </motion.div>
                     </Parallax>
                 </div>
@@ -122,11 +122,11 @@ function HeaderSection({ }: Props) {
                         initial={{ opacity: 0, translateY: -20 }}
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{
-                            delay: 1,
+                            delay: 1.2,
                         }}
                         className="ml-20 mt-[100px] m:mt-[90px] l:mt-[150px] md:mt-[220px] md:ml-0 w-1/2 md:w-[400px]"
                     >
-                        <img width={600} height={200} src={oil.src} alt={""} loading="eager" />
+                        <Image width={600} height={200} src={oil.src} alt={""} loading="eager" priority />
                     </motion.div>
                 </Parallax>
                 <Parallax speed={-30}>
@@ -135,11 +135,11 @@ function HeaderSection({ }: Props) {
                         animate={{ opacity: 1, rotate: 0, translateY: 0 }}
                         transition={{
                             duration: 0.8,
-                            delay: 0.7,
+                            delay: 1.3,
                         }}
                         className="-mt-[50px] md:-ml-[950px] md:-mt-[100px] md:w-[900px]"
                     >
-                        <img className="hover:invert transition-all ease-in-out" width={1000} height={500} src={sai.src} alt={""} loading="eager" />
+                        <Image className="hover:invert transition-all ease-in-out" width={1000} height={500} src={sai.src} alt={""} loading="eager" priority />
                     </motion.div>
                 </Parallax>
             </div>
