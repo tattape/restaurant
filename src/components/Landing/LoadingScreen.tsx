@@ -9,7 +9,7 @@ type Props = {
 
 function LoadingScreen({ Loading }: Props) {
   return (
-    <div className={`z-[999] absolute w-full h-screen flex justify-center items-center bg-main`}>
+    <div className={`z-[999] absolute w-full h-full bg-main flex justify-center items-center`}>
       <AnimatePresence>
         {Loading && (
           <motion.div
@@ -25,7 +25,6 @@ function LoadingScreen({ Loading }: Props) {
                 damping: 20,
               },
             }}
-            className="bg-main"
           >
             <img
               className=""
