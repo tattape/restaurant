@@ -27,12 +27,13 @@ function LoadingScreen({ Loading }: Props) {
             }}
             className="bg-main"
           >
-            <Image
+            <img
               className=""
-              src={Logo}
+              src={Logo.src}
               width={300}
               height={150}
               alt="logo"
+              loading="eager"
             />
           </motion.div>
         )}

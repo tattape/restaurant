@@ -60,12 +60,13 @@ function Footer({ }: Props) {
                             data-aos-anchor-placement="top-bottom"
                         >
                             <div className="w-14 bg-white p-2 rounded-md !duration-300 cursor-pointer hover:bg-gray-300 transition-all ease-in-out active:scale-[0.98] active:bg-gray-500">
-                                <Image
+                                <img
                                     className="w-full"
                                     width={64}
                                     height={64}
-                                    src={item.src}
+                                    src={item.src.src}
                                     alt={item.alt}
+                                    loading="eager"
                                 />
                             </div>
                         </div>
@@ -78,12 +79,12 @@ function Footer({ }: Props) {
                 {/* footer */}
                 <div className="z-10 bg-fuchsia-800 w-full flex justify-center py-10">
                     <div className="w-[150px] m:w-[250px] md:w-[400px]">
-                        <Image
-                            src={Logo}
+                        <img
+                            src={Logo.src}
                             width={600}
                             height={200}
                             alt="logo"
-                            unoptimized
+                            loading="eager"
                         />
                     </div>
                 </div>

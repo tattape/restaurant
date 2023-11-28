@@ -22,12 +22,8 @@ import { motion } from "framer-motion";
 type Props = {};
 
 function ThaiStreetSection({ }: Props) {
-  const [activeIndex, setActiveIndex] = useState(
-    Math.floor(ThaiStreetImg.length / 4)
-  );
-  const [activeIndex2, setActiveIndex2] = useState(
-    Math.floor(ThaiStreetImg.length / 4)
-  );
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
     <div className="">
@@ -38,28 +34,29 @@ function ThaiStreetSection({ }: Props) {
             data-aos-duration="700"
             className="w-[90px] md:w-[150px] -ml-[200px] md:-ml-[420px] -mb-80 md:-mb-96"
           >
-            <Image className="hover:animate-spin transition-all ease-in-out" width={500} height={800} src={pick} alt="" />
+            <img className="hover:animate-spin transition-all ease-in-out" width={500} height={800} src={pick.src} alt="" loading="eager" />
           </div>
         </Parallax>
         <div className="flex flex-col-reverse items-center justify-center z-10">
           <div className="w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
-            <Image
+            <img
               data-aos="fade-up"
               data-aos-once="true"
               width={400}
               height={300}
-              src={thaiStreet}
+              src={thaiStreet.src}
               alt=""
+              loading="eager"
             />
           </div>
           <div className="hover:animate-shake transition-all ease-in-out w-[180px] md:w-[300px] lg:w-[440px] rotate-[30deg] md:rotate-0 -mb-10 md:-mb-28 lg:-mb-32 -mr-[200px] md:-mr-[450px] lg:-mr-[650px] z-10">
-            <Image
+            <img
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
               data-aos-once="true"
               width={500}
               height={30}
-              src={thisIsSoYum}
+              src={thisIsSoYum.src}
               alt=""
             />
           </div>
@@ -75,7 +72,7 @@ function ThaiStreetSection({ }: Props) {
             }}
             className="-mt-20"
           >
-            <Image width={3500} height={1000} src={thongRed} alt="" />
+            <img width={3500} height={1000} src={thongRed.src} alt="" loading="eager" />
           </motion.div>
         </Parallax>
         <div
@@ -84,6 +81,7 @@ function ThaiStreetSection({ }: Props) {
           data-aos-once="true"
         >
           <Swiper
+            loop
             effect={"coverflow"}
             grabCursor={true}
             initialSlide={activeIndex}
@@ -103,9 +101,9 @@ function ThaiStreetSection({ }: Props) {
             }}
             modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
-            {ThaiStreetImg.slice(0, 8).map((image: any, idx: number) => {
+            {ThaiStreetImg.slice(0, 8).concat(ThaiStreetImg.slice(0, 8)).map((image: any, idx: number) => {
               const isActive = idx === activeIndex;
               const Opacity = isActive
                 ? "hover:!scale-[1.02] !transition-all"
@@ -116,7 +114,7 @@ function ThaiStreetSection({ }: Props) {
                   key={idx}
                   className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                 >
-                  <Image width={500} height={500} alt="" src={image.src} />
+                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
                   {isActive && (
                     <p
                       data-aos="zoom-in"
@@ -138,6 +136,7 @@ function ThaiStreetSection({ }: Props) {
           data-aos-once="true"
         >
           <Swiper
+            loop
             effect={"coverflow"}
             grabCursor={true}
             initialSlide={activeIndex}
@@ -158,9 +157,9 @@ function ThaiStreetSection({ }: Props) {
             }}
             modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
-            onSlideChange={(swiper) => setActiveIndex2(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex2(swiper.realIndex)}
           >
-            {ThaiStreetImg.slice(8, 17).map((image: any, idx: number) => {
+            {ThaiStreetImg.slice(8, 17).concat(ThaiStreetImg.slice(8, 17)).map((image: any, idx: number) => {
               const isActive = idx === activeIndex2;
               const Opacity = isActive
                 ? "hover:!scale-[1.02] !transition-all"
@@ -171,7 +170,7 @@ function ThaiStreetSection({ }: Props) {
                   key={idx}
                   className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                 >
-                  <Image width={500} height={500} alt="" src={image.src} />
+                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
                   {isActive && (
                     <p
                       data-aos="zoom-in"

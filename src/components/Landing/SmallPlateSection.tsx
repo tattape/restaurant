@@ -20,9 +20,7 @@ import bitong from "../../images/bitong.png";
 type Props = {};
 
 function SmallPlateSection({ }: Props) {
-  const [activeIndex, setActiveIndex] = useState(
-    Math.floor(SmallPlateImg.length / 2)
-  );
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
     <div className="mt-0 md:mt-[500px]">
@@ -30,19 +28,21 @@ function SmallPlateSection({ }: Props) {
         <div className="flex justify-center">
           <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
             <div className="flex justify-center w-[100px] md:w-[300px] lg:w-[500px]">
-              <Image
+              <img
                 data-aos="fade-up"
                 data-aos-once="true"
-                src={menu}
+                src={menu.src}
                 alt={""}
+                loading="eager"
               />
             </div>
             <div className="flex justify-center w-[180px] md:w-[300px] lg:w-[500px]">
-              <Image
+              <img
                 data-aos="fade-down"
                 data-aos-once="true"
-                src={smallPlates}
+                src={smallPlates.src}
                 alt={""}
+                loading="eager"
               />
             </div>
           </div>
@@ -50,7 +50,7 @@ function SmallPlateSection({ }: Props) {
         <div className="w-full flex justify-end -mt-20 md:-mt-40">
           <Parallax translateX={[100, -10]}>
             <div className="w-[150px] md:w-[200px] lg:w-[350px]">
-              <Image width={600} height={600} src={handblack} alt={""} />
+              <img width={600} height={600} src={handblack.src} alt={""} loading="eager" />
             </div>
           </Parallax>
         </div>
@@ -60,6 +60,7 @@ function SmallPlateSection({ }: Props) {
           className="mt-0 md:mt-10 lg:-mt-24"
         >
           <Swiper
+            loop
             effect={"coverflow"}
             grabCursor={true}
             initialSlide={activeIndex}
@@ -79,9 +80,9 @@ function SmallPlateSection({ }: Props) {
             }}
             modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
-            {SmallPlateImg.map((image: any, idx: number) => {
+            {SmallPlateImg.concat(SmallPlateImg).map((image: any, idx: number) => {
               const isActive = idx === activeIndex;
               const Opacity = isActive
                 ? "hover:!scale-[1.02] !transition-all"
@@ -92,7 +93,7 @@ function SmallPlateSection({ }: Props) {
                   key={idx}
                   className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                 >
-                  <Image width={500} height={500} alt="" src={image.src} />
+                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
                   {isActive && (
                     <p
                       data-aos="zoom-in"
@@ -111,14 +112,15 @@ function SmallPlateSection({ }: Props) {
         <div className="w-full mt-5 md:mt-0 pl-5 md:pl-10 lg:pl-60">
           <Parallax speed={-10}>
             <div className="w-[150px] md:w-[200px] lg:w-[300px]">
-              <Image
+              <img
                 data-aos="fade-down"
                 data-aos-duration="500"
                 data-aos-once="true"
                 width={300}
                 height={300}
-                src={bitong}
+                src={bitong.src}
                 alt={""}
+                loading="eager"
               />
             </div>
           </Parallax>

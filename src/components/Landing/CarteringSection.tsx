@@ -53,12 +53,12 @@ function CarteringSection({ }: Props) {
         <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
           <Parallax opacity={[0, 1]} translateY={[0, 30]}>
             <div className="w-[200px] -mt-24">
-              <Image className="hover:animate-shake1" width={300} height={300} src={camera} alt={""} />
+              <img className="hover:animate-shake1" width={300} height={300} src={camera.src} alt={""} loading="eager" />
             </div>
           </Parallax>
           <Parallax opacity={[0, 1]} translateY={[0, 30]}>
             <div className="w-[70px] justify-self-end self-end">
-              <Image className="hover:animate-shake" width={300} height={300} src={flower} alt={""} />
+              <img className="hover:animate-shake" width={300} height={300} src={flower.src} alt={""} loading="eager" />
             </div>
           </Parallax>
         </div>
@@ -72,7 +72,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[65px]" variants={ltorVariants}>
-                <Image width={300} height={300} src={fontC} alt={""} />
+                <img width={300} height={300} src={fontC.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -81,7 +81,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[100px]" variants={rtolVariants}>
-                <Image width={300} height={300} src={fontA} alt={""} />
+                <img width={300} height={300} src={fontA.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -90,7 +90,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[120px]" variants={ltorVariants}>
-                <Image width={300} height={300} src={fontR} alt={""} />
+                <img width={300} height={300} src={fontR.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
           </div>
@@ -101,7 +101,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[50px]" variants={rtolVariants}>
-                <Image width={300} height={300} src={fontT} alt={""} />
+                <img width={300} height={300} src={fontT.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -110,7 +110,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[50px]" variants={ltorVariants}>
-                <Image width={300} height={300} src={fontE} alt={""} />
+                <img width={300} height={300} src={fontE.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
           </div>
@@ -121,7 +121,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[130px]" variants={rtolVariants}>
-                <Image width={300} height={300} src={fontRingR} alt={""} />
+                <img width={300} height={300} src={fontRingR.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -130,7 +130,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[40px] -mt-10" variants={ltorVariants}>
-                <Image width={300} height={300} src={fontI} alt={""} />
+                <img width={300} height={300} src={fontI.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -139,7 +139,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[65px]" variants={rtolVariants}>
-                <Image width={300} height={300} src={fontN} alt={""} />
+                <img width={300} height={300} src={fontN.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
             <motion.div
@@ -148,7 +148,7 @@ function CarteringSection({ }: Props) {
               viewport={{ once: true, amount: 0.8 }}
             >
               <motion.div className="w-[70px]" variants={ltorVariants}>
-                <Image width={300} height={300} src={fontG} alt={""} />
+                <img width={300} height={300} src={fontG.src} alt={""} loading="eager" />
               </motion.div>
             </motion.div>
           </div>
@@ -201,27 +201,27 @@ function CarteringSection({ }: Props) {
               <div className="flex flex-col gap-10">
                 <div className="flex">
                   <div className="w-[137px]">
-                    <Image width={300} height={300} src={fontW} alt={""} />
+                    <img width={300} height={300} src={fontW.src} alt={""} loading="eager" />
                   </div>
                   <div className="w-[78px]">
-                    <Image width={300} height={300} src={fontWedE} alt={""} />
+                    <img width={300} height={300} src={fontWedE.src} alt={""} loading="eager" />
                   </div>
                   <div className="w-[90px]">
-                    <Image width={300} height={300} src={fontD} alt={""} />
+                    <img width={300} height={300} src={fontD.src} alt={""} loading="eager" />
                   </div>
                 </div>
                 <div className="flex">
                   <div className="w-[90px]">
-                    <Image width={300} height={300} src={fontDingD} alt={""} />
+                    <img width={300} height={300} src={fontDingD.src} alt={""} loading="eager" />
                   </div>
                   <div className="w-[42.3px]">
-                    <Image width={300} height={300} src={fontDingI} alt={""} />
+                    <img width={300} height={300} src={fontDingI.src} alt={""} loading="eager" />
                   </div>
                   <div className="w-[88px]">
-                    <Image width={300} height={300} src={fontDingN} alt={""} />
+                    <img width={300} height={300} src={fontDingN.src} alt={""} loading="eager" />
                   </div>
                   <div className="w-[87px]">
-                    <Image width={300} height={300} src={fontDingG} alt={""} />
+                    <img width={300} height={300} src={fontDingG.src} alt={""} loading="eager" />
                   </div>
                 </div>
               </div>
@@ -229,17 +229,17 @@ function CarteringSection({ }: Props) {
             <div className="flex flex-col items-end ml-10 mt-10">
               <Parallax>
                 <div className="w-[400px]">
-                  <Image width={450} height={450} src={arch} alt={""} />
+                  <img width={450} height={450} src={arch.src} alt={""} loading="eager" />
                 </div>
               </Parallax>
               <Parallax rotate={[10, -20]}>
                 <div className="w-[280px] -mt-[320px] mr-5 ">
-                  <Image width={350} height={350} src={cropPhoto} alt={""} />
+                  <img width={350} height={350} src={cropPhoto.src} alt={""} loading="eager" />
                 </div>
               </Parallax>
               <Parallax rotate={[0, 180]}>
                 <div className="w-[120px] -mt-10 mr-10">
-                  <Image className="hover:animate-[spin_2s_ease-in-out]" width={300} height={300} src={date} alt={""} />
+                  <img className="hover:animate-[spin_2s_ease-in-out]" width={300} height={300} src={date.src} alt={""} loading="eager" />
                 </div>
               </Parallax>
             </div>

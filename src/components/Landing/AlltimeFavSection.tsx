@@ -19,12 +19,8 @@ import horapa2 from "../../images/horapa2.png";
 type Props = {};
 
 function AlltimeFavSection({ }: Props) {
-  const [activeIndex, setActiveIndex] = useState(
-    Math.floor(AlltimeFavImg.length / 4)
-  );
-  const [activeIndex2, setActiveIndex2] = useState(
-    Math.floor(AlltimeFavImg.length / 4)
-  );
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
     <div className="mt-20">
@@ -32,15 +28,16 @@ function AlltimeFavSection({ }: Props) {
         {/* baitong */}
         <Parallax speed={10}>
           <div className="w-[350px] md:w-[470px] lg:w-[670px] ml-32 md:ml-44 hover:ease-in-out hover:transition-all hover:duration-200">
-            <Image
+            <img
               className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(255,36,145,1)] !transition-all !ease-in-out"
               data-aos="fade-up"
               data-aos-anchor-placement="center-center"
               data-aos-once="true"
               width={800}
               height={100}
-              src={allTimeFavorite}
+              src={allTimeFavorite.src}
               alt={""}
+              loading="eager"
             />
           </div>
         </Parallax>
@@ -48,27 +45,29 @@ function AlltimeFavSection({ }: Props) {
         <div className="flex justify-between w-full">
           <Parallax speed={-20} className="z-10">
             <div className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out w-[150px] md:w-[250px] lg:w-[400px] -ml-20 md:-ml-40 mt-40">
-              <Image
+              <img
                 data-aos="fade-up-right"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
                 width={600}
                 height={200}
-                src={horapa2}
+                src={horapa2.src}
                 alt={""}
+                loading="eager"
               />
             </div>
           </Parallax>
           <Parallax speed={-25}>
             <div className="animate-[shake_3s_ease-in-out_infinite] transition-all ease-in-out w-[150px] md:w-[250px] lg:w-[350px] delay-75 -mr-20 md:-mr-40">
-              <Image
+              <img
                 data-aos="fade-down-left"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-once="true"
                 width={600}
                 height={600}
-                src={horapa1}
+                src={horapa1.src}
                 alt={""}
+                loading="eager"
               />
             </div>
           </Parallax>
@@ -82,11 +81,12 @@ function AlltimeFavSection({ }: Props) {
           data-aos-once="true"
         >
           <Swiper
+            loop
             effect={"coverflow"}
             grabCursor={true}
             initialSlide={activeIndex}
             centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView={'auto'}
             autoplay={{
               delay: 1500,
               pauseOnMouseEnter: true,
@@ -101,9 +101,9 @@ function AlltimeFavSection({ }: Props) {
             }}
             modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
-            {AlltimeFavImg.slice(0, 9).map((image: any, idx: number) => {
+            {AlltimeFavImg.slice(0, 9).concat(AlltimeFavImg.slice(0, 9)).map((image: any, idx: number) => {
               const isActive = idx === activeIndex;
               const Opacity = isActive
                 ? "hover:!scale-[1.02] !transition-all"
@@ -114,7 +114,7 @@ function AlltimeFavSection({ }: Props) {
                   key={idx}
                   className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                 >
-                  <Image width={500} height={500} alt="" src={image.src} />
+                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
                   {isActive && (
                     <p
                       data-aos="zoom-in"
@@ -137,11 +137,12 @@ function AlltimeFavSection({ }: Props) {
           data-aos-once="true"
         >
           <Swiper
+            loop
             effect={"coverflow"}
             grabCursor={true}
             initialSlide={activeIndex2}
             centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView={'auto'}
             autoplay={{
               delay: 1500,
               pauseOnMouseEnter: true,
@@ -157,9 +158,9 @@ function AlltimeFavSection({ }: Props) {
             }}
             modules={[Autoplay, EffectCoverflow]}
             className="!w-full"
-            onSlideChange={(swiper) => setActiveIndex2(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex2(swiper.realIndex)}
           >
-            {AlltimeFavImg.slice(9, 18).map((image: any, idx: number) => {
+            {AlltimeFavImg.slice(9, 18).concat(AlltimeFavImg.slice(9, 18)).map((image: any, idx: number) => {
               const isActive = idx === activeIndex2;
               const Opacity = isActive
                 ? "hover:!scale-[1.02] !transition-all"
@@ -170,7 +171,7 @@ function AlltimeFavSection({ }: Props) {
                   key={idx}
                   className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                 >
-                  <Image width={500} height={500} alt="" src={image.src} />
+                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
                   {isActive && (
                     <p
                       data-aos="zoom-in"
