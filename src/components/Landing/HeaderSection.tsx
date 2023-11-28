@@ -21,7 +21,7 @@ function HeaderSection({ }: Props) {
     return (
         <div className="h-screen mb-10">
             <div className="flex justify-center">
-                <div data-aos='fade-down' data-aos-delay='1400' className="my-14 w-[200px] md:w-[300px]">
+                <div data-aos='fade-down' data-aos-delay='500' className="my-14 w-[200px] md:w-[300px]">
                     <Image src={Logo.src} width={300} height={150} alt="logo" loading="eager" priority />
                 </div>
             </div>
