@@ -1,5 +1,5 @@
 import { PauseCircleIcon, PlayCircleIcon } from "@heroicons/react/24/solid";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function AudioButton() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,18 +14,16 @@ export default function AudioButton() {
       setIsPlaying(false);
     }
   };
+
   return (
-    <div>
+    <button
+      onClick={handlePlayPause}
+      className="w-[50px] h-[50px] opacity-50 hover:opacity-100"
+    >
       {isPlaying ? (
-        <PauseCircleIcon
-          className="w-[50px] text-white opacity-50 hover:opacity-100"
-          onClick={handlePlayPause}
-        />
+        <PauseCircleIcon className="text-white" />
       ) : (
-        <PlayCircleIcon
-          className="w-[50px] text-white opacity-50 hover:opacity-100"
-          onClick={handlePlayPause}
-        />
+        <PlayCircleIcon className="text-white" />
       )}
       <audio
         controls
@@ -38,6 +36,6 @@ export default function AudioButton() {
       >
         <source src="/foodmusic.mp3" type="audio/mpeg" />
       </audio>
-    </div>
+    </button>
   );
 }
