@@ -5,8 +5,9 @@ import Image from "next/image";
 
 import Logo from "../../images/slice6.png";
 
-import thaiFood from "../../images/slice4.png";
-import authentic from "../../images/slice5.png";
+import thai from "../../images/slice89.png";
+import taste from "../../images/slice90.png";
+import authentic from "../../images/slice91.png";
 import food from "../../images/Asset 5.png";
 import tong1 from "../../images/Asset 2.png";
 import tong2 from "../../images/Asset 3.png";
@@ -79,12 +80,10 @@ function HeaderSection({ }: Props) {
                     </div>
                 </Parallax>
 
-                <div className="-mt-[160px] m:-mt-[160px] l:-mt-[230px] md:-mt-[600px] z-30 flex flex-col justify-center items-center">
-                    <Parallax
-                        className="w-1/2 md:w-[500px]"
-                    >
+                <div className="-mt-[130px] m:-mt-[160px] l:-mt-[190px] md:-mt-[550px] z-30 flex flex-col items-center">
+                    <Parallax data-aos='zoom-in' data-aos-once="true" className="w-2/3 md:w-[600px]">
                         <motion.div
-                            initial={{ scale: 0 }}
+                            initial={{ scale: 1.5 }}
                             animate={{ scale: 1 }}
                             transition={{
                                 delay: 0.8,
@@ -93,11 +92,25 @@ function HeaderSection({ }: Props) {
                                 damping: 25
                             }}
                         >
-                            <Image width={500} height={500} src={thaiFood.src} alt={""} loading="eager" priority />
+                            <Image width={700} height={700} src={thai.src} alt={""} loading="eager" priority />
+                        </motion.div>
+                    </Parallax>
+                    <Parallax className="-ml-[120px] md:-ml-[250px] -mt-[40px] md:-mt-[85px] w-2/5 md:w-[400px]">
+                        <motion.div
+                            initial={{ opacity: 0, translateY: -100 }}
+                            animate={{ opacity: 1, translateY: 0 }}
+                            transition={{
+                                delay: 0.8,
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 25
+                            }}
+                        >
+                            <Image width={500} height={500} src={taste.src} alt={""} loading="eager" priority />
                         </motion.div>
                     </Parallax>
                     <Parallax
-                        className="-mt-[75px] m:-mt-[90px] l:-mt-[100px] md:-mt-[225px] w-1/2 md:w-[600px]"
+                        className="-mt-[100px] m:-mt-[130px] l:-mt-[150px] md:-mt-[320px] -mr-[80px] m:-mr-[90px] l:-mr-[100px] md:-mr-[180px] w-1/2 md:w-[450px]"
                     >
                         <motion.div
                             initial={{ clipPath: 'polygon(0 0, 0 100%, 0 100%, 0 0)' }}
@@ -107,7 +120,7 @@ function HeaderSection({ }: Props) {
                                 delay: 1,
                             }}
                         >
-                            <Image width={600} height={600} className="w-full s:h-9 m:h-12 sm:h-16 md:h-24" src={authentic.src} alt={""} loading="eager" priority />
+                            <Image width={600} height={600} className="w-full" src={authentic.src} alt={""} loading="eager" priority />
                         </motion.div>
                     </Parallax>
                 </div>

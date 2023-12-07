@@ -67,7 +67,7 @@ function SmallPlateSection({ }: Props) {
             centeredSlides={true}
             slidesPerView={"auto"}
             autoplay={{
-              delay: 1500,
+              delay: 900,
               pauseOnMouseEnter: true,
               disableOnInteraction: false
             }}

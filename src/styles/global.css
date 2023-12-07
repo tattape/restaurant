@@ -34,7 +34,6 @@
 body {
     scroll-behavior: smooth;
     background-color: rgb(20, 20, 20);
-    background-image: url('../images/bgModify.png');
     animation: fade-in .5s ease-in-out;
 }
 

@@ -88,7 +88,7 @@ function AlltimeFavSection({ }: Props) {
             centeredSlides={true}
             slidesPerView={'auto'}
             autoplay={{
-              delay: 1500,
+              delay: 900,
               pauseOnMouseEnter: true,
               disableOnInteraction: false
             }}
@@ -144,7 +144,7 @@ function AlltimeFavSection({ }: Props) {
             centeredSlides={true}
             slidesPerView={'auto'}
             autoplay={{
-              delay: 1500,
+              delay: 900,
               pauseOnMouseEnter: true,
               reverseDirection: true,
               disableOnInteraction: false
