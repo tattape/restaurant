@@ -17,10 +17,10 @@ import plate16 from "../images/StreetFood/plate16.png";
 import plate17 from "../images/StreetFood/plate17.png";
 
 plate1.name = "Pad Sei-Iew";
-plate2.name = "Grill Pork % Sticky Rice";
+plate2.name = "Grill Pork & Sticky Rice";
 plate3.name = "Crispy Mussels Pancake";
 plate4.name = "Salmon Garlic Fried Rice";
-plate5.name = "BBQ pork % Crispy Pork Belly over Rice";
+plate5.name = "BBQ pork & Crispy Pork Belly over Rice";
 plate6.name = "Fried Rice";
 plate7.name = "Basil Crispy Pork Belly over Rice";
 plate8.name = "Boat Noodle";

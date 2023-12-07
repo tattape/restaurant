@@ -3,8 +3,8 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-    font-family: 'UID-SUKSAN';
-    src: url('../fonts/UID_SUKSAN.ttf') format('truetype');
+    font-family: 'Syncopate';
+    src: url('../fonts/Syncopate-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +24,7 @@
 }
 
 .font-uid {
-    font-family: 'UID-SUKSAN', sans-serif;
+    font-family: 'Syncopate', sans-serif;
 }
 
 .font-din {
