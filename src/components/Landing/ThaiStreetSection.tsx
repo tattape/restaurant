@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
-function ThaiStreetSection({ }: Props) {
+function ThaiStreetSection({}: Props) {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeIndex2, setActiveIndex2] = useState(1);
 
@@ -34,12 +34,20 @@ function ThaiStreetSection({ }: Props) {
             data-aos-duration="700"
             className="w-[90px] md:w-[150px] -ml-[200px] md:-ml-[420px] -mb-80 md:-mb-96"
           >
-            <img className="hover:animate-spin transition-all ease-in-out" width={500} height={800} src={pick.src} alt="" loading="eager" />
+            <img
+              className="hover:animate-spin transition-all ease-in-out"
+              width={500}
+              height={800}
+              src={pick.src}
+              alt=""
+              loading="eager"
+            />
           </div>
         </Parallax>
         <div className="flex flex-col-reverse items-center justify-center z-10">
           <div className="w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
             <img
+              className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(119,247,45,0.8)] !transition-all !ease-in-out"
               data-aos="fade-up"
               data-aos-once="true"
               width={400}
@@ -72,7 +80,13 @@ function ThaiStreetSection({ }: Props) {
             }}
             className="-mt-20"
           >
-            <img width={3500} height={1000} src={thongRed.src} alt="" loading="eager" />
+            <img
+              width={3500}
+              height={1000}
+              src={thongRed.src}
+              alt=""
+              loading="eager"
+            />
           </motion.div>
         </Parallax>
         <div
@@ -90,7 +104,7 @@ function ThaiStreetSection({ }: Props) {
             autoplay={{
               delay: 900,
               pauseOnMouseEnter: true,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             coverflowEffect={{
               rotate: 0,
@@ -103,31 +117,39 @@ function ThaiStreetSection({ }: Props) {
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
-            {ThaiStreetImg.slice(0, 8).concat(ThaiStreetImg.slice(0, 8)).map((image: any, idx: number) => {
-              const isActive = idx === activeIndex;
-              const Opacity = isActive
-                ? "hover:!scale-[1.02] !transition-all"
-                : "brightness-50";
+            {ThaiStreetImg.slice(0, 8)
+              .concat(ThaiStreetImg.slice(0, 8))
+              .map((image: any, idx: number) => {
+                const isActive = idx === activeIndex;
+                const Opacity = isActive
+                  ? "hover:!scale-[1.02] !transition-all"
+                  : "brightness-50";
 
-              return (
-                <SwiperSlide
-                  key={idx}
-                  className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
-                >
-                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
-                  {isActive && (
-                    <p
-                      data-aos="zoom-in"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-once="true"
-                      className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
-                    >
-                      {image.name}
-                    </p>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+                return (
+                  <SwiperSlide
+                    key={idx}
+                    className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                  >
+                    <img
+                      width={500}
+                      height={500}
+                      alt=""
+                      src={image.src}
+                      loading="eager"
+                    />
+                    {isActive && (
+                      <p
+                        data-aos="zoom-in"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
+                      >
+                        {image.name}
+                      </p>
+                    )}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
         <div
@@ -146,7 +168,7 @@ function ThaiStreetSection({ }: Props) {
               delay: 900,
               pauseOnMouseEnter: true,
               reverseDirection: true,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             coverflowEffect={{
               rotate: 0,
@@ -159,31 +181,39 @@ function ThaiStreetSection({ }: Props) {
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex2(swiper.realIndex)}
           >
-            {ThaiStreetImg.slice(8, 17).concat(ThaiStreetImg.slice(8, 17)).map((image: any, idx: number) => {
-              const isActive = idx === activeIndex2;
-              const Opacity = isActive
-                ? "hover:!scale-[1.02] !transition-all"
-                : "brightness-50";
+            {ThaiStreetImg.slice(8, 17)
+              .concat(ThaiStreetImg.slice(8, 17))
+              .map((image: any, idx: number) => {
+                const isActive = idx === activeIndex2;
+                const Opacity = isActive
+                  ? "hover:!scale-[1.02] !transition-all"
+                  : "brightness-50";
 
-              return (
-                <SwiperSlide
-                  key={idx}
-                  className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
-                >
-                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
-                  {isActive && (
-                    <p
-                      data-aos="zoom-in"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-once="true"
-                      className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
-                    >
-                      {image.name}
-                    </p>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+                return (
+                  <SwiperSlide
+                    key={idx}
+                    className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                  >
+                    <img
+                      width={500}
+                      height={500}
+                      alt=""
+                      src={image.src}
+                      loading="eager"
+                    />
+                    {isActive && (
+                      <p
+                        data-aos="zoom-in"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
+                      >
+                        {image.name}
+                      </p>
+                    )}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </div>
