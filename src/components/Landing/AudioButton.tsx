@@ -28,8 +28,8 @@ export default function AudioButton() {
       <audio
         controls
         loop
-        autoPlay
         className="hidden"
+        preload="auto"
         ref={audioRef}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}

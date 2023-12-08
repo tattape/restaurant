@@ -120,7 +120,7 @@ function AlltimeFavSection({ }: Props) {
                       data-aos="zoom-in"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-once="true"
-                      className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
+                      className="text-white text-center text-base md:text-lg lg:text-xl font-uid"
                     >
                       {image.name}
                     </p>
@@ -177,7 +177,7 @@ function AlltimeFavSection({ }: Props) {
                       data-aos="zoom-in"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-once="true"
-                      className="text-white text-center text-base md:text-2xl lg:text-3xl font-uid"
+                      className="text-white text-center text-base md:text-lg lg:text-xl font-uid"
                     >
                       {image.name}
                     </p>
