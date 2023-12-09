@@ -18,7 +18,7 @@ import horapa2 from "../../images/horapa2.png";
 
 type Props = {};
 
-function AlltimeFavSection({ }: Props) {
+function AlltimeFavSection({}: Props) {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeIndex2, setActiveIndex2] = useState(1);
 
@@ -86,11 +86,11 @@ function AlltimeFavSection({ }: Props) {
             grabCursor={true}
             initialSlide={activeIndex}
             centeredSlides={true}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             autoplay={{
               delay: 900,
               pauseOnMouseEnter: true,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             coverflowEffect={{
               rotate: 0,
@@ -103,31 +103,39 @@ function AlltimeFavSection({ }: Props) {
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
-            {AlltimeFavImg.slice(0, 9).concat(AlltimeFavImg.slice(0, 9)).map((image: any, idx: number) => {
-              const isActive = idx === activeIndex;
-              const Opacity = isActive
-                ? "hover:!scale-[1.02] !transition-all"
-                : "brightness-50";
+            {AlltimeFavImg.slice(0, 9)
+              .concat(AlltimeFavImg.slice(0, 9))
+              .map((image: any, idx: number) => {
+                const isActive = idx === activeIndex;
+                const Opacity = isActive
+                  ? "hover:!scale-[1.02] !transition-all"
+                  : "brightness-50";
 
-              return (
-                <SwiperSlide
-                  key={idx}
-                  className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
-                >
-                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
-                  {isActive && (
-                    <p
-                      data-aos="zoom-in"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-once="true"
-                      className="text-white text-center text-base md:text-lg lg:text-xl font-uid"
-                    >
-                      {image.name}
-                    </p>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+                return (
+                  <SwiperSlide
+                    key={idx}
+                    className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                  >
+                    <img
+                      width={500}
+                      height={500}
+                      alt=""
+                      src={image.src}
+                      loading="eager"
+                    />
+                    {isActive && (
+                      <p
+                        data-aos="zoom-in"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        className="text-white text-center text-base md:text-lg lg:text-xl font-syn"
+                      >
+                        {image.name}
+                      </p>
+                    )}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
         <div
@@ -142,12 +150,12 @@ function AlltimeFavSection({ }: Props) {
             grabCursor={true}
             initialSlide={activeIndex2}
             centeredSlides={true}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             autoplay={{
               delay: 900,
               pauseOnMouseEnter: true,
               reverseDirection: true,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             coverflowEffect={{
               rotate: 0,
@@ -160,31 +168,39 @@ function AlltimeFavSection({ }: Props) {
             className="!w-full"
             onSlideChange={(swiper) => setActiveIndex2(swiper.realIndex)}
           >
-            {AlltimeFavImg.slice(9, 18).concat(AlltimeFavImg.slice(9, 18)).map((image: any, idx: number) => {
-              const isActive = idx === activeIndex2;
-              const Opacity = isActive
-                ? "hover:!scale-[1.02] !transition-all"
-                : "brightness-50";
+            {AlltimeFavImg.slice(9, 18)
+              .concat(AlltimeFavImg.slice(9, 18))
+              .map((image: any, idx: number) => {
+                const isActive = idx === activeIndex2;
+                const Opacity = isActive
+                  ? "hover:!scale-[1.02] !transition-all"
+                  : "brightness-50";
 
-              return (
-                <SwiperSlide
-                  key={idx}
-                  className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
-                >
-                  <img width={500} height={500} alt="" src={image.src} loading="eager" />
-                  {isActive && (
-                    <p
-                      data-aos="zoom-in"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-once="true"
-                      className="text-white text-center text-base md:text-lg lg:text-xl font-uid"
-                    >
-                      {image.name}
-                    </p>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+                return (
+                  <SwiperSlide
+                    key={idx}
+                    className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                  >
+                    <img
+                      width={500}
+                      height={500}
+                      alt=""
+                      src={image.src}
+                      loading="eager"
+                    />
+                    {isActive && (
+                      <p
+                        data-aos="zoom-in"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-once="true"
+                        className="text-white text-center text-base md:text-lg lg:text-xl font-syn"
+                      >
+                        {image.name}
+                      </p>
+                    )}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </div>

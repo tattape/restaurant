@@ -35,7 +35,7 @@ export default function AudioButton() {
         onPause={() => setIsPlaying(false)}
       >
         <source
-          src="https://github.com/BlazingKing/song_music/blob/main/foodmusic.mp3?raw=true"
+          src="https://github.com/tattape/restaurant/blob/master/public/foodmusic.mp3?raw=true"
           type="audio/mpeg"
         />
       </audio>

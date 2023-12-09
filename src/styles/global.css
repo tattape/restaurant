@@ -1,96 +1,107 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
-    font-family: 'Syncopate';
-    src: url('../fonts/Syncopate-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Syncopate";
+  src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'DIN-Condensed-Bold';
-    src: url('../fonts/DINCondensed-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "UID-SUKSAN";
+  src: url("../fonts/UID_SUKSAN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'arial';
-    src: url('../fonts/arial.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "DIN-Condensed-Bold";
+  src: url("../fonts/DINCondensed-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "arial";
+  src: url("../fonts/arial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-syn {
+  font-family: "Syncopate", sans-serif;
 }
 
 .font-uid {
-    font-family: 'Syncopate', sans-serif;
+  font-family: "UID-SUKSAN", sans-serif;
 }
 
 .font-din {
-    font-family: 'DIN-Condensed-Bold', sans-serif;
+  font-family: "DIN-Condensed-Bold", sans-serif;
 }
 
 body {
-    scroll-behavior: smooth;
-    background-color: rgb(20, 20, 20);
-    animation: fade-in .5s ease-in-out;
+  scroll-behavior: smooth;
+  background-color: rgb(20, 20, 20);
+  animation: fade-in 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(52, 219, 110);
-    border-radius: 6px;
+  background-color: rgb(52, 219, 110);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .bg-main {
-    background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20);
 }
 
 .slick-slide {
-    transform: scale(0.8);
-    transition: all 0.4s ease-in-out;
+  transform: scale(0.8);
+  transition: all 0.4s ease-in-out;
 }
 
 .slick-slide img {
-    display: block;
-    max-width: 100%;
-    transition: all 0.4s ease-in-out;
+  display: block;
+  max-width: 100%;
+  transition: all 0.4s ease-in-out;
 }
 
 .slick-center {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes brushStrokeReveal {
-    0% {
-        opacity: 0;
-        clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
-    }
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }
 
-    100% {
-        opacity: 1;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .brush-stroke {
-    animation: brushStrokeReveal .5s ease-in-out forwards;
+  animation: brushStrokeReveal 0.5s ease-in-out forwards;
 }
