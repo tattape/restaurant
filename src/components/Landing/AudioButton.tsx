@@ -29,11 +29,15 @@ export default function AudioButton() {
         controls
         loop
         className="hidden"
+        autoPlay
         ref={audioRef}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
-        <source src="https://github.com/cre8ture/audioFilesForBL/blob/main/1.mp3?raw=true" type="audio/mpeg" />
+        <source
+          src="https://github.com/BlazingKing/song_music/blob/main/foodmusic.mp3?raw=true"
+          type="audio/mpeg"
+        />
       </audio>
     </button>
   );
