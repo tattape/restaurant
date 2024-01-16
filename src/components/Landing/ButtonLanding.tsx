@@ -7,18 +7,23 @@ import pickup from "../../images/pick-up.png";
 import reservation from "../../images/reser-vation.png";
 import Image from "next/image";
 import AudioButton from "./AudioButton";
+import Sidebar from "./Sidebar";
 
 type Props = {
   scroll: true | false;
 };
 
 function ButtonLanding({ scroll }: Props) {
-  const layout = "cursor-pointer z-[999] fixed";
+  const layout = "cursor-pointer z-[990] fixed";
   const hover =
     "hover:animate-shake active:scale-[0.98] transition-all ease-in-out duration-500";
 
   return (
     <>
+      <div className={`flex justify-end top-0 right-0 lg:right-0`}>
+        <Sidebar />
+      </div>
+
       <div
         data-aos="fade-right"
         data-aos-delay="1400"
