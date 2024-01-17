@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import LoadingScreen from "./LoadingScreen";
 
@@ -17,7 +17,7 @@ import ButtonLanding from "./ButtonLanding";
 
 type Props = {};
 
-function LandingSection({ }: Props) {
+function LandingSection({}: Props) {
   const [Loading, setLoading] = useState(true);
   const [Ready, setReady] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -77,7 +77,7 @@ function LandingSection({ }: Props) {
   useEffect(() => {
     AOS.init({
       duration: 500,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
     });
 
     return () => {
@@ -87,35 +87,37 @@ function LandingSection({ }: Props) {
 
   return (
     <>
-      {!Ready ?
+      {!Ready ? (
         <LoadingScreen Loading={Loading} />
-        : (
-          <ParallaxProvider>
-            <ButtonLanding scroll={isScrolling} />
-            <div className="overflow-x-hidden">
-              {/* heder */}
-              <HeaderSection />
+      ) : (
+        <ParallaxProvider>
+          <ButtonLanding scroll={isScrolling} />
+          <div className="overflow-x-hidden">
+            {/* heder */}
+            <HeaderSection />
 
-              {/* small plate */}
-              <SmallPlateSection />
+            {/* small plate */}
+            <SmallPlateSection />
 
-              {/* thai street */}
-              <ThaiStreetSection />
+            {/* thai street */}
+            <ThaiStreetSection />
 
-              {/* all time favorite */}
-              <AlltimeFavSection />
+            {/* all time favorite */}
+            <AlltimeFavSection />
 
-              {/* gift card */}
-              <GiftCardSection />
+            {/* gift card */}
+            <GiftCardSection />
 
-              {/* Car te Ring */}
-              <CarteringSection />
+            {/* Car te Ring */}
+            <CarteringSection />
 
-              {/* footer */}
-              <Footer />
-            </div>
-          </ParallaxProvider>
-        )}
+            {/* Gallery */}
+
+            {/* footer */}
+            <Footer />
+          </div>
+        </ParallaxProvider>
+      )}
     </>
   );
 }

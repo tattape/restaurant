@@ -26,7 +26,7 @@ function ThaiStreetSection({}: Props) {
   const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
-    <div className="">
+    <section id="thai-street" className="">
       <div className="flex flex-col items-center">
         <Parallax speed={-5} className="z-10">
           <div
@@ -217,7 +217,7 @@ function ThaiStreetSection({}: Props) {
           </Swiper>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

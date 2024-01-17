@@ -23,7 +23,7 @@ function SmallPlateSection({}: Props) {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <div className="mt-0 md:mt-[500px]">
+    <section id="small-plates" className="mt-0 md:mt-[500px]">
       <div className="flex flex-col items-center">
         <div className="flex justify-center mb-20">
           <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
@@ -141,7 +141,7 @@ function SmallPlateSection({}: Props) {
           </Parallax>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
