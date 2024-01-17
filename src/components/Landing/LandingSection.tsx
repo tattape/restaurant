@@ -14,6 +14,7 @@ import GiftCardSection from "./GiftCardSection";
 import CarteringSection from "./CarteringSection";
 import Footer from "./Footer";
 import ButtonLanding from "./ButtonLanding";
+import GallerySection from "./GallerySection";
 
 type Props = {};
 
@@ -112,6 +113,7 @@ function LandingSection({}: Props) {
             <CarteringSection />
 
             {/* Gallery */}
+            <GallerySection />
 
             {/* footer */}
             <Footer />
