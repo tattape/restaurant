@@ -32,6 +32,13 @@ export default function Sidebar() {
     }
   };
 
+  const scrollToMenu = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", closeSidebar);
     return () => {
@@ -58,7 +65,10 @@ export default function Sidebar() {
             <>
               {index === 7 && <div className="h-[2px] bg-slate-700" />}
               <div className="py-2 hover:text-green-400 hover:font-bold cursor-pointer">
-                <a href={`#${menu.section}`} className="text-sm font-syn">
+                <a href={`#${menu.section}`} className="text-sm font-syn" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToMenu(menu.section);
+                }}>
                   {menu.name}
                 </a>
               </div>
