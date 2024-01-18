@@ -18,7 +18,9 @@ export default function GallerySection() {
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div>
-        <p className="text-4xl font-syn font-bold text-white">Gallery Baitong</p>
+        <p className="text-4xl font-syn font-bold text-white">
+          Gallery Baitong
+        </p>
       </div>
       <div>
         <Swiper
@@ -40,7 +42,7 @@ export default function GallerySection() {
             modifier: 3,
             slideShadows: false,
           }}
-          modules={[Autoplay, EffectCoverflow]}
+          modules={[EffectCoverflow]}
           className="!w-full"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         >
