@@ -18,8 +18,8 @@ export default function GallerySection() {
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div>
-        <p className="text-4xl font-syn font-bold text-white">
-          Gallery Baitong
+        <p className="text-8xl font-syn font-extrabold text-lime-500">
+          Gallery <br /> <span className="text-white">Baitong</span>
         </p>
       </div>
       <div>
@@ -50,20 +50,19 @@ export default function GallerySection() {
             (image: any, idx: number) => {
               const isActive = idx === activeIndex;
               const Opacity = isActive
-                ? "hover:!scale-[1.02] !transition-all"
+                ? "hover:!scale-[1.15] !transition-all"
                 : "brightness-50";
 
               return (
                 <SwiperSlide
                   key={idx}
-                  className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                  className={`pb-1 !flex !flex-col !justify-center !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[600px] ${Opacity}`}
                 >
                   <div
                     className={clsx(
                       "relative bg-white p-4 w-[500px] h-[500px] rounded-lg flex flex-col gap-2 justify-center"
                     )}
                   >
-                    <div className="absolute inset-0 hover:bg-gradient-to-b from-gray-200/0 via-gray-900/10 to-[#3b3d49] z-10" />
                     <img
                       width={500}
                       height={500}
@@ -71,16 +70,6 @@ export default function GallerySection() {
                       src={image.src}
                       loading="eager"
                     />
-                    {isActive && (
-                      <p
-                        data-aos="zoom-in"
-                        data-aos-anchor-placement="top-bottom"
-                        data-aos-once="true"
-                        className="text-black text-center text-base md:text-lg lg:text-xl font-syn"
-                      >
-                        {image.name}
-                      </p>
-                    )}
                   </div>
                 </SwiperSlide>
               );
