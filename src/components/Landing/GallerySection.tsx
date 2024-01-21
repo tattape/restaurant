@@ -17,7 +17,7 @@ export default function GallerySection() {
       id="gallery"
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
-      <div>
+      <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
         <p className="text-8xl font-syn font-extrabold text-lime-500">
           Gallery <br /> <span className="text-white">Baitong</span>
         </p>
@@ -59,6 +59,9 @@ export default function GallerySection() {
                   className={`pb-1 !flex !flex-col !justify-center !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[600px] ${Opacity}`}
                 >
                   <div
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
                     className={clsx(
                       "relative bg-white p-4 w-[500px] h-[500px] rounded-lg flex flex-col gap-2 justify-center"
                     )}
