@@ -6,10 +6,10 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menus = [
-    { id: 1, url: "", section: "home", name: "Home", subMenu: [] },
+    { id: 1, url: "#", section: "home", name: "Home", subMenu: [] },
     {
       id: 2,
-      url: "",
+      url: "#",
       section: "#",
       name: "Menu",
       subMenu: [
@@ -18,12 +18,12 @@ export default function Sidebar() {
         { id: 3, section: "all-time-favorites", name: "All Time favorites" },
       ],
     },
-    { id: 3, url: "", section: "gift-card", name: "Gift Cards", subMenu: [] },
-    { id: 4, url: "", section: "car-te-ring", name: "CarTeRing", subMenu: [] },
-    { id: 5, url: "", section: "gallery", name: "Gallery", subMenu: [] },
-    { id: 6, url: "", section: "#", name: "Delivery", subMenu: [] },
-    { id: 7, url: "", section: "#", name: "Reservation", subMenu: [] },
-    { id: 8, url: "", section: "#", name: "Pickup", subMenu: [] },
+    { id: 3, url: "#", section: "gift-card", name: "Gift Cards", subMenu: [] },
+    { id: 4, url: "#", section: "car-te-ring", name: "CarTeRing", subMenu: [] },
+    { id: 5, url: "#", section: "gallery", name: "Gallery", subMenu: [] },
+    { id: 6, url: "#", section: "#", name: "Delivery", subMenu: [] },
+    { id: 7, url: "#", section: "#", name: "Reservation", subMenu: [] },
+    { id: 8, url: "#", section: "#", name: "Pickup", subMenu: [] },
   ];
 
   const toggleSidebar = () => {
@@ -94,8 +94,9 @@ export default function Sidebar() {
                 </a>
                 {menu.subMenu.length > 0 && (
                   <div className="mt-2 ml-4 flex flex-col gap-2">
-                    {menu.subMenu.map((subMenu) => (
+                    {menu.subMenu.map((subMenu, idx) => (
                       <a
+                        key={idx}
                         href={`#${subMenu.section}`}
                         className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer"
                         onClick={(e) => {
