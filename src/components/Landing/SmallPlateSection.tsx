@@ -19,7 +19,7 @@ import bitong from "../../images/bitong.png";
 
 type Props = {};
 
-function SmallPlateSection({}: Props) {
+function SmallPlateSection({ }: Props) {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
