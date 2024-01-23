@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SmallPlateImg from "../../Utils/SmallPlateImg";
 
+//image
+import galleryheader from "../../images/gallery.png";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -9,6 +12,7 @@ import "swiper/css/effect-coverflow";
 // import required modules
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import clsx from "clsx";
+import Image from "next/image";
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -17,10 +21,16 @@ export default function GallerySection() {
       id="gallery"
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
-      <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-        <p className="text-8xl font-syn font-extrabold text-lime-500">
-          Gallery <br /> <span className="text-white">Baitong</span>
-        </p>
+      <div data-aos="fade-up" data-aos-once="true" >
+        <Image
+          className=" hover:drop-shadow-[0_5px_10px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
+          width={600}
+          height={600}
+          src={galleryheader.src}
+          alt={""}
+          loading="eager"
+          priority
+        />
       </div>
       <div>
         <Swiper

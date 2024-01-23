@@ -141,10 +141,11 @@ function HeaderSection({}: Props) {
                 alt={""}
                 loading="eager"
                 priority
+                className="drop-shadow-[0_5px_10px_rgba(1,76,47,0.8)]"
               />
             </motion.div>
           </Parallax>
-          <Parallax className="-ml-[120px] md:-ml-[250px] -mt-[40px] md:-mt-[85px] w-2/5 md:w-[400px]">
+          {/* <Parallax className="-ml-[120px] md:-ml-[250px] -mt-[40px] md:-mt-[85px] w-2/5 md:w-[400px]">
             <motion.div
               initial={{ opacity: 0, translateY: -100 }}
               animate={{ opacity: 1, translateY: 0 }}
@@ -164,8 +165,8 @@ function HeaderSection({}: Props) {
                 priority
               />
             </motion.div>
-          </Parallax>
-          <Parallax className="-mt-[100px] m:-mt-[130px] l:-mt-[150px] md:-mt-[320px] -mr-[80px] m:-mr-[90px] l:-mr-[100px] md:-mr-[180px] w-1/2 md:w-[450px]">
+          </Parallax> */}
+          {/* <Parallax className="-mt-[100px] m:-mt-[130px] l:-mt-[150px] md:-mt-[320px] -mr-[80px] m:-mr-[90px] l:-mr-[100px] md:-mr-[180px] w-1/2 md:w-[450px]">
             <motion.div
               initial={{ clipPath: "polygon(0 0, 0 100%, 0 100%, 0 0)" }}
               animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
@@ -184,7 +185,7 @@ function HeaderSection({}: Props) {
                 priority
               />
             </motion.div>
-          </Parallax>
+          </Parallax> */}
         </div>
 
         <Parallax

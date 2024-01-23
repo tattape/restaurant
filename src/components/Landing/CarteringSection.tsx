@@ -227,7 +227,7 @@ function CarteringSection({}: Props) {
           {/* paragraph */}
           <div
             data-aos="fade-up"
-            className="flex z-10 flex-col gap-5 text-[#EDD202] text-lg ml-10 l:ml-0 "
+            className="flex z-10 flex-col gap-5 text-white text-lg ml-10 l:ml-0 "
           >
             <div className="font-bold text-2xl font-din">
               Looking for
@@ -286,7 +286,7 @@ function CarteringSection({}: Props) {
                       loading="eager"
                     />
                   </div>
-                  <div className="w-[90px]">
+                  <div className="w-[89px]">
                     <img
                       width={300}
                       height={300}
@@ -306,7 +306,7 @@ function CarteringSection({}: Props) {
                       loading="eager"
                     />
                   </div>
-                  <div className="w-[42.3px]">
+                  <div className="w-[41.6px]">
                     <img
                       width={300}
                       height={300}

@@ -80,11 +80,11 @@ function GiftCardSection({ }: Props) {
               </div>
             </Parallax>
             {/* Description */}
-            <div className={clsx("flex flex-col w-[520px] items-end font-uid")}>
+            <div className={clsx("flex flex-col w-[570px] items-end font-uid")}>
               <Parallax translateX={[10, -10]}>
                 <p
                   className={clsx(
-                    "text-white 2xl:text-2xl xl:text-xl lg:text-base md:text-sm l:text-sm m:text-sm text-xs"
+                    "text-white font-syn 2xl:text-xl xl:text-lg lg:text-base md:text-xs l:text-[9px] m:text-[9px] text-[8px]"
                   )}
                 >
                   Give your loved ones the gift of dining
@@ -93,7 +93,7 @@ function GiftCardSection({ }: Props) {
               <Parallax translateX={[-50, 50]}>
                 <p
                   className={clsx(
-                    "text-white 2xl:text-2xl xl:text-xl lg:text-base md:text-sm l:text-sm m:text-sm text-xs"
+                    "text-white font-syn 2xl:text-xl xl:text-lg lg:text-base md:text-xs l:text-[9px] m:text-[9px] text-[8px]"
                   )}
                 >
                   with Bai Tong gift card.

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import Image from "next/image";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import SmallPlateImg from "../../Utils/SmallPlateImg";
@@ -13,6 +12,7 @@ import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 import menu from "../../images/menu.png";
+import star from "../../images/stargreen.png";
 import smallPlates from "../../images/small-plate.png";
 import handblack from "../../images/hand-black.png";
 import bitong from "../../images/bitong.png";
@@ -27,14 +27,28 @@ function SmallPlateSection({}: Props) {
       <div className="flex flex-col items-center">
         <div className="flex justify-center mb-20">
           <div className="flex flex-col gap-6 items-center w-[180px] md:w-[300px] lg:w-[500px]">
-            <div className="flex justify-center w-[100px] md:w-[300px] lg:w-[500px]">
-              <img
-                data-aos="fade-up"
+            <div className="flex justify-center w-[100px] md:w-[300px] lg:w-[500px] lg:h-[150px] md:h-[120px] h-[40px]">
+              <div
+                className="flex items-start"
+                data-aos="fade-down"
                 data-aos-once="true"
-                src={menu.src}
-                alt={""}
-                loading="eager"
-              />
+              >
+                <img
+                  className="hover:animate-[spin_2s_ease-in-out]"
+                  src={star.src}
+                  alt={""}
+                  loading="eager"
+                />
+              </div>
+              <div className="flex items-end">
+                <img
+                  data-aos="fade-up"
+                  data-aos-once="true"
+                  src={menu.src}
+                  alt={""}
+                  loading="eager"
+                />
+              </div>
             </div>
             <div className="flex justify-center w-[180px] md:w-[300px] lg:w-[500px]">
               <img
