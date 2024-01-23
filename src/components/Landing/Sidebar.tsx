@@ -10,7 +10,7 @@ export default function Sidebar() {
     { id: 3, section: "thai-street", name: "Thai Street" },
     { id: 4, section: "all-time-favorites", name: "All Time favorites" },
     { id: 5, section: "gift-card", name: "Gift Cards" },
-    { id: 6, section: "car-te-ring", name: "Car te Ring" },
+    { id: 6, section: "car-te-ring", name: "CarTeRing" },
     { id: 7, section: "gallery", name: "Gallery" },
     { id: 8, section: "#", name: "Delivery" },
     { id: 9, section: "#", name: "Reservation" },
@@ -65,10 +65,14 @@ export default function Sidebar() {
             <>
               {index === 7 && <div className="h-[2px] bg-slate-700" />}
               <div className="py-2 hover:text-green-400 hover:font-bold cursor-pointer">
-                <a href={`#${menu.section}`} className="text-sm font-syn" onClick={(e) => {
-                  e.preventDefault();
-                  scrollToMenu(menu.section);
-                }}>
+                <a
+                  href={`#${menu.section}`}
+                  className="text-sm font-syn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToMenu(menu.section);
+                  }}
+                >
                   {menu.name}
                 </a>
               </div>
