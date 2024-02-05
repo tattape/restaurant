@@ -47,7 +47,7 @@ function CarteringSection({}: Props) {
     },
   };
   return (
-    <section id="car-te-ring" className="-mt-[5px]">
+    <section id="ca-te-ring" className="-mt-[5px]">
       <div className="flex flex-col items-center ">
         {/* camera and sunflower */}
         <div className="flex l:-mr-[250px] m:-mr-[240px] -mr-[120px] scale-[0.45] md:scale-75">
@@ -115,7 +115,7 @@ function CarteringSection({}: Props) {
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.8 }}
             >
-              <motion.div className="w-[120px]" variants={ltorVariants}>
+              {/* <motion.div className="w-[120px]" variants={ltorVariants}>
                 <img
                   width={300}
                   height={300}
@@ -123,7 +123,7 @@ function CarteringSection({}: Props) {
                   alt={""}
                   loading="eager"
                 />
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
           <div className="flex gap-1 items-end">

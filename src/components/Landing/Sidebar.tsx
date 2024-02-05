@@ -19,7 +19,7 @@ export default function Sidebar() {
       ],
     },
     { id: 3, url: "#", section: "gift-card", name: "Gift Cards", subMenu: [] },
-    { id: 4, url: "#", section: "car-te-ring", name: "CarTeRing", subMenu: [] },
+    { id: 4, url: "#", section: "ca-te-ring", name: "Ca Te Ring", subMenu: [] },
     { id: 5, url: "#", section: "gallery", name: "Gallery", subMenu: [] },
     { id: 6, url: "#", section: "#", name: "Delivery", subMenu: [] },
     { id: 7, url: "#", section: "#", name: "Reservation", subMenu: [] },
@@ -58,20 +58,17 @@ export default function Sidebar() {
     <div
       ref={sidebarRef}
       className={`z-[999] fixed h-full text-white ${
-        isOpen ? "w-64 bg-[#383838]" : "w-24"
+        isOpen ? "w-64 bg-[#383838]" : "w-16"
       } transition-all duration-300 ease-in-out`}
     >
       <button
-        className={clsx(isOpen ? "w-[50px]" : "w-[100px]", " h-[50px] p-2")}
+        className={clsx(isOpen ? "w-[50px]" : "w-[50px]", " h-[50px] p-2")}
         onClick={toggleSidebar}
       >
         {isOpen ? (
           <XMarkIcon className="text-white hover:opacity-50 " />
         ) : (
-          <div className="flex flex-row items-center">
-            <p className="text-xs font-bold font-syn">menu</p>
-            <Bars3Icon className="text-white hover:opacity-50]" />
-          </div>
+          <Bars3Icon className="text-white hover:opacity-50]" />
         )}
       </button>
       {isOpen && (
