@@ -1,15 +1,17 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Sidebar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const menus = [
-    { id: 1, url: "#", section: "home", name: "Home", subMenu: [] },
+    { id: 1, url: "/", section: "home", name: "Home", subMenu: [] },
     {
       id: 2,
-      url: "#",
+      url: "",
       section: "#",
       name: "Menu",
       subMenu: [
@@ -18,12 +20,13 @@ export default function Sidebar() {
         { id: 3, section: "all-time-favorites", name: "All Time favorites" },
       ],
     },
-    { id: 3, url: "#", section: "gift-card", name: "Gift Cards", subMenu: [] },
-    { id: 4, url: "#", section: "ca-te-ring", name: "Ca Te Ring", subMenu: [] },
-    { id: 5, url: "#", section: "gallery", name: "Gallery", subMenu: [] },
-    { id: 6, url: "#", section: "#", name: "Delivery", subMenu: [] },
-    { id: 7, url: "#", section: "#", name: "Reservation", subMenu: [] },
-    { id: 8, url: "#", section: "#", name: "Pickup", subMenu: [] },
+    { id: 3, url: "", section: "gift-card", name: "Gift Cards", subMenu: [] },
+    { id: 4, url: "", section: "ca-te-ring", name: "Ca Te Ring", subMenu: [] },
+    { id: 5, url: "", section: "gallery", name: "Gallery", subMenu: [] },
+    { id: 6, url: "/aboutus", section: "#", name: "About Us", subMenu: [] },
+    { id: 7, url: "", section: "#", name: "Delivery", subMenu: [] },
+    { id: 8, url: "", section: "#", name: "Reservation", subMenu: [] },
+    { id: 9, url: "", section: "#", name: "Pickup", subMenu: [] },
   ];
 
   const toggleSidebar = () => {
@@ -84,6 +87,9 @@ export default function Sidebar() {
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToMenu(menu.section);
+                    {
+                      menu.url === "" ? null : router.push(menu.url);
+                    }
                   }}
                 >
                   {menu.name}
