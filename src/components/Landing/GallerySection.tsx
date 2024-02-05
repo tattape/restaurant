@@ -21,7 +21,7 @@ export default function GallerySection() {
       id="gallery"
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
-      <div data-aos="fade-up" data-aos-once="true" >
+      <div data-aos="fade-up" data-aos-once="true" className="lg:w-full md:w-full w-[250px] flex justify-center">
         <Image
           className=" hover:drop-shadow-[0_5px_10px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
           width={600}
@@ -73,7 +73,8 @@ export default function GallerySection() {
                     data-aos-duration="1000"
                     data-aos-once="true"
                     className={clsx(
-                      "relative bg-white w-[500px] h-[500px] rounded-lg flex flex-col gap-2 justify-center"
+                      "relative bg-white  rounded-lg flex flex-col gap-2 justify-center",
+                      "lg:w-[500px] lg:h-[500px]","md:w-[300px] md:h-[300px]","w-[200px] h-[200px]"
                     )}
                   >
                     <img
