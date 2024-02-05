@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SmallPlateImg from "../../Utils/SmallPlateImg";
+import GalleryImg from "../../Utils/GalleryImg";
 
 //image
 import galleryheader from "../../images/gallery.png";
@@ -56,7 +56,7 @@ export default function GallerySection() {
           className="!w-full"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         >
-          {SmallPlateImg.concat(SmallPlateImg).map(
+          {GalleryImg.concat(GalleryImg).map(
             (image: any, idx: number) => {
               const isActive = idx === activeIndex;
               const Opacity = isActive
@@ -73,7 +73,7 @@ export default function GallerySection() {
                     data-aos-duration="1000"
                     data-aos-once="true"
                     className={clsx(
-                      "relative bg-white p-4 w-[500px] h-[500px] rounded-lg flex flex-col gap-2 justify-center"
+                      "relative bg-white w-[500px] h-[500px] rounded-lg flex flex-col gap-2 justify-center"
                     )}
                   >
                     <img
@@ -82,6 +82,7 @@ export default function GallerySection() {
                       alt=""
                       src={image.src}
                       loading="eager"
+                      className="object-cover w-full h-full rounded-lg"
                     />
                   </div>
                 </SwiperSlide>

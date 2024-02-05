@@ -79,8 +79,7 @@ export default function Sidebar() {
                 <div className="h-[2px] bg-[#4b4b4b]" />
               )}
               <div className="py-1">
-                <a
-                  href={`#${menu.section}`}
+                <button
                   className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer"
                   onClick={(e) => {
                     e.preventDefault();
@@ -88,13 +87,12 @@ export default function Sidebar() {
                   }}
                 >
                   {menu.name}
-                </a>
+                </button>
                 {menu.subMenu.length > 0 && (
-                  <div className="mt-2 ml-4 flex flex-col gap-2">
+                  <div className="mt-2 ml-4 flex flex-col gap-2 items-start">
                     {menu.subMenu.map((subMenu, idx) => (
-                      <a
+                      <button
                         key={idx}
-                        href={`#${subMenu.section}`}
                         className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer"
                         onClick={(e) => {
                           e.preventDefault();
@@ -102,7 +100,7 @@ export default function Sidebar() {
                         }}
                       >
                         {subMenu.name}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 )}
