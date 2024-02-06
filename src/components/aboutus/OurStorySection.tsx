@@ -16,7 +16,7 @@ export default function OurStorySection() {
   return (
     <section
       id="our-story"
-      className="h-full w-full flex flex-col gap-16 items-center justify-center"
+      className=" h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div className="flex flex-col items-center">
         <div className="z-10">
@@ -44,7 +44,7 @@ export default function OurStorySection() {
             data-aos-duration="1500"
             className="lg:w-full md:w-full w-[250px] flex justify-center"
           >
-            <p className="text-center font-semibold text-5xl text-white font-din">
+            <p className="text-center font-semibold text-4xl text-white font-serif">
               Our commitment <br /> to cooking truly authentic Thai food, <br />{" "}
               so that our customers <br /> can experience the same delicious
               recipes <br /> that Thai people enjoy in Thailand.
@@ -60,7 +60,7 @@ export default function OurStorySection() {
             transition={{
               duration: 1.5,
             }}
-            className="-mt-[680px]"
+            className="-mt-[635px]"
           >
             <img
               width={1500}
@@ -78,7 +78,7 @@ export default function OurStorySection() {
             data-aos="fade-right"
             data-aos-once="true"
             data-aos-duration="1000"
-            className="lg:w-full md:w-full w-[250px] flex justify-center -mr-[70px]"
+            className="lg:w-full md:w-full w-[250px] flex justify-center z-10 -mr-[70px]"
           >
             <Image
             className="opacity-75"

@@ -3,6 +3,7 @@ import Footer from "@/components/Landing/Footer";
 import HeaderSection from "@/components/aboutus/HeaderSection";
 import OurFamilySection from "@/components/aboutus/OurFamilySection";
 import OurStorySection from "@/components/aboutus/OurStorySection";
+import OurVisionSection from "@/components/aboutus/OurVisionSection";
 import React, { useEffect, useState } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -39,6 +40,7 @@ export default function index({}: Props) {
         <OurStorySection />
 
         {/* Our Vision */}
+        <OurVisionSection />
 
         {/* Our Family */}
         <OurFamilySection />
