@@ -7,7 +7,7 @@ interface Props {}
 
 export default function HeaderSection({}: Props) {
   return (
-    <section className="h-screen mb-10">
+    <section className="mb-20">
       <div className="flex justify-center">
         <div
           data-aos="fade-down"
