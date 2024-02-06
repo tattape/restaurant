@@ -1,12 +1,14 @@
 import React from "react";
+import Image from "next/image";
 
 import foodcicle from "../../images/aboutUS/slice97.png";
 import ciclepurple from "../../images/aboutUS/slice96.png";
-import stargreen from "../../images/aboutUs/slice95.png";
+import stargreen from "../../images/aboutUS/slice95.png";
 import baithong from "../../images/aboutUS/green-banana-leaves.png";
-import Image from "next/image";
 
-export default function OurVisionSection() {
+interface Props {}
+
+export default function OurVisionSection({}: Props) {
   return (
     <section
       id="our-vision"
@@ -59,7 +61,6 @@ export default function OurVisionSection() {
               alt=""
               loading="eager"
               priority
-              unoptimized
             />
           </div>
         </div>
@@ -78,7 +79,6 @@ export default function OurVisionSection() {
             alt=""
             loading="eager"
             priority
-            unoptimized
           />
           <p className="absolute text-white text-5xl text-center font-semibold font-serif ">
             Our vision <br /> is to bring you <br /> the best Thai dining <br />{" "}

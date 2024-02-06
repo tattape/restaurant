@@ -3,12 +3,12 @@ import { Parallax } from "react-scroll-parallax";
 
 import { motion } from "framer-motion";
 
-import thonggreen from "../../images/aboutus/green-banana-leaves.png";
-import OurStoryImg from "../../images/aboutus/slice92.png";
-import ChiefImg from "../../images/aboutus/slice93.png";
+import thonggreen from "../../images/aboutUS/green-banana-leaves.png";
+import OurStoryImg from "../../images/aboutUS/slice92.png";
+import ChiefImg from "../../images/aboutUS/slice93.png";
 
-import number15 from "../../images/aboutus/slice94.png";
-import stargreen from "../../images/aboutus/slice95.png";
+import number15 from "../../images/aboutUS/slice94.png";
+import stargreen from "../../images/aboutUS/slice95.png";
 
 import Image from "next/image";
 
@@ -62,12 +62,13 @@ export default function OurStorySection() {
             }}
             className="-mt-[635px]"
           >
-            <img
+            <Image
               width={1500}
               height={1000}
               src={thonggreen.src}
               alt=""
               loading="eager"
+              priority
             />
           </motion.div>
         </Parallax>
@@ -81,7 +82,7 @@ export default function OurStorySection() {
             className="lg:w-full md:w-full w-[250px] flex justify-center z-10 -mr-[70px]"
           >
             <Image
-            className="opacity-75"
+              className="opacity-75"
               width={400}
               height={400}
               src={number15.src}

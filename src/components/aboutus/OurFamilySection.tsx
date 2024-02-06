@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-import OurFamilyImg from "../../images/aboutus/slice98.png";
-import LogoImg1 from "../../images/aboutus/slice99.png";
-import LogoImg2 from "../../images/aboutus/slice100.png";
-import LogoImg3 from "../../images/aboutus/slice101.png";
+import OurFamilyImg from "../../images/aboutUS/slice98.png";
+import LogoImg1 from "../../images/aboutUS/slice99.png";
+import LogoImg2 from "../../images/aboutUS/slice100.png";
+import LogoImg3 from "../../images/aboutUS/slice101.png";
 
 export default function OurFamilySection() {
   return (
@@ -41,7 +41,6 @@ export default function OurFamilySection() {
             alt={""}
             loading="eager"
             priority
-            unoptimized
           />
         </div>
         <div
@@ -57,7 +56,6 @@ export default function OurFamilySection() {
             alt={""}
             loading="eager"
             priority
-            unoptimized
           />
         </div>
         <div
@@ -73,7 +71,6 @@ export default function OurFamilySection() {
             alt={""}
             loading="eager"
             priority
-            unoptimized
           />
         </div>
       </div>
