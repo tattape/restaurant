@@ -10,12 +10,12 @@ export default function OurFamilySection() {
   return (
     <section
       id="our-family"
-      className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
+      className="mt-[350px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div
         data-aos="fade-up"
         data-aos-once="true"
-        className="lg:w-full md:w-full w-[250px] flex justify-center"
+        className="xl:w-full lg:w-[500px] md:w-[400px] l:w-[250px] flex justify-center"
       >
         <Image
           className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
@@ -34,7 +34,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center"
         >
           <Image
-            className="lg:w-[400px] lg:h-[220px] w-[300px] h-[220px]"
+            className="lg:w-[400px] lg:h-[220px] md:w-[420px] md:h-[220px] w-[200px] h-[120px]"
             width={400}
             height={400}
             src={LogoImg1.src}
@@ -49,7 +49,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center"
         >
           <Image
-            className="lg:w-[400px] lg:h-[320px] w-[300px] h-[200px]"
+            className="lg:w-[400px] lg:h-[320px] md:w-[420px] md:h-[260px] w-[200px] h-[150px]"
             width={400}
             height={400}
             src={LogoImg2.src}
@@ -64,7 +64,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center"
         >
           <Image
-            className="lg:w-[400px] lg:h-[150px] w-[300px] h-[150px]"
+            className="lg:w-[400px] lg:h-[150px] md:w-[420px] md:h-[220px] w-[200px] h-[100px]"
             width={400}
             height={400}
             src={LogoImg3.src}

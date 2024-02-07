@@ -24,7 +24,7 @@ export default function OurStorySection() {
             data-aos="fade-down"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="lg:w-full md:w-full w-[250px] flex justify-center"
+            className="xl:w-full lg:w-[300px] md:w-[250px] l:w-[150px] w-[100px] flex justify-center"
           >
             <Image
               className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out opacity-75"
@@ -37,14 +37,14 @@ export default function OurStorySection() {
             />
           </div>
         </div>
-        <div className="mt-10 z-10">
+        <div className="xl:mt-10 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
           <div
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="lg:w-full md:w-full w-[250px] flex justify-center"
+            className="xl:w-full md:w-full l:w-full flex justify-center"
           >
-            <p className="text-center font-semibold text-4xl text-white font-serif">
+            <p className="text-center font-semibold xl:text-4xl lg:text-2xl md:text-xl l:text-sm text-xs text-white font-serif">
               Our commitment <br /> to cooking truly authentic Thai food, <br />{" "}
               so that our customers <br /> can experience the same delicious
               recipes <br /> that Thai people enjoy in Thailand.
@@ -52,7 +52,7 @@ export default function OurStorySection() {
           </div>
         </div>
         {/* baitong */}
-        <Parallax speed={10} className="w-[500px] md:w-[800px] lg:w-[1500px]">
+        <Parallax speed={10} className="w-[500px] lg:w-[1000px] md:w-[800px] xl:w-[1500px]">
           <motion.div
             initial={{ opacity: 1, scale: 1.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -60,7 +60,7 @@ export default function OurStorySection() {
             transition={{
               duration: 1.5,
             }}
-            className="-mt-[635px]"
+            className="xl:-mt-[640px] lg:-mt-[395px] md:-mt-[310px] l:-mt-[180px] -mt-[150px]"
           >
             <Image
               width={1500}
@@ -73,13 +73,13 @@ export default function OurStorySection() {
           </motion.div>
         </Parallax>
       </div>
-      <div className="flex flex-col gap-10 items-center">
-        <div className="h-[400px] flex flex-row justify-center items-center">
+      <div className="flex flex-col xl:gap-10 lg:gap-10 md:gap-4 l:gap-10 items-center">
+        <div className="w-full xl:h-full lg:h-full md:h-full l:h-[200px] flex flex-row justify-center items-center">
           <div
             data-aos="fade-right"
             data-aos-once="true"
             data-aos-duration="1000"
-            className="lg:w-full md:w-full w-[250px] flex justify-center z-10 -mr-[70px]"
+            className="xl:w-full lg:w-full md:w-[700px] l:w-[250px] w-[250px] flex justify-center z-10 xl:-mr-[70px] lg:-mr-[70px] md:-mr-[50px] l:-mr-[20px]"
           >
             <Image
               className="opacity-75"
@@ -94,7 +94,7 @@ export default function OurStorySection() {
           <div
             data-aos="zoom-in"
             data-aos-once="true"
-            className="lg:w-full md:w-full w-[250px] flex justify-center"
+            className="xl:w-full lg:w-full md:w-full l:w-full w-[250px] flex justify-center"
           >
             <Image
               width={400}
@@ -109,7 +109,7 @@ export default function OurStorySection() {
             data-aos="fade-left"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="lg:w-full lg:h-full md:w-full w-[250px] flex items-end -ml-[100px]"
+            className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full l:w-full l:h-full w-[250px] flex items-end xl:-ml-[100px] lg:-ml-[100px] md:-ml-[100px] md:-mt-[20px] l:-ml-[100px] l:-mt-[30px]"
           >
             <Image
               className="opacity-75"
@@ -123,7 +123,7 @@ export default function OurStorySection() {
           </div>
         </div>
         <div data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
-          <p className="text-white text-xl font-uid text-center">
+          <p className="text-white xl:text-xl lg:text-xl md:text-lg l:text-xs font-uid text-center">
             After more than 15 years serving the authentic Thai food <br /> for
             the Seattle, the founder decided to hand the Bai Tong to the next
             generation of the family in 2005.
