@@ -34,7 +34,12 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             className={`${layout} left-0 lg:left-20 top-32`}
           >
             <div
-              onClick={() => console.log(true)}
+              onClick={() =>
+                window.open(
+                  "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
+                  "_blank"
+                )
+              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={tugTug.src} alt={""} loading="eager" />
@@ -54,6 +59,12 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             className={`${layout} flex justify-end right-0 lg:right-20 top-1/3`}
           >
             <div
+              onClick={() =>
+                window.open(
+                  "https://www.toasttab.com/baitong-thai-street-cafe/v3",
+                  "_blank"
+                )
+              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={tung.src} alt={""} loading="eager" />
@@ -73,6 +84,12 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             className={`${layout} left-0 lg:left-20 top-3/4`}
           >
             <div
+              onClick={() =>
+                window.open(
+                  "https://www.yelp.com/reservations/bai-tong-thai-street-cafe-seattle",
+                  "_blank"
+                )
+              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={nangrum.src} alt={""} loading="eager" />

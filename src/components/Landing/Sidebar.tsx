@@ -1,5 +1,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -24,9 +25,27 @@ export default function Sidebar() {
     { id: 4, url: "", section: "ca-te-ring", name: "Ca Te Ring", subMenu: [] },
     { id: 5, url: "", section: "gallery", name: "Gallery", subMenu: [] },
     { id: 6, url: "/aboutus", section: "#", name: "About Us", subMenu: [] },
-    { id: 7, url: "", section: "#", name: "Delivery", subMenu: [] },
-    { id: 8, url: "", section: "#", name: "Reservation", subMenu: [] },
-    { id: 9, url: "", section: "#", name: "Pickup", subMenu: [] },
+    {
+      id: 7,
+      url: "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
+      section: "#",
+      name: "Delivery",
+      subMenu: [],
+    },
+    {
+      id: 8,
+      url: "https://www.yelp.com/reservations/bai-tong-thai-street-cafe-seattle",
+      section: "#",
+      name: "Reservation",
+      subMenu: [],
+    },
+    {
+      id: 9,
+      url: "https://www.toasttab.com/baitong-thai-street-cafe/v3",
+      section: "#",
+      name: "Pickup",
+      subMenu: [],
+    },
   ];
 
   const toggleSidebar = () => {
@@ -48,6 +67,18 @@ export default function Sidebar() {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const _handletoPage = (name: string, url: string) => {
+    if (name === "Home" || name === "About Us") {
+      router.push(url);
+    } else if (
+      name === "Delivery" ||
+      name === "Reservation" ||
+      name === "Pickup"
+    ) {
+      window.open(url, "_blank");
     }
   };
 
@@ -87,9 +118,7 @@ export default function Sidebar() {
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToMenu(menu.section);
-                    {
-                      menu.url === "" ? null : router.push(menu.url);
-                    }
+                    _handletoPage(menu.name, menu.url);
                   }}
                 >
                   {menu.name}
