@@ -52,7 +52,7 @@ export default function OurStorySection() {
           </div>
         </div>
         {/* baitong */}
-        <Parallax speed={10} className="w-[500px] lg:w-[1000px] md:w-[800px] xl:w-[1500px]">
+        <div className="w-[500px] lg:w-[1000px] md:w-[800px] xl:w-[1500px]">
           <motion.div
             initial={{ opacity: 1, scale: 1.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -60,7 +60,7 @@ export default function OurStorySection() {
             transition={{
               duration: 1.5,
             }}
-            className="xl:-mt-[640px] lg:-mt-[395px] md:-mt-[310px] l:-mt-[180px] -mt-[150px]"
+            className="xl:-mt-[570px] lg:-mt-[410px] md:-mt-[340px] l:-mt-[220px] -mt-[200px]"
           >
             <Image
               width={1500}
@@ -71,7 +71,7 @@ export default function OurStorySection() {
               priority
             />
           </motion.div>
-        </Parallax>
+        </div>
       </div>
       <div className="flex flex-col xl:gap-10 lg:gap-10 md:gap-4 l:gap-10 items-center">
         <div className="w-full xl:h-full lg:h-full md:h-full l:h-[200px] flex flex-row justify-center items-center">
@@ -79,7 +79,7 @@ export default function OurStorySection() {
             data-aos="fade-right"
             data-aos-once="true"
             data-aos-duration="1000"
-            className="xl:w-full lg:w-full md:w-[700px] l:w-[250px] w-[250px] flex justify-center z-10 xl:-mr-[70px] lg:-mr-[70px] md:-mr-[50px] l:-mr-[20px]"
+            className="xl:w-full lg:w-full md:w-[700px] l:w-[250px] w-[100px] flex justify-center z-10 xl:-mr-[70px] lg:-mr-[70px] md:-mr-[50px] l:-mr-[20px] -mr-[18px]"
           >
             <Image
               className="opacity-75"
@@ -94,7 +94,7 @@ export default function OurStorySection() {
           <div
             data-aos="zoom-in"
             data-aos-once="true"
-            className="xl:w-full lg:w-full md:w-full l:w-full w-[250px] flex justify-center"
+            className="xl:w-full lg:w-full md:w-full l:w-full w-[200px] flex justify-center"
           >
             <Image
               width={400}
@@ -109,7 +109,7 @@ export default function OurStorySection() {
             data-aos="fade-left"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full l:w-full l:h-full w-[250px] flex items-end xl:-ml-[100px] lg:-ml-[100px] md:-ml-[100px] md:-mt-[20px] l:-ml-[100px] l:-mt-[30px]"
+            className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full l:w-full l:h-full w-[150px] flex items-end xl:-ml-[100px] lg:-ml-[100px] md:-ml-[100px] md:-mt-[20px] l:-ml-[100px] l:-mt-[30px] -ml-[60px]"
           >
             <Image
               className="opacity-75"

@@ -15,7 +15,7 @@ export default function OurFamilySection() {
       <div
         data-aos="fade-up"
         data-aos-once="true"
-        className="xl:w-full lg:w-[500px] md:w-[400px] l:w-[250px] flex justify-center"
+        className="xl:w-full lg:w-[500px] md:w-[400px] l:w-[250px] w-[230px] flex justify-center"
       >
         <Image
           className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
