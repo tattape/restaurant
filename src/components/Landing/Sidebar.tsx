@@ -91,8 +91,8 @@ export default function Sidebar() {
   return (
     <div
       ref={sidebarRef}
-      className={`z-[999] fixed h-full text-white ${
-        isOpen ? "w-64 bg-[#383838]" : "w-16"
+      className={`z-[999] fixed  text-white ${
+        isOpen ? "w-64 bg-[#383838] h-full" : "w-16"
       } transition-all duration-300 ease-in-out`}
     >
       <button
