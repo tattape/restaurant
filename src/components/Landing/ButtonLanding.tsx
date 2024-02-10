@@ -32,14 +32,14 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             data-aos-delay="1400"
             data-aos-once="true"
             className={`${layout} left-0 lg:left-20 top-32`}
+            onClick={() =>
+              window.open(
+                "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
+                "_blank"
+              )
+            }
           >
             <div
-              onClick={() =>
-                window.open(
-                  "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
-                  "_blank"
-                )
-              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={tugTug.src} alt={""} loading="eager" />
@@ -57,14 +57,14 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             data-aos-delay="1400"
             data-aos-once="true"
             className={`${layout} flex justify-end right-0 lg:right-20 top-1/3`}
+            onClick={() =>
+              window.open(
+                "https://www.toasttab.com/baitong-thai-street-cafe/v3",
+                "_blank"
+              )
+            }
           >
             <div
-              onClick={() =>
-                window.open(
-                  "https://www.toasttab.com/baitong-thai-street-cafe/v3",
-                  "_blank"
-                )
-              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={tung.src} alt={""} loading="eager" />
@@ -82,14 +82,14 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             data-aos-delay="1400"
             data-aos-once="true"
             className={`${layout} left-0 lg:left-20 top-3/4`}
+            onClick={() =>
+              window.open(
+                "https://www.yelp.com/reservations/bai-tong-thai-street-cafe-seattle",
+                "_blank"
+              )
+            }
           >
             <div
-              onClick={() =>
-                window.open(
-                  "https://www.yelp.com/reservations/bai-tong-thai-street-cafe-seattle",
-                  "_blank"
-                )
-              }
               className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
               <img src={nangrum.src} alt={""} loading="eager" />
