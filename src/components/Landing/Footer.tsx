@@ -118,11 +118,11 @@ function Footer({}: Props) {
                 priority
               />
             </div>
-            <div className="bg-white rounded-lg p-4 flex flex-col gap-4 items-center">
-              <p className="text-center text-yellow-500 text-2xl font-syn font-bold">
+            <div className="bg-white rounded-lg py-4 px-8 flex flex-col gap-4 items-start">
+              <p className="text-start text-[#8aa774] text-2xl font-serif font-bold">
                 Location & Hours
               </p>
-              <div className="flex flex-col items-start justify-center">
+              <div className="flex flex-col items-start justify-start">
                 <p className="text-lg font-medium">
                   1121 E Pike St, Seattle, WA 98122 ​
                 </p>
@@ -133,23 +133,45 @@ function Footer({}: Props) {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="">
-                  <p className="text-lg font-bold">Monday to Thursday</p>
-                  <p className="text-lg font-medium">12.00 pm - 3.00 pm</p>
-                  <p className="text-lg font-medium">4.30 pm - 9.00 pm</p>
+                  <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
+                    Monday to Thursday
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    12.00 pm - 3.00 pm
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    4.30 pm - 9.00 pm
+                  </p>
                 </div>
                 <div className="">
-                  <p className="text-lg font-bold">Friday</p>
-                  <p className="text-lg font-medium">12.00 pm - 3.00 pm</p>
-                  <p className="text-lg font-medium">4.30 pm - 10.00 pm</p>
+                  <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
+                    Friday
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    12.00 pm - 3.00 pm
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    4.30 pm - 10.00 pm
+                  </p>
                 </div>
                 <div className="">
-                  <p className="text-lg font-bold">Saturday</p>
-                  <p className="text-lg font-medium">12.00 pm - 3.00 pm</p>
-                  <p className="text-lg font-medium">4.30 pm - 10.00 pm</p>
+                  <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
+                    Saturday
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    12.00 pm - 3.00 pm
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    4.30 pm - 10.00 pm
+                  </p>
                 </div>
                 <div className="">
-                  <p className="text-lg font-bold">Sunday</p>
-                  <p className="text-lg font-medium">12.00 pm - 8.30 pm</p>
+                  <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
+                    Sunday
+                  </p>
+                  <p className="lg:text-lg m:text-sm s:text-xs font-medium">
+                    12.00 pm - 8.30 pm
+                  </p>
                 </div>
               </div>
             </div>
@@ -161,7 +183,7 @@ function Footer({}: Props) {
       <Image className="w-full" src={footer} alt={""} />
 
       {/* footer */}
-      <div className="z-20 bg-fuchsia-800 w-full flex justify-center py-10">
+      <div className="z-20 bg-[#2a4826] w-full flex justify-center py-10">
         <div className="w-[150px] m:w-[250px] md:w-[400px]">
           <img
             src={Logo.src}

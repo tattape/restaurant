@@ -238,7 +238,7 @@ function CarteringSection({}: Props) {
               <br />
               your upcoming event?
             </div>
-            <div className="font-arial">
+            <div className="font-din">
               We offer an extensive menu
               <br />
               selection and can accommodate
@@ -255,7 +255,7 @@ function CarteringSection({}: Props) {
               <br />
               you time to relax.
             </div>
-            <div className="">
+            <div className="font-din">
               For more information,
               <br />
               please email us at :

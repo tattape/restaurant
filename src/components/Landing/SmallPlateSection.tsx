@@ -78,7 +78,7 @@ function SmallPlateSection({ }: Props) {
         <div
           data-aos="zoom-in-down"
           data-aos-once="true"
-          className="mt-0 md:mt-10 lg:-mt-24"
+          className="mt-0 md:mt-10 lg:mt-0"
         >
           <Swiper
             loop
