@@ -8,6 +8,7 @@ import reservation from "../../images/reser-vation.png";
 import Image from "next/image";
 import AudioButton from "./AudioButton";
 import Sidebar from "./Sidebar";
+import clsx from "clsx";
 
 type Props = {
   scroll: true | false;
@@ -53,7 +54,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 className="z-[50]"
               />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -61,7 +62,13 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
               >
                 Delivery
               </p>
-              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
+              <div
+                className={clsx(
+                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 rounded-full",
+                  "md:bottom-[-10px] md:right-[-20px] s:bottom-0 s:right-[-10px]",
+                  "md:w-20 md:h-20 s:w-10 s:h-10"
+                )}
+              ></div>
             </div>
           </div>
 
@@ -82,7 +89,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             >
               <img src={tung.src} alt={""} loading="eager" className="z-[50]" />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideright} drop-shadow-lg bottom-3 right-[20px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -90,7 +97,13 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
               >
                 Pickup
               </p>
-              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
+              <div
+                className={clsx(
+                  "absolute  transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 rounded-full",
+                  "md:bottom-[-10px] md:left-[-20px] s:bottom-0 s:left-[-10px]",
+                  "md:w-20 md:h-20 s:w-10 s:h-10"
+                )}
+              ></div>
             </div>
           </div>
 
@@ -116,7 +129,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 className="z-[50]"
               />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -126,7 +139,13 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 <br />
                 Vation
               </p>
-              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
+              <div
+                className={clsx(
+                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 rounded-full",
+                  "md:bottom-[-10px] md:right-[-20px] s:bottom-0 s:right-[-10px]",
+                  "md:w-20 md:h-20 s:w-10 s:h-10"
+                )}
+              ></div>
             </div>
           </div>
 
