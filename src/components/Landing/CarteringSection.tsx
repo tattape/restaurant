@@ -229,7 +229,7 @@ function CarteringSection({}: Props) {
             data-aos="fade-up"
             className="flex z-10 flex-col gap-5 text-white text-lg ml-10 l:ml-0 "
           >
-            <div className="font-bold text-2xl font-din">
+            <div className="font-bold text-2xl font-arial">
               Looking for
               <br />
               catering service
@@ -238,7 +238,7 @@ function CarteringSection({}: Props) {
               <br />
               your upcoming event?
             </div>
-            <div className="font-din">
+            <div className="font-arial">
               We offer an extensive menu
               <br />
               selection and can accommodate
@@ -255,7 +255,7 @@ function CarteringSection({}: Props) {
               <br />
               you time to relax.
             </div>
-            <div className="font-din">
+            <div className="font-arial">
               For more information,
               <br />
               please email us at :

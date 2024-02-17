@@ -113,7 +113,7 @@ function SmallPlateSection({ }: Props) {
                 return (
                   <SwiperSlide
                     key={idx}
-                    className={`pb-1 !flex !flex-col !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
+                    className={`pb-1 !flex !flex-col !gap-6 !justify-end !w-[200px] !h-[200px] md:!w-[300px] md:!h-[300px] lg:!w-[500px] lg:!h-[500px] ${Opacity}`}
                   >
                     <img
                       width={500}

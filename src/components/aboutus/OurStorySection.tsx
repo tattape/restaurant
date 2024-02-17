@@ -44,7 +44,7 @@ export default function OurStorySection() {
             data-aos-duration="1500"
             className="xl:w-full md:w-full l:w-full flex justify-center"
           >
-            <p className="text-center font-semibold xl:text-4xl lg:text-2xl md:text-xl l:text-sm text-xs text-white font-serif">
+            <p className="text-center font-semibold xl:text-4xl lg:text-2xl md:text-xl l:text-sm text-xs text-white">
               Our commitment <br /> to cooking truly authentic Thai food, <br />{" "}
               so that our customers <br /> can experience the same delicious
               recipes <br /> that Thai people enjoy in Thailand.
