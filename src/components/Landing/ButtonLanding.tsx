@@ -40,9 +40,9 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={tugTug.src} alt={""} loading="eager" />
+              <img src={tugTug.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
               <img
                 className="absolute"
                 src={delivery.src}
@@ -65,9 +65,9 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={tung.src} alt={""} loading="eager" />
+              <img src={tung.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
               <img
                 className="absolute"
                 src={pickup.src}
@@ -90,9 +90,9 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={nangrum.src} alt={""} loading="eager" />
+              <img src={nangrum.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
               <img
                 className="absolute"
                 src={reservation.src}
