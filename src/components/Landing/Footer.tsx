@@ -110,7 +110,7 @@ function Footer({}: Props) {
               className="cursor-pointer flex items-center justify-center"
             >
               <Image
-                className="rounded-md w-full bg-white p-2"
+                className="rounded-md bg-white p-2"
                 alt=""
                 src={mapRestaurant.src}
                 width={600}
@@ -131,7 +131,7 @@ function Footer({}: Props) {
                   Email: info@baitongthaistreetcafe.com
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="">
                   <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
                     Monday to Thursday

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import foodcicle from "../../images/aboutUS/slice97.png";
+import foodcicle from "../../images/aboutUS/slice97_2.png";
 import ciclepurple from "../../images/aboutUS/slice96.png";
 import stargreen from "../../images/aboutUS/slice95.png";
 import baithong from "../../images/aboutUS/green-banana-leaves.png";
@@ -52,7 +52,7 @@ export default function OurVisionSection({}: Props) {
             data-aos="zoom-in"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="flex justify-center z-10 xl:w-full lg:w-[1500px] md:w-[1500px] l:w-[1000px] w-[1000px]"
+            className="flex justify-center z-10 xl:w-full xl:mr-20 lg:w-[1500px] lg:mr-10 md:w-[1500px] md:mr-20 l:w-[1000px] l:mr-10 w-[1000px] mr-5"
           >
             <Image
               width={1500}
@@ -68,10 +68,10 @@ export default function OurVisionSection({}: Props) {
           data-aos="zoom-out"
           data-aos-once="true"
           data-aos-duration="1800"
-          className="relative xl:w-full lg:w-[450px] md:w-[350px] l:w-[200px] w-[180px] flex flex-col items-center justify-center z-20 xl:-mt-[750px] lg:-mt-[500px] md:-mt-[400px] l:-mt-[220px] -mt-[210px]" 
+          className="relative xl:w-full lg:w-[450px] md:w-[350px] l:w-[200px] w-[180px] flex flex-col items-center justify-center z-20 xl:-mt-[750px] lg:-mt-[500px] md:-mt-[400px] l:-mt-[220px] -mt-[210px]"
         >
           <Image
-            className="opacity-70"
+            className="opacity-70 hover:invert"
             width={650}
             height={500}
             src={ciclepurple.src}

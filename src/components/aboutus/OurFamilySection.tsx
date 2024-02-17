@@ -10,7 +10,7 @@ export default function OurFamilySection() {
   return (
     <section
       id="our-family"
-      className="mt-[350px] h-full w-full flex flex-col gap-16 items-center justify-center"
+      className="lg:mt-[350px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div
         data-aos="fade-up"
