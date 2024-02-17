@@ -18,6 +18,10 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
   const layout = "cursor-pointer z-[990] fixed";
   const hover =
     "hover:animate-shake active:scale-[0.98] transition-all ease-in-out duration-500";
+  const slideright =
+    "transition-transform duration-300 ease-in-out transform translate-x-0 group-hover:translate-x-[-25%]";
+  const slideleft =
+    "transition-transform duration-300 ease-in-out transform translate-x-0 group-hover:translate-x-[25%]";
 
   return (
     <>
@@ -40,15 +44,24 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`group transition-all ease-in-out duration-500 relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={tugTug.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
               <img
-                className="absolute"
-                src={delivery.src}
+                src={tugTug.src}
                 alt={""}
                 loading="eager"
+                className="z-[50]"
               />
+              <p
+                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                style={{
+                  textShadow:
+                    "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
+                }}
+              >
+                Delivery
+              </p>
+              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
             </div>
           </div>
 
@@ -65,15 +78,19 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={tung.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
-              <img
-                className="absolute"
-                src={pickup.src}
-                alt={""}
-                loading="eager"
-              />
+              <img src={tung.src} alt={""} loading="eager" className="z-[50]" />
+              <p
+                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                style={{
+                  textShadow:
+                    "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
+                }}
+              >
+                Pickup
+              </p>
+              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
             </div>
           </div>
 
@@ -90,15 +107,26 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`${hover} group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
             >
-              <img src={nangrum.src} alt={""} loading="eager" className="group-hover:scale-[0.60]"/>
               <img
-                className="absolute"
-                src={reservation.src}
+                src={nangrum.src}
                 alt={""}
                 loading="eager"
+                className="z-[50]"
               />
+              <p
+                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-15px] text-4xl text-white font-semibold font-serif z-[60]`}
+                style={{
+                  textShadow:
+                    "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
+                }}
+              >
+                Reser
+                <br />
+                Vation
+              </p>
+              <div className="absolute bottom-[-10px] right-[-20px] transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 w-20 h-20 rounded-full"></div>
             </div>
           </div>
 
