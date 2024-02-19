@@ -13,7 +13,7 @@ type Props = {};
 
 function GiftCardSection({ }: Props) {
   return (
-    <section id="gift-card" className="my-[100px]">
+    <section id="gift-card" className="my-[200px]">
       <div className="flex flex-col items-center">
         {/* Thong Muang */}
         <Parallax translateX={[-10, 0]}>

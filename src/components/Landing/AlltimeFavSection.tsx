@@ -23,7 +23,7 @@ function AlltimeFavSection({}: Props) {
   const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
-    <section id="all-time-favorites" className="mt-20">
+    <section id="all-time-favorites" className="mt-[350px]">
       <div className="flex flex-col items-center">
         {/* baitong */}
         <Parallax speed={10}>

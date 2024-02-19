@@ -26,7 +26,7 @@ function ThaiStreetSection({}: Props) {
   const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
-    <section id="thai-street" className="">
+    <section id="thai-street" className="mt-[250px]">
       <div className="flex flex-col items-center">
         <Parallax speed={-5} className="z-10">
           <div

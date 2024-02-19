@@ -21,7 +21,7 @@ export default function GallerySection() {
       id="gallery"
       className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
-      <div data-aos="fade-up" data-aos-once="true" className="lg:w-full md:w-full w-[250px] flex justify-center">
+      <div data-aos="fade-up" data-aos-once="true" className="lg:w-full md:w-[250px] flex justify-center">
         <Image
           className=" hover:drop-shadow-[0_5px_10px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
           width={600}

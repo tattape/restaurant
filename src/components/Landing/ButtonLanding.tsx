@@ -45,7 +45,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`group transition-all ease-in-out duration-500 relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`group transition-all ease-in-out duration-500 relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[160px]`}
             >
               <img
                 src={tugTug.src}
@@ -54,7 +54,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 className="z-[50]"
               />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideleft} drop-shadow-lg bottom-3 right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60] tracking-wide`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -64,7 +64,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
               </p>
               <div
                 className={clsx(
-                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 rounded-full",
+                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#F10058] group-hover:opacity-100 rounded-full",
                   "md:bottom-[-10px] md:right-[-20px] s:bottom-0 s:right-[-10px]",
                   "md:w-20 md:h-20 s:w-10 s:h-10"
                 )}
@@ -85,17 +85,17 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             }
           >
             <div
-              className={`group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[150px]`}
+              className={`group relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[170px]`}
             >
               <img src={tung.src} alt={""} loading="eager" className="z-[50]" />
               <p
-                className={`absolute ${slideright} drop-shadow-lg bottom-3 right-[20px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideright} drop-shadow-lg bottom-3 right-[20px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60] tracking-wide`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
                 }}
               >
-                Pickup
+                Pick up
               </p>
               <div
                 className={clsx(
@@ -129,7 +129,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 className="z-[50]"
               />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60]`}
+                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-15px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60] tracking-wide`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -137,11 +137,11 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
               >
                 Reser
                 <br />
-                Vation
+                vation
               </p>
               <div
                 className={clsx(
-                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#00a97a] group-hover:opacity-100 rounded-full",
+                  "absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:bg-[#FCA919] group-hover:opacity-100 rounded-full",
                   "md:bottom-[-10px] md:right-[-20px] s:bottom-0 s:right-[-10px]",
                   "md:w-20 md:h-20 s:w-10 s:h-10"
                 )}

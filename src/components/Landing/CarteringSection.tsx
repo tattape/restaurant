@@ -227,16 +227,12 @@ function CarteringSection({}: Props) {
           {/* paragraph */}
           <div
             data-aos="fade-up"
-            className="flex z-10 flex-col gap-5 text-white text-lg ml-10 l:ml-0 "
+            className="flex z-10 flex-col gap-5 text-white text-lg ml-10 l:ml-0 tracking-wide"
           >
             <div className="font-bold text-2xl font-arial">
               Looking for
               <br />
               catering service
-              <br />
-              for
-              <br />
-              your upcoming event?
             </div>
             <div className="font-arial">
               We offer an extensive menu

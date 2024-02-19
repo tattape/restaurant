@@ -22,7 +22,7 @@ export default function Sidebar() {
       ],
     },
     { id: 3, url: "", section: "gift-card", name: "Gift Cards", subMenu: [] },
-    { id: 4, url: "", section: "ca-te-ring", name: "Ca Te Ring", subMenu: [] },
+    { id: 4, url: "", section: "ca-te-ring", name: "CaTeRing", subMenu: [] },
     { id: 5, url: "", section: "gallery", name: "Gallery", subMenu: [] },
     { id: 6, url: "/aboutus", section: "#", name: "About Us", subMenu: [] },
     {
@@ -43,7 +43,7 @@ export default function Sidebar() {
       id: 9,
       url: "https://www.toasttab.com/baitong-thai-street-cafe/v3",
       section: "#",
-      name: "Pickup",
+      name: "Pick up",
       subMenu: [],
     },
   ];
@@ -76,7 +76,7 @@ export default function Sidebar() {
     } else if (
       name === "Delivery" ||
       name === "Reservation" ||
-      name === "Pickup"
+      name === "Pick up"
     ) {
       window.open(url, "_blank");
     }
@@ -100,9 +100,9 @@ export default function Sidebar() {
         onClick={toggleSidebar}
       >
         {isOpen ? (
-          <XMarkIcon className="text-white hover:opacity-50 " />
+          <XMarkIcon className="text-white hover:opacity-50" />
         ) : (
-          <Bars3Icon className="text-white hover:opacity-50]" />
+          <Bars3Icon className="text-white hover:opacity-50" />
         )}
       </button>
       {isOpen && (

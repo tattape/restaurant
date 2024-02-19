@@ -118,7 +118,7 @@ function Footer({}: Props) {
                 priority
               />
             </div>
-            <div className="bg-white rounded-lg py-4 px-8 flex flex-col gap-4 items-start">
+            <div className="bg-white rounded-lg py-4 px-8 flex flex-col gap-4 items-start tracking-wide">
               <p className="text-start text-[#8aa774] text-2xl font-serif font-bold">
                 Location & Hours
               </p>
