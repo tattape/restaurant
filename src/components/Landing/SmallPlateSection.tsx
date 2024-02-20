@@ -108,7 +108,7 @@ function SmallPlateSection({ }: Props) {
                 const isActive = idx === activeIndex;
                 const Opacity = isActive
                   ? "hover:!scale-[1.02] !transition-all"
-                  : "brightness-50";
+                  : "brightness-100";
 
                 return (
                   <SwiperSlide

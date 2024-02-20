@@ -109,7 +109,7 @@ function AlltimeFavSection({}: Props) {
                 const isActive = idx === activeIndex;
                 const Opacity = isActive
                   ? "hover:!scale-[1.02] !transition-all"
-                  : "brightness-50";
+                  : "brightness-100";
 
                 return (
                   <SwiperSlide
@@ -174,7 +174,7 @@ function AlltimeFavSection({}: Props) {
                 const isActive = idx === activeIndex2;
                 const Opacity = isActive
                   ? "hover:!scale-[1.02] !transition-all"
-                  : "brightness-50";
+                  : "brightness-100";
 
                 return (
                   <SwiperSlide
