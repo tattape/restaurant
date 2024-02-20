@@ -200,7 +200,7 @@ function HeaderSection({}: Props) {
             transition={{
               delay: 1.2,
             }}
-            className="ml-20 mt-[40px] m:mt-[60px] l:mt-[80px] md:mt-[150px] md:ml-0 w-1/2 md:w-[400px]"
+            className="ml-20 mt-[-20px] m:mt-[10px] l:mt-[30px] md:mt-[70px] md:ml-0 w-1/2 md:w-[400px]"
           >
             <Image
               width={600}
