@@ -123,7 +123,7 @@ function Footer({}: Props) {
                 <p className="text-lg font-medium">
                   1121 E Pike St, Seattle, WA 98122 ​
                 </p>
-                <p className="text-lg font-font-bold">Call: 206.787.8448</p>
+                <p className="text-lg ">Call: 206.787.8448</p>
                 <p className="text-lg font-medium">
                   Email: info@baitongthaistreetcafe.com
                 </p>

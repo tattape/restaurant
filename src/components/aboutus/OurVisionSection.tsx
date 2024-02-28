@@ -79,7 +79,7 @@ export default function OurVisionSection({}: Props) {
             loading="eager"
             priority
           />
-          <p className="absolute text-white xl:text-5xl lg:text-3xl md:text-xl l:text-sm text-xs text-center font-semibold font-serif ">
+          <p className="absolute text-white xl:text-5xl lg:text-3xl md:text-xl l:text-sm text-xs text-center font-semibold ">
             Our vision <br /> is to bring you <br /> the best Thai dining <br />{" "}
             experience <br /> and <br /> be your favorite <br /> Thai place.
           </p>
