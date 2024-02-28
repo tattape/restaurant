@@ -6,8 +6,8 @@ import clsx from "clsx";
 
 //contact
 import facebook from "../../images/facebook-logo.png";
-import twitter from "../../images/twitter-logo.png";
-import whatapp from "../../images/whatsapp-logo.png";
+import tiktok from "../../images/tik-tok-logo.png";
+import threads from "../../images/threads-logo.png";
 import instagram from "../../images/instagram-logo.png";
 import tel from "../../images/smartphone-logo.png";
 import email from "../../images/mail-logo.png";
@@ -22,32 +22,28 @@ function Footer({}: Props) {
     {
       alt: "facebook",
       src: facebook,
+      href: "https://www.facebook.com/baitongthaistreetcafe",
     },
     {
-      alt: "x",
-      src: twitter,
-    },
-    {
-      alt: "whatapp",
-      src: whatapp,
+      alt: "tiktok",
+      src: tiktok,
+      href: "https://www.tiktok.com/@baitongthaistreetcafe",
     },
     {
       alt: "instagram",
       src: instagram,
+      href: "https://www.instagram.com/baitongrestaurant/",
     },
     {
-      alt: "tel",
-      src: tel,
-    },
-    {
-      alt: "email",
-      src: email,
-    },
-    {
-      alt: "message",
-      src: message,
+      alt: "threads",
+      src: threads,
+      href: "https://www.threads.net/@baitongrestaurant",
     },
   ];
+
+  const handleopenlink = (url: any) => {
+    window.open(url, "_blank");
+  };
   return (
     <section
       id="footer"
@@ -66,14 +62,15 @@ function Footer({}: Props) {
                 data-aos-anchor-placement="top-bottom"
               >
                 <div
+                  onClick={() => handleopenlink(item.href)}
                   className={clsx(
                     "w-14 bg-white rounded-md !duration-300 cursor-pointer transition-all ease-in-out active:scale-[0.98]",
                     item.alt === "facebook"
                       ? "hover:bg-gradient-to-tl from-blue-500 to-blue-600"
-                      : item.alt === "x"
-                      ? "hover:bg-gradient-to-br from-sky-400 to-cyan-300"
-                      : item.alt === "whatapp"
-                      ? "hover:bg-gradient-to-br from-green-500 to-green-700"
+                      : item.alt === "tiktok"
+                      ? "hover:bg-gradient-to-br from-gray-700 to-black"
+                      : item.alt === "threads"
+                      ? "hover:bg-gradient-to-br from-gray-500 to-black"
                       : item.alt === "instagram"
                       ? "hover:bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-500"
                       : item.alt === "tel"
