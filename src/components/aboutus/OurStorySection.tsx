@@ -24,12 +24,12 @@ export default function OurStorySection() {
             data-aos="fade-down"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="xl:w-full lg:w-[300px] md:w-[250px] l:w-[150px] m:w-[140px] w-[130px] flex justify-center"
+            className="xl:w-full lg:w-[500px] md:w-[400px] l:w-[300px] m:w-[280px] w-[130px] flex justify-center"
           >
             <Image
               className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
-              width={500}
-              height={400}
+              width={600}
+              height={600}
               src={OurStoryImg.src}
               alt={""}
               loading="eager"
@@ -37,7 +37,7 @@ export default function OurStorySection() {
             />
           </div>
         </div>
-        <div className="xl:mt-8 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
+        <div className="xl:mt-0 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
           <div
             data-aos="fade-up"
             data-aos-once="true"
@@ -52,7 +52,7 @@ export default function OurStorySection() {
           </div>
         </div>
         {/* baitong */}
-        <div className="w-[500px] lg:w-[1000px] md:w-[800px] xl:w-[1500px]">
+        <div className="w-[700px] lg:w-[1000px] md:w-[1000px] xl:w-[1500px]">
           <motion.div
             initial={{ opacity: 1, scale: 1.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -60,7 +60,7 @@ export default function OurStorySection() {
             transition={{
               duration: 1.5,
             }}
-            className="xl:-mt-[570px] lg:-mt-[410px] md:-mt-[340px] l:-mt-[220px] -mt-[200px]"
+            className="xl:-mt-[570px] lg:-mt-[410px] md:-mt-[410px] l:-mt-[300px] -mt-[270px]"
           >
             <Image
               width={1500}
