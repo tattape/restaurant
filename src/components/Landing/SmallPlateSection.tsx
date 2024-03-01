@@ -19,7 +19,7 @@ import bitong from "../../images/bitong.png";
 
 type Props = {};
 
-function SmallPlateSection({ }: Props) {
+function SmallPlateSection({}: Props) {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
@@ -50,11 +50,13 @@ function SmallPlateSection({ }: Props) {
                 />
               </div>
             </div>
-            <div className="flex justify-center w-[180px] md:w-[300px] lg:w-[500px]">
+            <div className="flex justify-center w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
               <img
                 className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
                 data-aos="fade-down"
                 data-aos-once="true"
+                width={400}
+                height={300}
                 src={smallPlates.src}
                 alt={""}
                 loading="eager"
