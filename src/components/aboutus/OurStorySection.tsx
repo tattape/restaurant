@@ -59,7 +59,7 @@ export default function OurStorySection() {
             transition={{
               duration: 1.5,
             }}
-            className="xl:-mt-[570px] lg:-mt-[410px] md:-mt-[410px] l:-mt-[300px] -mt-[270px]"
+            className="xl:-mt-[570px] lg:-mt-[415px] md:-mt-[410px] l:-mt-[300px] -mt-[270px]"
           >
             <Image
               width={1500}
