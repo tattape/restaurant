@@ -24,11 +24,11 @@ export default function OurStorySection() {
             data-aos="fade-down"
             data-aos-once="true"
             data-aos-duration="1500"
-            className="xl:w-full lg:w-[300px] md:w-[250px] l:w-[150px] w-[100px] flex justify-center"
+            className="xl:w-full lg:w-[300px] md:w-[250px] l:w-[150px] m:w-[140px] w-[130px] flex justify-center"
           >
             <Image
-              className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out opacity-75"
-              width={400}
+              className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
+              width={500}
               height={400}
               src={OurStoryImg.src}
               alt={""}
@@ -37,7 +37,7 @@ export default function OurStorySection() {
             />
           </div>
         </div>
-        <div className="xl:mt-10 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
+        <div className="xl:mt-8 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
           <div
             data-aos="fade-up"
             data-aos-once="true"

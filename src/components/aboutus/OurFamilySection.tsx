@@ -64,7 +64,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center"
         >
           <Image
-            className="lg:w-[400px] lg:h-[150px] md:w-[420px] md:h-[220px] w-[200px] h-[100px]"
+            className="lg:w-[400px] lg:h-[150px] md:w-[420px] md:h-[180px] w-[200px] h-[80px]"
             width={400}
             height={400}
             src={LogoImg3.src}
