@@ -25,7 +25,7 @@ export default function OurStorySection() {
             data-aos-duration="1500"
             className="xl:w-full lg:w-[500px] md:w-[400px] l:w-[300px] m:w-[280px] w-[130px] flex justify-center"
           >
-            {/* <Image
+            <Image
               className=" hover:drop-shadow-[0_5px_5px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
               width={600}
               height={600}
@@ -33,7 +33,7 @@ export default function OurStorySection() {
               alt={""}
               loading="eager"
               priority
-            /> */}
+            />
           </div>
         </div>
         <div className="xl:mt-0 lg:mt-8 md:mt-5 l:mt-3 mt-3 z-10">
