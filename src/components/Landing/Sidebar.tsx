@@ -114,7 +114,7 @@ export default function Sidebar() {
               )}
               <div className="py-1">
                 <button
-                  className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer"
+                  className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer uppercase"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToMenu(menu.section);
@@ -128,7 +128,7 @@ export default function Sidebar() {
                     {menu.subMenu.map((subMenu, idx) => (
                       <button
                         key={idx}
-                        className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer"
+                        className="text-sm font-syn hover:text-green-400 hover:font-bold cursor-pointer uppercase"
                         onClick={(e) => {
                           e.preventDefault();
                           scrollToMenu(subMenu.section);
