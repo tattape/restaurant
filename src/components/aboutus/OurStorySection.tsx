@@ -121,8 +121,8 @@ export default function OurStorySection() {
             />
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
-          <p className="text-white xl:text-xl lg:text-xl md:text-lg l:text-xs text-center">
+        <div data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" className="p-4">
+          <p className="text-white xl:text-xl lg:text-xl md:text-lg l:text-sm text-sm text-center ">
             After more than 15 years serving the authentic Thai food <br /> for
             the Seattle, the founder decided to hand the Bai Tong to the next
             generation of the family in 2005.

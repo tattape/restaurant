@@ -12,7 +12,7 @@ export default function OurVisionSection({}: Props) {
   return (
     <section
       id="our-vision"
-      className="mt-40 mb-40 h-full w-full flex flex-col gap-16 items-center justify-center"
+      className="mt-24 mb-40 h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div className="w-full flex flex-col justify-center items-center ">
         <div className="flex flex-row items-center">
