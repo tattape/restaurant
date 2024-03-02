@@ -47,7 +47,7 @@ function Footer({}: Props) {
   return (
     <section
       id="footer"
-      className="mt-[400px] flex flex-col items-center justify-center"
+      className="mt-[200px] flex flex-col items-center justify-center"
     >
       {/* contacts */}
       <div className="flex flex-col items-center justify-center gap-10 z-20 xl:-mb-[600px] lg:-mb-[400px] md:-mb-[200px]">
