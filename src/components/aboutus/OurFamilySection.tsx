@@ -27,7 +27,7 @@ export default function OurFamilySection() {
           priority
         />
       </div>
-      <div className="p-2 w-full grid lg:grid-cols-3 gap-5">
+      <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 gap-3">
         <div
           data-aos="fade-left"
           data-aos-once="true"
