@@ -53,7 +53,7 @@ function GiftCardSection({ }: Props) {
         >
           <div
             className={clsx(
-              "flex flex-col z-10",
+              "flex flex-col z-30",
               "2xl:mt-[60px] 2xl:mr-[-210px] 2xl:gap-20",
               "xl:mt-[30px] xl:mr-[-160px] xl:gap-16",
               "lg:mt-[25px] lg:mr-[-150px] lg:gap-14",
@@ -72,7 +72,7 @@ function GiftCardSection({ }: Props) {
                   "lg:ml-[190px] lg:w-[250px]",
                   "md:ml-[250px] md:w-[200px]",
                   "l:ml-[295px] l:w-[150px]",
-                  "m:ml-[280px] m:w-[100px]",
+                  "m:ml-[280px] m:w-[140px]",
                   "ml-[270px] w-[100px]"
                 )}
               >

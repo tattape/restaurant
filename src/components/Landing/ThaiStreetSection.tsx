@@ -26,7 +26,7 @@ function ThaiStreetSection({}: Props) {
   const [activeIndex2, setActiveIndex2] = useState(1);
 
   return (
-    <section id="thai-street" className="mt-[250px]">
+    <section id="thai-street" className="mt-[200px]">
       <div className="flex flex-col items-center">
         <Parallax speed={-5} className="z-10">
           <div
@@ -45,7 +45,7 @@ function ThaiStreetSection({}: Props) {
           </div>
         </Parallax>
         <div className="flex flex-col-reverse items-center justify-center z-10">
-          <div className="w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
+          <div className="w-[200px] m:w-[200px] md:w-[300px] lg:w-[400px]">
             <img
               className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(119,247,45,0.8)] !transition-all !ease-in-out"
               data-aos="fade-up"

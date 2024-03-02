@@ -128,7 +128,7 @@ function Footer({}: Props) {
                   Email: info@baitongthaistreetcafe.com
                 </p>
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid l:grid-cols-3 grid-cols-2 gap-4">
                 <div className="">
                   <p className="lg:text-lg l:text-base m:text-sm s:text-xs font-bold">
                     Monday to Thursday

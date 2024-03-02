@@ -50,7 +50,7 @@ function SmallPlateSection({}: Props) {
                 />
               </div>
             </div>
-            <div className="flex justify-center w-[200px] m:w-[250px] md:w-[300px] lg:w-[400px]">
+            <div className="flex justify-center w-[200px] m:w-[200px] md:w-[300px] lg:w-[400px]">
               <img
                 className="hover:invert hover:drop-shadow-[0_5px_10px_rgba(4,255,158,0.8)] !transition-all !ease-in-out"
                 data-aos="fade-down"

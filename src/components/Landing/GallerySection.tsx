@@ -19,7 +19,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="mt-[150px] h-full w-full flex flex-col gap-16 items-center justify-center"
+      className="mt-[100px] h-full w-full flex flex-col gap-16 items-center justify-center"
     >
       <div
         data-aos="fade-up"
