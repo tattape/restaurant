@@ -29,9 +29,12 @@ export default function OurFamilySection() {
       </div>
       <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 l:grid-cols-1 l:gap-3 grid-cols-1 gap-2">
         <div
+          onClick={() =>
+            window.open("https://www.baitongrestaurant.com/", "_blank")
+          }
           data-aos="fade-left"
           data-aos-once="true"
-          className="w-full h-full flex justify-center items-center"
+          className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
             className="lg:w-[400px] lg:h-[220px] md:w-[420px] md:h-[220px] w-[200px] h-[120px]"
@@ -44,9 +47,12 @@ export default function OurFamilySection() {
           />
         </div>
         <div
+          onClick={() =>
+            window.open("https://www.noithaicuisine.com/", "_blank")
+          }
           data-aos="zoom-in"
           data-aos-once="true"
-          className="w-full h-full flex justify-center items-center"
+          className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
             className="lg:w-[400px] lg:h-[320px] md:w-[420px] md:h-[260px] w-[200px] h-[150px]"
@@ -61,7 +67,7 @@ export default function OurFamilySection() {
         <div
           data-aos="fade-right"
           data-aos-once="true"
-          className="w-full h-full flex justify-center items-center"
+          className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
             className="lg:w-[400px] lg:h-[150px] md:w-[420px] md:h-[180px] w-[200px] h-[80px]"
