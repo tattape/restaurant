@@ -9,11 +9,7 @@ import facebook from "../../images/facebook-logo.png";
 import tiktok from "../../images/tik-tok-logo.png";
 import threads from "../../images/threads-logo.png";
 import instagram from "../../images/instagram-logo.png";
-import tel from "../../images/smartphone-logo.png";
-import email from "../../images/mail-logo.png";
-import message from "../../images/chat-logo.png";
 import mapRestaurant from "../../images/map.png";
-import { Parallax } from "react-scroll-parallax";
 
 type Props = {};
 

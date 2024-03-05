@@ -8,9 +8,16 @@ import galleryheader from "../../images/gallery.png";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Autoplay } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Autoplay,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -42,10 +49,12 @@ export default function GallerySection() {
           effect={"coverflow"}
           grabCursor={true}
           initialSlide={activeIndex}
+          navigation
+          pagination={{ clickable: true }}
           centeredSlides={true}
           slidesPerView={"auto"}
           autoplay={{
-            delay: 900,
+            delay: 2500,
             pauseOnMouseEnter: true,
             disableOnInteraction: false,
           }}
@@ -56,7 +65,7 @@ export default function GallerySection() {
             modifier: 3,
             slideShadows: false,
           }}
-          modules={[EffectCoverflow]}
+          modules={[Autoplay, EffectCoverflow, Navigation, Pagination]}
           className="!w-full"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         >

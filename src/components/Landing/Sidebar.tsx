@@ -4,6 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
+// Contact
+import facebook from "../../images/facebook-logo.png";
+import tiktok from "../../images/tik-tok-logo.png";
+import threads from "../../images/threads-logo.png";
+import instagram from "../../images/instagram-logo.png";
+
 export default function Sidebar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +51,29 @@ export default function Sidebar() {
       section: "#",
       name: "Pick up",
       subMenu: [],
+    }
+  ];
+
+  const contact = [
+    {
+      alt: "facebook",
+      src: facebook,
+      href: "https://www.facebook.com/baitongthaistreetcafe",
+    },
+    {
+      alt: "tiktok",
+      src: tiktok,
+      href: "https://www.tiktok.com/@baitongthaistreetcafe",
+    },
+    {
+      alt: "instagram",
+      src: instagram,
+      href: "https://www.instagram.com/baitongrestaurant/",
+    },
+    {
+      alt: "threads",
+      src: threads,
+      href: "https://www.threads.net/@baitongrestaurant",
     },
   ];
 
@@ -80,6 +109,10 @@ export default function Sidebar() {
     ) {
       window.open(url, "_blank");
     }
+  };
+
+  const handleopenlink = (url: any) => {
+    window.open(url, "_blank");
   };
 
   useEffect(() => {
@@ -142,6 +175,49 @@ export default function Sidebar() {
               </div>
             </div>
           ))}
+          <div className="h-[2px] bg-[#4b4b4b]" />
+          <div className="mt-3 grid grid-cols-4 gap-5">
+            {contact.map((item, index) => (
+              <div
+                className=""
+                key={index}
+                data-aos="flip-right"
+                data-aos-delay={index * 50}
+                data-aos-anchor-placement="top-bottom"
+              >
+                <div
+                  onClick={() => handleopenlink(item.href)}
+                  className={clsx(
+                    "w-10 bg-white rounded-md !duration-300 cursor-pointer transition-all ease-in-out active:scale-[0.98]",
+                    item.alt === "facebook"
+                      ? "hover:bg-gradient-to-tl from-blue-500 to-blue-600"
+                      : item.alt === "tiktok"
+                      ? "hover:bg-gradient-to-br from-gray-700 to-black"
+                      : item.alt === "threads"
+                      ? "hover:bg-gradient-to-br from-gray-500 to-black"
+                      : item.alt === "instagram"
+                      ? "hover:bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-500"
+                      : item.alt === "tel"
+                      ? "hover:bg-gradient-to-tr from-rose-400 via-fuchsia-500 to-indigo-500"
+                      : item.alt === "email"
+                      ? "hover:bg-gradient-to-bl from-orange-500 to-yellow-300"
+                      : "hover:bg-gradient-to-tl from-sky-400 to-blue-500"
+                  )}
+                >
+                  <div className="p-2 hover:invert">
+                    <img
+                      className="w-full "
+                      width={64}
+                      height={64}
+                      src={item.src.src}
+                      alt={item.alt}
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

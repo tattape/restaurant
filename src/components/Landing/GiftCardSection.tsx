@@ -11,10 +11,18 @@ import clsx from "clsx";
 
 type Props = {};
 
-function GiftCardSection({ }: Props) {
+function GiftCardSection({}: Props) {
   return (
     <section id="gift-card" className="mt-[150px] mb-[200px]">
-      <div className="flex flex-col items-center">
+      <div
+        onClick={() =>
+          window.open(
+            "https://www.toasttab.com/baitong-thai-street-cafe/giftcards",
+            "_blank"
+          )
+        }
+        className="flex flex-col items-center cursor-pointer"
+      >
         {/* Thong Muang */}
         <Parallax translateX={[-10, 0]}>
           <div
@@ -131,7 +139,13 @@ function GiftCardSection({ }: Props) {
                   "ml-[-100px] mt-[55px] w-[80px]"
                 )}
               >
-                <Image className="hover:drop-shadow-[0_5px_10px_rgba(217,163,0,1)] hover:brightness-150 hover:rotate-3 hover:scale-110 transition-all duration-700 ease-in-out" width={500} height={30} src={thongTong} alt={""} />
+                <Image
+                  className="hover:drop-shadow-[0_5px_10px_rgba(217,163,0,1)] hover:brightness-150 hover:rotate-3 hover:scale-110 transition-all duration-700 ease-in-out"
+                  width={500}
+                  height={30}
+                  src={thongTong}
+                  alt={""}
+                />
               </div>
             </Parallax>
             {/* Heart */}
