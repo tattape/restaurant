@@ -55,7 +55,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
-            className="lg:w-[400px] lg:h-[320px] md:w-[420px] md:h-[260px] w-[200px] h-[150px]"
+            className="lg:w-[400px] lg:h-[320px] md:w-[350px] md:h-[300px] w-[200px] h-[150px]"
             width={400}
             height={400}
             src={LogoImg2.src}
