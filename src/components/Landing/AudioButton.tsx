@@ -18,7 +18,7 @@ export default function AudioButton() {
   return (
     <button
       onClick={handlePlayPause}
-      className="w-[50px] h-[50px] opacity-50 hover:opacity-100"
+      className="w-[50px] h-[50px] opacity-50 hover:opacity-100 bottom-10"
     >
       {isPlaying ? (
         <PauseCircleIcon className="text-white" />

@@ -2,11 +2,8 @@ import React from "react";
 import tugTug from "../../images/tug-tug.png";
 import tung from "../../images/tung.png";
 import nangrum from "../../images/nangrum.png";
-import qrcode from "../../images/qrcode.png";
-import delivery from "../../images/deli-very.png";
-import pickup from "../../images/pick-up.png";
-import reservation from "../../images/reser-vation.png";
-import Image from "next/image";
+import qrcode from "../../images/qrcodebaithong.png";
+import fontqrcode from "../../images/fontqrcode.png";
 import AudioButton from "./AudioButton";
 import Sidebar from "./Sidebar";
 import clsx from "clsx";
@@ -74,30 +71,6 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
           </div>
 
           <div
-            data-aos="fade-right"
-            data-aos-delay="1400"
-            data-aos-once="true"
-            className={`${layout} left-0 lg:left-20 top-96`}
-            onClick={() =>
-              window.open(
-                "https://qrco.de/bbX0o0",
-                "_blank"
-              )
-            }
-          >
-            <div
-              className={`group transition-all ease-in-out duration-500 relative flex justify-center items-center w-[70px] md:w-[100px] lg:w-[160px]`}
-            >
-              <img
-                src={qrcode.src}
-                alt={""}
-                loading="eager"
-                className="z-[50] group-hover:scale-150"
-              />
-            </div>
-          </div>
-
-          <div
             data-aos="fade-left"
             data-aos-delay="1400"
             data-aos-once="true"
@@ -154,7 +127,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 className="z-[50]"
               />
               <p
-                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] right-[-45px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60] tracking-wide`}
+                className={`absolute ${slideleft} drop-shadow-lg bottom-[-10px] lg:right-[-45px] md:right-[-65px] right-[-40px] lg:text-4xl md:text-2xl text-white font-semibold font-serif z-[60] tracking-wide`}
                 style={{
                   textShadow:
                     "0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000",
@@ -173,8 +146,22 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
           </div>
 
           <div
-            className={`${layout} flex justify-end right-0 lg:right-20 bottom-10`}
+            className={`${layout} flex justify-end items-center right-0 lg:right-20 bottom-0`}
           >
+            <div onClick={() => window.open("https://qrco.de/bbX0o0", "_blank")} className="relative">
+              <img
+                src={qrcode.src}
+                alt={""}
+                loading="eager"
+                className="z-[50] lg:w-[250px] md:w-[200px] w-[130px]"
+              />
+              <img
+                src={fontqrcode.src}
+                alt={""}
+                loading="eager"
+                className="absolute z-[50] lg:w-[250px] lg:-top-[65px] md:w-[200px] md:-top-[55px] w-[130px] -top-[35px] hover:animate-shake transition-all ease-in-out"
+              />
+            </div>
             <AudioButton />
           </div>
         </>
