@@ -20,7 +20,7 @@ import {
 } from "swiper/modules";
 import clsx from "clsx";
 import Image from "next/image";
-import GalleryImageSwiper from "./GalleryImageSwiper";
+
 import BtnGalleryNavi from "./BtnGalleryNavi";
 
 export default function GallerySection() {
@@ -47,8 +47,6 @@ export default function GallerySection() {
         />
       </div>
       <div className="w-full">
-        {/* <GalleryImageSwiper/> */}
-
         <Swiper
           loop
           effect={"coverflow"}
@@ -72,7 +70,7 @@ export default function GallerySection() {
           className="!w-full !z-[40] !relative"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         >
-          <BtnGalleryNavi className="absolute top-1/2 -translate-y-1/2"/>
+          <BtnGalleryNavi className="absolute top-1/2 -translate-y-1/2" />
           {GalleryImg.concat(GalleryImg).map((image: any, idx: number) => {
             const isActive = idx === activeIndex;
             const Opacity = isActive
@@ -107,7 +105,6 @@ export default function GallerySection() {
               </SwiperSlide>
             );
           })}
-          
         </Swiper>
       </div>
     </section>
