@@ -176,7 +176,7 @@ export default function Sidebar() {
             </div>
           ))}
           <div className="h-[2px] bg-[#4b4b4b]" />
-          <div className="mt-3 grid grid-cols-4 gap-5">
+          <div className="mt-3 grid grid-cols-4 gap-4">
             {contact.map((item, index) => (
               <div
                 className=""
@@ -188,7 +188,7 @@ export default function Sidebar() {
                 <div
                   onClick={() => handleopenlink(item.href)}
                   className={clsx(
-                    "w-10 bg-white rounded-md !duration-300 cursor-pointer transition-all ease-in-out active:scale-[0.98]",
+                    "w-9 hover:border-none border border-white rounded-md !duration-300 cursor-pointer transition-all ease-in-out active:scale-[0.98]",
                     item.alt === "facebook"
                       ? "hover:bg-gradient-to-tl from-blue-500 to-blue-600"
                       : item.alt === "tiktok"
@@ -204,7 +204,7 @@ export default function Sidebar() {
                       : "hover:bg-gradient-to-tl from-sky-400 to-blue-500"
                   )}
                 >
-                  <div className="p-2 hover:invert">
+                  <div className="p-2 invert">
                     <img
                       className="w-full "
                       width={64}

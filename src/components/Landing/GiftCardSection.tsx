@@ -140,7 +140,7 @@ function GiftCardSection({}: Props) {
                 )}
               >
                 <Image
-                  className="hover:drop-shadow-[0_5px_10px_rgba(217,163,0,1)] hover:brightness-150 hover:rotate-3 hover:scale-110 transition-all duration-700 ease-in-out"
+                  className="animate-bounce hover:animate-none hover:drop-shadow-[0_5px_10px_rgba(217,163,0,1)] hover:brightness-150 hover:rotate-3 hover:scale-110 transition-all duration-700 ease-in-out"
                   width={500}
                   height={30}
                   src={thongTong}

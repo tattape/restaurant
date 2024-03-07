@@ -2,7 +2,8 @@ import React from "react";
 import tugTug from "../../images/tug-tug.png";
 import tung from "../../images/tung.png";
 import nangrum from "../../images/nangrum.png";
-import qrcode from "../../images/qrcodebaithong.png";
+import qrcode from "../../images/qrcode.png";
+import handqrcode from "../../images/hand1.png";
 import fontqrcode from "../../images/fontqrcode.png";
 import AudioButton from "./AudioButton";
 import Sidebar from "./Sidebar";
@@ -146,20 +147,29 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
           </div>
 
           <div
-            className={`${layout} flex justify-end items-center right-0 lg:right-20 bottom-0`}
+            className={`${layout} flex justify-end items-center right-0 lg:right-20 bottom-0 px-2`}
           >
-            <div onClick={() => window.open("https://qrco.de/bbX0o0", "_blank")} className="relative">
+            <div
+              onClick={() => window.open("https://qrco.de/bbX0o0", "_blank")}
+              className="relative"
+            >
               <img
                 src={qrcode.src}
                 alt={""}
                 loading="eager"
-                className="z-[50] lg:w-[250px] md:w-[200px] w-[130px]"
+                className="absolute z-[50] lg:w-[270px] lg:-top-[35px] lg:left-[10px] md:w-[200px] md:-top-[10px] md:left-[20px] w-[130px] -top-[15px] left-[5px]"
+              />
+              <img
+                src={handqrcode.src}
+                alt={""}
+                loading="eager"
+                className="z-[50] lg:w-[300px] md:w-[250px] w-[150px] drop-shadow-[0_1px_1px_rgba(255,255,255)]"
               />
               <img
                 src={fontqrcode.src}
                 alt={""}
                 loading="eager"
-                className="absolute z-[50] lg:w-[250px] lg:-top-[65px] md:w-[200px] md:-top-[55px] w-[130px] -top-[35px] hover:animate-shake transition-all ease-in-out"
+                className="absolute z-[50] lg:w-[220px] lg:top-[145px] lg:left-[40px] md:w-[200px] md:top-[115px] md:left-[30px] w-[130px] top-[60px] left-[15px] hover:animate-shake transition-all ease-in-out"
               />
             </div>
             <AudioButton />
