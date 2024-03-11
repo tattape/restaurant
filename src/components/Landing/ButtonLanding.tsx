@@ -3,7 +3,7 @@ import tugTug from "../../images/tug-tug.png";
 import tung from "../../images/tung.png";
 import nangrum from "../../images/nangrum.png";
 import qrcode from "../../images/qrcode.png";
-import handqrcode from "../../images/hand1.png";
+import handqrcode from "../../images/handGrey.png";
 import fontqrcode from "../../images/fontqrcode.png";
 import AudioButton from "./AudioButton";
 import Sidebar from "./Sidebar";
