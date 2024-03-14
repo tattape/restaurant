@@ -157,19 +157,19 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
                 src={qrcode.src}
                 alt={""}
                 loading="eager"
-                className="absolute z-[50] lg:w-[270px] lg:-top-[35px] lg:left-[10px] md:w-[200px] md:-top-[10px] md:left-[20px] w-[130px] -top-[15px] left-[5px]"
+                className="absolute z-[50] lg:w-[210px] lg:-top-[25px] lg:left-[25px] md:w-[200px] md:-top-[10px] md:left-[20px] w-[130px] -top-[15px] left-[5px]"
               />
               <img
                 src={handqrcode.src}
                 alt={""}
                 loading="eager"
-                className="z-[50] lg:w-[300px] md:w-[250px] w-[150px] drop-shadow-[0_1px_1px_rgba(255,255,255)]"
+                className="z-[50] lg:w-[250px] md:w-[250px] w-[150px] drop-shadow-[0_1px_5px_rgba(192,100,255,1)]"
               />
               <img
                 src={fontqrcode.src}
                 alt={""}
                 loading="eager"
-                className="absolute z-[50] lg:w-[220px] lg:top-[145px] lg:left-[40px] md:w-[200px] md:top-[115px] md:left-[30px] w-[130px] top-[60px] left-[15px] hover:animate-shake transition-all ease-in-out"
+                className="absolute z-[50] lg:w-[200px] lg:top-[110px] lg:left-[35px] md:w-[200px] md:top-[115px] md:left-[30px] w-[130px] top-[60px] left-[15px] hover:animate-shake transition-all ease-in-out"
               />
             </div>
             <AudioButton />
