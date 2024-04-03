@@ -98,7 +98,7 @@ export default function Sidebar() {
     const element = document.getElementById(section);
     if (pathname !== "/") {
       router.push("/");
-      localStorage.setItem("section", section);
+      sessionStorage.setItem("section", section);
     } else {
       element?.scrollIntoView({ behavior: "smooth" });
     }
@@ -129,7 +129,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     setTimeout(() => {
-      const section = localStorage.getItem("section");
+      const section = sessionStorage.getItem("section");
       if (section) {
         const element = document.getElementById(section);
         element?.scrollIntoView({ behavior: "smooth" });
