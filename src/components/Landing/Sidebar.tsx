@@ -1,7 +1,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 // Contact
@@ -12,6 +12,8 @@ import instagram from "../../images/instagram-logo.png";
 
 export default function Sidebar() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const menus = [
@@ -51,7 +53,7 @@ export default function Sidebar() {
       section: "#",
       name: "Pick up",
       subMenu: [],
-    }
+    },
   ];
 
   const contact = [
@@ -94,8 +96,11 @@ export default function Sidebar() {
 
   const scrollToMenu = (section: string) => {
     const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (pathname !== "/") {
+      router.push("/");
+      localStorage.setItem("section", section);
+    } else {
+      element?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -121,11 +126,22 @@ export default function Sidebar() {
       document.removeEventListener("mousedown", closeSidebar);
     };
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const section = localStorage.getItem("section");
+      if (section) {
+        const element = document.getElementById(section);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1755);
+  }, []);
+
   return (
     <div
       ref={sidebarRef}
-      className={`fixed h-full  text-white ${
-        isOpen ? "w-64 bg-[#383838] z-[999]" : "w-16 z-[40]"
+      className={`fixed h-full flex flex-col   text-white ${
+        isOpen ? "w-64 bg-[#383838] z-[999]" : "w-10 z-[60] items-center"
       } transition-all duration-300 ease-in-out`}
     >
       <button

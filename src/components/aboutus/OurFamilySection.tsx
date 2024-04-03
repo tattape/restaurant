@@ -4,7 +4,7 @@ import React from "react";
 import OurFamilyImg from "../../images/aboutUS/slice98.png";
 import LogoImg1 from "../../images/aboutUS/slice99.png";
 import LogoImg2 from "../../images/aboutUS/slice100.png";
-import LogoImg3 from "../../images/aboutUS/slice101.png";
+import LogoImg3 from "../../images/aboutUS/logo_baitong_thaistreet_cafe.png";
 
 export default function OurFamilySection() {
   return (
@@ -27,7 +27,7 @@ export default function OurFamilySection() {
           priority
         />
       </div>
-      <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 l:grid-cols-1 l:gap-3 grid-cols-1 gap-2">
+      <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 l:grid-cols-1 l:gap-8 grid-cols-1 gap-2">
         <div
           onClick={() =>
             window.open("https://www.baitongrestaurant.com/", "_blank")
@@ -37,7 +37,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
-            className="lg:w-[400px] lg:h-[220px] md:w-[420px] md:h-[220px] w-[200px] h-[120px]"
+            className="lg:w-[500px] lg:h-[180px] md:w-[420px] md:h-[220px] w-[200px] h-[120px]"
             width={400}
             height={400}
             src={LogoImg1.src}
@@ -55,7 +55,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
-            className="lg:w-[400px] lg:h-[320px] md:w-[350px] md:h-[300px] w-[200px] h-[150px]"
+            className="xl:w-[350px] xl:h-[300px] lg:w-[300px] lg:h-[250px] md:w-[350px] md:h-[300px] w-[200px] h-[150px]"
             width={400}
             height={400}
             src={LogoImg2.src}
@@ -70,7 +70,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
-            className="lg:w-[400px] lg:h-[150px] md:w-[420px] md:h-[180px] w-[200px] h-[80px]"
+            className="2xl:w-[600px] 2xl:h-[220px] xl:w-[500px] xl:h-[180px] lg:w-[500px] lg:h-[150px] md:w-[480px] md:h-[200px] w-[280px] h-[110px]"
             width={400}
             height={400}
             src={LogoImg3.src}
