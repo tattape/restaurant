@@ -34,7 +34,7 @@ export default function AudioButton() {
         onPause={() => setIsPlaying(false)}
       >
         <source
-          src="/sounds/music_caphill_website.mp3"
+          src="https://github.com/tattape/restaurant/blob/master/public/sounds/music_caphill_website.mp3?raw=true"
           type="audio/mpeg"
         />
       </audio>
