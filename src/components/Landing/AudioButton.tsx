@@ -1,6 +1,5 @@
 import { PauseCircleIcon, PlayCircleIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useRef, useState } from "react";
-
 export default function AudioButton() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<any>(null);
@@ -35,7 +34,7 @@ export default function AudioButton() {
         onPause={() => setIsPlaying(false)}
       >
         <source
-          src="https://github.com/tattape/restaurant/blob/master/public/foodmusic.mp3?raw=true"
+          src="/sounds/music_caphill_website.mp3"
           type="audio/mpeg"
         />
       </audio>
