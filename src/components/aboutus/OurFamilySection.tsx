@@ -27,7 +27,7 @@ export default function OurFamilySection() {
           priority
         />
       </div>
-      <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 l:grid-cols-1 l:gap-8 grid-cols-1 gap-2">
+      <div className="p-2 w-full grid lg:grid-cols-3 lg:gap-5 l:grid-cols-1 l:gap-8 grid-cols-1 gap-5">
         <div
           onClick={() =>
             window.open("https://www.baitongrestaurant.com/", "_blank")
@@ -55,7 +55,7 @@ export default function OurFamilySection() {
           className="w-full h-full flex justify-center items-center cursor-pointer"
         >
           <Image
-            className="xl:w-[350px] xl:h-[300px] lg:w-[300px] lg:h-[250px] md:w-[350px] md:h-[300px] w-[200px] h-[150px]"
+            className="xl:w-[350px] xl:h-[300px] lg:w-[300px] lg:h-[250px] md:w-[350px] md:h-[300px] w-[250px] h-[200px]"
             width={400}
             height={400}
             src={LogoImg2.src}
