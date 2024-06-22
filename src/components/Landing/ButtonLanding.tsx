@@ -38,7 +38,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             className={`${layout} left-0 lg:left-20 top-32`}
             onClick={() =>
               window.open(
-                "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
+                "https://baitongthaistreet.com",
                 "_blank"
               )
             }
@@ -78,7 +78,7 @@ function ButtonLanding({ scroll, isAboutUs }: Props) {
             className={`${layout} flex justify-end right-0 lg:right-20 top-1/3`}
             onClick={() =>
               window.open(
-                "https://www.toasttab.com/baitong-thai-street-cafe/v3",
+                "https://baitongthaistreet.com",
                 "_blank"
               )
             }

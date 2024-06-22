@@ -35,7 +35,7 @@ export default function Sidebar() {
     { id: 6, url: "/aboutus", section: "#", name: "About Us", subMenu: [] },
     {
       id: 7,
-      url: "https://www.doordash.com/store/bai-tong-thai-restaurant-seattle-130667/en-US",
+      url: "https://baitongthaistreet.com",
       section: "#",
       name: "Delivery",
       subMenu: [],
@@ -49,7 +49,7 @@ export default function Sidebar() {
     },
     {
       id: 9,
-      url: "https://www.toasttab.com/baitong-thai-street-cafe/v3",
+      url: "https://baitongthaistreet.com",
       section: "#",
       name: "Pick up",
       subMenu: [],
